@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+  background: ${({ scrollNav }) => (scrollNav ? '#000' : '#101522')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -13,9 +13,11 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
+    margin-bottom: 135px;
   }
 `;
 
@@ -30,7 +32,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #000;
+  color: #fff;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
