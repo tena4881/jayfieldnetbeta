@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ExchangeContainer = styled.div`
   height: 800px;
   display: flex;
-  
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,8 @@ export const ExchangeContainer = styled.div`
     height: 1100px;
   }
  
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    height: 1300px;
   }
   
 `;
@@ -36,7 +35,7 @@ export const ExchangeWrapper = styled.div`
     grid-template-columns: 1fr;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 375px) {
     grid-template-columns: 1fr;
     padding: 0 10px;
   }
@@ -47,15 +46,17 @@ export const ExchangeCard = styled.div`
   display: flex;
   background: #fcfcfc;
   min-height:  500px;
-  min-width:  500px;
+  min-width:  100%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   max-height: 800px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+
+ 
 
   &:hover {
     transform: scale(1.02);

@@ -21,6 +21,7 @@ const Exchange = () => {
           <ExchangeIcon src={Icon1} />
           <ExchangeH2>View your JFLD coin Balance</ExchangeH2>
           <ExchangeP>
+            
             Coming soon! <br></br>
             In the meantime make sure you have MetaMask installed! 
           </ExchangeP>
