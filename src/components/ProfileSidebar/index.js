@@ -64,7 +64,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='/signin'>Transactions</SidebarRoute>
+          <SidebarRoute to='/profile'>Transactions</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
