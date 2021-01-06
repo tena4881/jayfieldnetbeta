@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Discover
+            Business Brain
           </SidebarLink>
           <SidebarLink
             to='services'
@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Services
+            Network
           </SidebarLink>
           <SidebarLink
             to='signup'
@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Sign Up
+            Contact
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>

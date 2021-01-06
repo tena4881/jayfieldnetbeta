@@ -54,55 +54,20 @@ const ProfileNavbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to='about'
+                  to='/'
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
                 >
-                  About
+                  Home
                 </NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks
-                  to='discover'
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >
-                  Business Brain
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to='services'
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >
-                  Network
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to='signup'
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >
-                  Contact
-                </NavLinks>
-              </NavItem>
+              
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/signin'>Transaction</NavBtnLink>
+              <NavBtnLink to='profile'>Transaction</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

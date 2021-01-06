@@ -9,7 +9,7 @@ import {
   SidebarRoute,
   SideBtnWrap
 } from './ProfileSidebarElements';
-
+import Home from '../../pages/index'
 const ProfileSidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -18,50 +18,8 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink
-            to='about'
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact='true'
-            offset={-80}
-          >
-            About
-          </SidebarLink>
-          <SidebarLink
-            to='discover'
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact='true'
-            offset={-80}
-          >
-            Discover
-          </SidebarLink>
-          <SidebarLink
-            to='services'
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact='true'
-            offset={-80}
-          >
-            Services
-          </SidebarLink>
-          <SidebarLink
-            to='signup'
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact='true'
-            offset={-80}
-          >
-            Sign Up
-          </SidebarLink>
+        <SidebarLink to='/'>Return Home</SidebarLink>
+          
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to='/profile'>Transactions</SidebarRoute>
