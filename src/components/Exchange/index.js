@@ -19,16 +19,18 @@ const Exchange = () => {
       <ExchangeWrapper>
         <ExchangeCard>
           <ExchangeIcon src={Icon1} />
-          <ExchangeH2>Reduce Expenses</ExchangeH2>
+          <ExchangeH2>View your JFLD coin Balance</ExchangeH2>
           <ExchangeP>
-            We help reduce your fees and increase your overall revenue.
+            Coming soon! <br></br>
+            In the meantime make sure you have MetaMask installed! 
           </ExchangeP>
         </ExchangeCard>
         <ExchangeCard>
           <ExchangeIcon src={Icon2} />
-          <ExchangeH2>Virtual Offices</ExchangeH2>
+          <ExchangeH2>View your staked DIA Balance</ExchangeH2>
           <ExchangeP>
-            You can access our platform online anywhere in the world.
+            You can view, contibute to, and withdraw your stake at any time! <br></br>
+            Coming Soon!
           </ExchangeP>
         </ExchangeCard>
       </ExchangeWrapper>
