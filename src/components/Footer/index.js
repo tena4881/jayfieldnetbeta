@@ -70,7 +70,7 @@ const Footer = () => {
             <SocialLogo to='/' onClick={toggleHome}>
               jayfield
             </SocialLogo>
-            <WebsiteRights>JayField LLC © 2020 All rights reserved.</WebsiteRights>
+            <WebsiteRights>JayField LLC © 2021 All rights reserved.</WebsiteRights>
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
                 <FaFacebook />
