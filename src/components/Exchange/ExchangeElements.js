@@ -8,34 +8,37 @@ export const ExchangeContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: ##f7f7f7;
-  margin-bottom: 135px;
+  margin-bottom: 250px;
 
   @media screen and (max-width: 768px) {
+    transition: 0.8s all ease;
     height: 1100px;
   }
-
+ 
   @media screen and (max-width: 480px) {
-    
+    transition: 0.8s all ease;
     height: 1300px;
   }
+  
 `;
 
 export const ExchangeWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;
+  justify-items: center;
 
-  @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
   }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 10px;
   }
 `;
 
