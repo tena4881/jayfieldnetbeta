@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "6.11.1"
+    "node": "8 8.6"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.1",
