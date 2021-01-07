@@ -5,7 +5,6 @@
   "engines": {
     "node": "15.5.0",
     "npm": "7.3.0"
-
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.1",
@@ -14,7 +13,9 @@
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "ethers": "^4.0.48",
     "framer-motion": "^3.1.4",
+    "fs": "^0.0.1-security",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",

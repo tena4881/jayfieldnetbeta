@@ -5,12 +5,13 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? '#101522' : 'transparent')};
   opacity: 85%;
-  height: 90px;
-  margin-top: -90px;
+  height: 80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  font-weight: bold;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -23,14 +24,14 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 90px;
+  height: 80px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
   max-width: 1100px;
 `;
 
-export const NavLogo = styled.img`
+export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -42,15 +43,6 @@ export const NavLogo = styled.img`
   text-decoration: none;
 `;
 
-export const LogoLink = styled(LinkR)`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 0;
-  height: auto;
-  cursor: pointer;
- 
-`;
 export const MobileIcon = styled.div`
   display: none;
 

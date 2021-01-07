@@ -8,13 +8,11 @@ import {
   NavbarContainer,
   NavItem,
   NavLinks,
-  LogoLink,
   NavLogo,
   NavMenu,
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
-import logo from '../../images/logo.png';
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -34,15 +32,15 @@ const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-  
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-          <LogoLink to='/'>
-          <img src={logo} alt='logo' />
-        </LogoLink>
+            <NavLogo onClick={toggleHome} to='/'>
+              JayField/net
+            </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
@@ -97,7 +95,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/profile'>Profile</NavBtnLink>
+              <NavBtnLink to='/profile'>My Wallet</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
