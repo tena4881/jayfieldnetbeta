@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? '#000' : '#101522')};
-  height: 80px;
-  margin-top: -80px;
+  height: 100px;
+  opacity: 85%;
+  margin-top: -100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +78,19 @@ export const NavBtn = styled.nav`
 
   @media screen and (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const LogoLink = styled(LinkR)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    color: #15cdfc;
   }
 `;
 

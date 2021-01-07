@@ -1,7 +1,5 @@
 import React from 'react';
-import Icon1 from '../../images/JayFieldTokenT.GIF';
-import Icon2 from '../../images/dai.svg';
-import Icon3 from '../../images/svg-5.svg';
+
 import {
   ExchangeContainer,
   ExchangeH1,
