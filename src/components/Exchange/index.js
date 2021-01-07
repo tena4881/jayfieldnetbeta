@@ -9,29 +9,44 @@ import {
   ExchangeCard,
   ExchangeIcon,
   ExchangeH2,
-  ExchangeP
+  ExchangeH3,
+  SubtitleP,
+  ExchangeP,
+  BurnBtn,
+  StakeBtn
 } from './ExchangeElements';
 
 const Exchange = () => {
   return (
     <ExchangeContainer id='Exchange'>
       <ExchangeH1>Your Wallet</ExchangeH1>
+      <ExchangeH3>Earn JFLD by DAI</ExchangeH3>
+      <SubtitleP>
+            (Deposit DAI and earn JFLD)
+          </SubtitleP>
       <ExchangeWrapper>
         <ExchangeCard>
-          <ExchangeIcon src={Icon1} />
-          <ExchangeH2>View your JFLD coin Balance</ExchangeH2>
+        <ExchangeH2>JFLD Balance:</ExchangeH2>
+        <ExchangeP>
+            (Rewards for staking)
+          </ExchangeP>
+        <ExchangeH3>4125 JFLD</ExchangeH3>
+
+          <BurnBtn>Settel Coins</BurnBtn>
           <ExchangeP>
-            
-            Coming soon! <br></br>
-            In the meantime make sure you have MetaMask installed! 
+            What is setteling?
           </ExchangeP>
         </ExchangeCard>
         <ExchangeCard>
-          <ExchangeIcon src={Icon2} />
-          <ExchangeH2>View your staked DIA Balance</ExchangeH2>
+        <ExchangeH2>DAI Balance:</ExchangeH2>
+        <ExchangeP>
+            (Currently staking)
+          </ExchangeP>
+        <ExchangeH3>4125 DAI</ExchangeH3>
+
+          <StakeBtn>Deposit DAI</StakeBtn>
           <ExchangeP>
-            You can view, contibute to, and withdraw your stake at any time! <br></br>
-            Coming Soon!
+            and earn JFLD Coins!
           </ExchangeP>
         </ExchangeCard>
       </ExchangeWrapper>

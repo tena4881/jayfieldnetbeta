@@ -13,11 +13,9 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  margin-bottom: 50px;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
-    margin-bottom: 135px;
   }
 `;
 

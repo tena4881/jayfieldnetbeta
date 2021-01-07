@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as LinkR } from 'react-router-dom';
 
 export const ExchangeContainer = styled.div`
   height: 800px;
@@ -45,8 +46,8 @@ export const ExchangeCard = styled.div`
   background: #fff;
   display: flex;
   background: #fcfcfc;
-  min-height:  500px;
-  min-width:  100%;
+  min-height: 350px;
+  min-width:  350px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -72,9 +73,9 @@ export const ExchangeIcon = styled.img`
 `;
 
 export const ExchangeH1 = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #000;
-  margin-bottom: 64px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -82,11 +83,72 @@ export const ExchangeH1 = styled.h1`
 `;
 
 export const ExchangeH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 `;
 
+export const ExchangeH3 = styled.h3`
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`;
+
 export const ExchangeP = styled.p`
-  font-size: 1rem;
+  font-size: .7rem;
+  margin-top: .1rem;
   text-align: center;
+ 
+`;
+
+export const SubtitleP = styled.p`
+  font-size: 1rem;
+  margin-top: .1rem;
+  margin-bottom: 20px;
+  text-align: center;
+ 
+`;
+
+export const BurnBtn = styled(LinkR)`
+  border-radius: 50px;
+  background: #CC0000;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2rem;
+  outline: none;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #000;
+    color: #fff;
+  }
+`;
+
+export const StakeBtn = styled(LinkR)`
+  border-radius: 50px;
+  background: #00b300;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2rem;
+  outline: none;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #000;
+    color: #fff;
+  }
 `;

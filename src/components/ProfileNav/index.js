@@ -61,7 +61,7 @@ const ProfileNavbar = ({ toggle }) => {
                   exact='true'
                   offset={-80}
                 >
-                  Home
+                  
                 </NavLinks>
               </NavItem>
               
