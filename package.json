@@ -2,6 +2,9 @@
   "name": "jayfieldnet",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.1.1",
     "@emotion/react": "^11.1.4",
