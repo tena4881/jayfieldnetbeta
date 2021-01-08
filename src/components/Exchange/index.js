@@ -32,7 +32,7 @@ const Exchange = () => {
         
         <ExchangeH3>In Your Wallet</ExchangeH3>
 
-          <StakeBtn>Deposit Ethereum</StakeBtn>
+          <StakeBtn>Deposit to Pool</StakeBtn>
           <ExchangeP>
             and earn JFLD Coins!
           </ExchangeP>
