@@ -31,6 +31,7 @@
     "web3-react": "^5.0.5"
   },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
