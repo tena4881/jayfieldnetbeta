@@ -7,8 +7,6 @@ import {
 } from './SigninElements';
 import Exchange from '../Exchange';
 import Footer from '../Footer';
-
-
 const SignIn = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
@@ -25,6 +23,7 @@ const SignIn = () => {
     <Container>
     <ProfileSidebar isOpen={isOpen} toggle={toggle} />
     <ProfileNavbar toggle={toggle} />
+    
       <Exchange/>
       
     <Footer />

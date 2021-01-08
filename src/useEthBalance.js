@@ -27,8 +27,9 @@ export default function useEthBalance() {
     console.log(address);
 
     const rawBalance = await provider.getBalance(address);
+    
     // Format ETH balance and parse it to JS number
-    const value = parseFloat(ethers.utils.formatEther(rawBalance));
+    const value = parseFloat(ethers.utils.formatEther(rawBalance)).toFixed(2);
 
     // Optimization: check that user balance has actually changed before
     // updating state and triggering the consuming component re-render

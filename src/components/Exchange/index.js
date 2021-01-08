@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import {
   ExchangeContainer,
@@ -17,10 +17,14 @@ import {
   ConnectBtn
 } from './ExchangeElements';
 import useEthBalance from '../../useEthBalance';
+import { StakeModal } from '../Modal/StakeModal';
 
 const Exchange = () => {
   const balance = useEthBalance();
 
+  const [show, setShow] = useState(false);
+
+  const closeModalHandler = () => setShow(false);
 
   return (
     <ExchangeContainer id='Exchange'>
@@ -32,7 +36,7 @@ const Exchange = () => {
         <ExchangeH2>0 JFLD</ExchangeH2>
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
-
+        
         <StakeBtn>Buy JFLD</StakeBtn>
         
       </ExchangeCard>
