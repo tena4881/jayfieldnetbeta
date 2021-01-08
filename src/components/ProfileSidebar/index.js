@@ -11,9 +11,11 @@ import {
 } from './ProfileSidebarElements';
 import TransactionsModal from '../Modal/TransactionsModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
+import useEthAccount from '../../blockchain/useEthAccount'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
+  const account = useEthAccount();
   
   return (
     
@@ -26,8 +28,8 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-        <ProfileIcon></ProfileIcon>
-        <SidebarLink to='/'>Home</SidebarLink>
+        <ProfileIcon account={account}></ProfileIcon>
+        <SidebarLink to='/profile'>Menu Item TBD</SidebarLink>
           
         </SidebarMenu>
         <SideBtnWrap>

@@ -119,3 +119,43 @@ export const NavBtnLink = styled(LinkR)`
     color: #ffc800;
   }
 `;
+export const HomeBtnLink = styled(LinkR)`
+  border-radius: 50px;
+  background: #ffc800;
+  white-space: nowrap;
+  color: #010606;
+  width: 3rem;
+  height: 3rem;
+  font-size: 16px;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #ffc800;
+  }
+`;
+
+export const HomeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const HomeIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+  font-size: 2rem;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;

@@ -48,7 +48,7 @@ const Exchange = () => {
             Modal
           </RemovePoolModal>
           
-      <ExchangeH1>Welcome back!</ExchangeH1>
+      <ExchangeH1>Welcome back,</ExchangeH1>
       <ProfileIcon account={account}></ProfileIcon>
       <div>{account}</div>
       

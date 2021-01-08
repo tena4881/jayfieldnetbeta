@@ -3,6 +3,8 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import {ModalCard,Input,ModalH3, StakeBtn, ModalH2} from './ModalElements';
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
+import useEthAccount from '../../blockchain/useEthAccount'
+
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
@@ -23,7 +25,10 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
+
+
 export default function Modal({open, onClose}) {
+  const account = useEthAccount();
   if (!open) return null
 
   return ReactDom.createPortal(
@@ -31,7 +36,7 @@ export default function Modal({open, onClose}) {
       <div onClick={onClose} style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <ModalCard>
-        <ProfileIcon></ProfileIcon>
+        <ProfileIcon account={account}></ProfileIcon>
         <ModalH2>Transactions</ModalH2>
         .<br></br>
         .<br></br>

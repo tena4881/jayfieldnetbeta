@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaEllipsisV, FaHome } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import {
@@ -8,7 +8,9 @@ import {
   NavbarContainer,
   NavItem,
   NavLinks,
-  NavLogo,
+  HomeBtnLink,
+  HomeContainer,
+  HomeIcon,
   NavMenu,
   NavBtn,
   NavBtnLink
@@ -44,13 +46,18 @@ const ProfileNavbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            
-            <NavLogo onClick={toggleHome} to='/'>
-            <NavBtnLink to='/'> Home</NavBtnLink>
-            </NavLogo>
-            
+            <HomeContainer>
+              <HomeBtnLink to='/'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>
+              <HomeIcon><FaHome style={{ color: 'black' }}/></HomeIcon>
+              </HomeBtnLink>
+            </HomeContainer>
             <MobileIcon onClick={toggle}>
-              <FaBars style={{ color: 'black' }}/>
+              <FaEllipsisV style={{ color: 'black' }}/>
             </MobileIcon>
             <NavMenu>
               <NavItem>
