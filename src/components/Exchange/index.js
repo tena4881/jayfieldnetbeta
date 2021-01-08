@@ -58,7 +58,7 @@ const Exchange = () => {
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
         
-        <StakeBtn onClick={() => setIsBuyOpen(true)}>Buy JFLD</StakeBtn>
+        <StakeBtn to="#" onClick={() => setIsBuyOpen(true)}>Buy JFLD</StakeBtn>
         
       </ExchangeCard>
       <ExchangeCard>
@@ -67,13 +67,13 @@ const Exchange = () => {
         
         <ExchangeH3>in the pool</ExchangeH3>
 
-          <StakeBtn onClick={() => setisEditPoolOpen(true)} >Add to Pool</StakeBtn>
+          <StakeBtn to="#" onClick={() => setisEditPoolOpen(true)} >Add to Pool</StakeBtn>
           <ExchangeP>
             and earn JFLD Coins!
           </ExchangeP>
           
           
-          <UnStakeBtn onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
+          <UnStakeBtn  to="#" onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
           
         </ExchangeCard>
       <ExchangeCard>
@@ -82,7 +82,7 @@ const Exchange = () => {
         <ExchangeP>
             (Rewards for staking)
           </ExchangeP>
-        <BurnBtn>Settel Coins</BurnBtn>
+        <BurnBtn to="#">Settel Coins</BurnBtn>
           <ExchangeP>
             What is setteling?
           </ExchangeP>
@@ -93,7 +93,7 @@ const Exchange = () => {
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
 
-        <StakeBtn>Buy More Ethereum</StakeBtn>
+        <StakeBtn to="#">Buy More Ethereum</StakeBtn>
           
           <ExchangeP>
             Provided by MoonPay

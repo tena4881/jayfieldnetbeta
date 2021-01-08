@@ -38,7 +38,7 @@ export default function RemovePoolModal({open, onClose}) {
         <form >
           <Input type="text" />
         </form>
-          <UnStakeBtn>Remove from Pool </UnStakeBtn>
+          <UnStakeBtn to='#'>Remove from Pool </UnStakeBtn>
           
         </ModalCard>
         

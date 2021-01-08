@@ -36,7 +36,7 @@ export default function Modal({open, onClose}) {
         <form >
           <Input type="text" />
         </form>
-          <StakeBtn>Buy JFLD</StakeBtn>
+          <StakeBtn to='#'>Buy JFLD</StakeBtn>
           
         </ModalCard>
         

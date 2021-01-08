@@ -48,9 +48,7 @@ const ProfileNavbar = ({ toggle }) => {
           <NavbarContainer>
             <HomeContainer>
               <HomeBtnLink to='/'
-                    smooth={true}
                     duration={500}
-                    spy={true}
                     exact='true'
                     offset={-80}>
               <HomeIcon><FaHome style={{ color: 'black' }}/></HomeIcon>
@@ -63,9 +61,7 @@ const ProfileNavbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to='/'
-                  smooth={true}
                   duration={500}
-                  spy={true}
                   exact='true'
                   offset={-80}
                 >
@@ -75,7 +71,7 @@ const ProfileNavbar = ({ toggle }) => {
               
             </NavMenu>
             <NavBtn>
-              <NavBtnLink onClick={() => setisTransactionsModalOpen(true)}>Transaction</NavBtnLink>
+              <NavBtnLink to="#" onClick={() => setisTransactionsModalOpen(true)}>Transaction</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

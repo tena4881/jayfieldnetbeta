@@ -37,7 +37,7 @@ export default function AddPoolModal({open, onClose}) {
         <form >
           <Input type="text" />
         </form>
-          <StakeBtn>Add to Pool </StakeBtn>
+          <StakeBtn to='#'>Add to Pool </StakeBtn>
           
         </ModalCard>
         

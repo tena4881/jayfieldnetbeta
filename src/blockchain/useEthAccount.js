@@ -19,7 +19,7 @@ export default function useEthAccount() {
 
   const fetchAccount = useCallback(async () => {
     const address = await signer.getAddress();
-    console.log(address);
+    
 
     const value = ethers.utils.getAddress(address);
     // Optimization: check that user balance has actually changed before

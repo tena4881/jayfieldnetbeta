@@ -19,7 +19,6 @@ export default function useEthBalance() {
 
   const fetchBalance = useCallback(async () => {
     const address = await signer.getAddress();
-    console.log(address);
 
     const rawBalance = await provider.getBalance(address);
     

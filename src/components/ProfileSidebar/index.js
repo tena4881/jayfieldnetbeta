@@ -33,7 +33,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
           
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
+          <SidebarRoute to='#' onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
