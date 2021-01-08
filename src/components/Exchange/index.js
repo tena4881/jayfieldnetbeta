@@ -10,6 +10,7 @@ import {
   ExchangeH3,
   SubtitleP,
   ExchangeP,
+  UnStakeBtn,
   BurnBtn,
   ExchangeH22,
   StakeBtn,
@@ -28,29 +29,48 @@ const Exchange = () => {
       
       <ExchangeWrapper>
       <ExchangeCard>
-        <ExchangeH2>Ξ{balance}</ExchangeH2>
+        <ExchangeH2>0 JFLD</ExchangeH2>
         
-        <ExchangeH3>In Your Wallet</ExchangeH3>
+        <ExchangeH3>in Your Wallet</ExchangeH3>
 
-          <StakeBtn>Deposit to Pool</StakeBtn>
+        <StakeBtn>Buy JFLD</StakeBtn>
+        
+      </ExchangeCard>
+      <ExchangeCard>
+      <ExchangeH3>You have</ExchangeH3>
+        <ExchangeH2>Ξ0</ExchangeH2>
+        
+        <ExchangeH3>in the pool</ExchangeH3>
+
+          <StakeBtn>Add to Pool</StakeBtn>
+          <UnStakeBtn>Remove from Pool</UnStakeBtn>
           <ExchangeP>
             and earn JFLD Coins!
           </ExchangeP>
         </ExchangeCard>
       <ExchangeCard>
-        <ExchangeH2>000 JFLD</ExchangeH2>
+        <ExchangeH2>0 JFLD</ExchangeH2>
+        <ExchangeH3>earned</ExchangeH3>
         <ExchangeP>
             (Rewards for staking)
           </ExchangeP>
-        
-        <ExchangeH3>In Your Wallet</ExchangeH3>
-
         <BurnBtn>Settel Coins</BurnBtn>
           <ExchangeP>
             What is setteling?
           </ExchangeP>
         </ExchangeCard>
         
+        <ExchangeCard>
+        <ExchangeH2>Ξ{balance}</ExchangeH2>
+        
+        <ExchangeH3>in Your Wallet</ExchangeH3>
+
+        <StakeBtn>Buy More Ethereum</StakeBtn>
+          
+          <ExchangeP>
+            Provided by MoonPay
+          </ExchangeP>
+        </ExchangeCard>
         
         
       </ExchangeWrapper>

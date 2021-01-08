@@ -2,22 +2,22 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
 export const ExchangeContainer = styled.div`
-  height: 800px;
+  height: auto;
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #f7f7f7;
-  margin-bottom: 250px;
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
-    height: 1100px;
+    height: auto;
   }
  
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
+    height: auto;
   }
   
 `;
@@ -76,7 +76,7 @@ export const ExchangeH1 = styled.h1`
   font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 15vh;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -84,7 +84,6 @@ export const ExchangeH1 = styled.h1`
 
 export const ExchangeH2 = styled.h2`
   font-size: 2rem;
-  margin-bottom: 10px;
 `;
 export const ExchangeH22 = styled.h2`
   font-size: 1.5rem;
@@ -97,13 +96,12 @@ export const ExchangeH22 = styled.h2`
 export const ExchangeH3 = styled.h3`
   font-size: 1.5rem;
   font-weight: normal;
-  margin-top: 1rem;
+  margin-top: .5rem;
   margin-bottom: 1rem;
 `;
 
 export const ExchangeP = styled.p`
   font-size: .7rem;
-  margin-top: .1rem;
   text-align: center;
  
 `;
@@ -118,12 +116,13 @@ export const SubtitleP = styled.p`
 
 export const BurnBtn = styled(LinkR)`
   border-radius: 50px;
-  background: #CC0000;
+  background: #d9d9d9;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #fff;
+  color: #000;
   font-size: 19px;
-  margin-top: .5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
   outline: none;
   
   border: none;
@@ -133,7 +132,7 @@ export const BurnBtn = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #000;
+    background: #CC0000;
     color: #fff;
   }
 `;
@@ -157,6 +156,28 @@ export const StakeBtn = styled(LinkR)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: green;
+    color: #fff;
+  }
+`;
+export const UnStakeBtn = styled(LinkR)`
+  border-radius: 50px;
+  background: #d9d9d9;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #000;
+  font-size: 19px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  outline: none;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: red;
     color: #fff;
   }
 `;

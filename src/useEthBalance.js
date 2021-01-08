@@ -1,14 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import Fortmatic from 'fortmatic';
 import { ethers } from 'ethers';
 
-// Replace `YOUR_API_KEY` with API key you get from Fortmatic dashboard
-const fm = new Fortmatic('YOUR_API_KEY', 'rinkeby');
+
+
 
 // Ethers.js provides functionality to query data from ethereum blockchain.
 // We can use `Web3Provider` class to construct a wrapper for
 // web3-compatible provider which we receive from Fortmatic.
-const provider = new ethers.providers.Web3Provider(window.ethereum);
+let provider;
+window.ethereum.enable();
+provider = new ethers.providers.Web3Provider(window.ethereum);
+
 // Signer represents ethereum wallet in ethers.js. You cannot just send
 // transactions with only provider, you will need signer (wallet) for this.
 // In our demo we use signer to query user ethereum address.
