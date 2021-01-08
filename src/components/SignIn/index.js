@@ -21,11 +21,11 @@ const SignIn = () => {
   return (
     <>
     <Container>
+    
     <ProfileSidebar isOpen={isOpen} toggle={toggle} />
     <ProfileNavbar toggle={toggle} />
     
       <Exchange/>
-      
     <Footer />
 
       </Container>

@@ -17,18 +17,36 @@ import {
   ConnectBtn
 } from './ExchangeElements';
 import useEthBalance from '../../useEthBalance';
-import { StakeModal } from '../Modal/StakeModal';
+import BuyModal from '../Modal/BuyModal'
+import AddPoolModal from '../Modal/AddPoolModal'
+import RemovePoolModal from '../Modal/RemovePoolModal'
+
 
 const Exchange = () => {
   const balance = useEthBalance();
 
-  const [show, setShow] = useState(false);
+  const [isBuyOpen,setIsBuyOpen] = useState(false);
+  const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
+  const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
+  const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
 
-  const closeModalHandler = () => setShow(false);
+  
 
   return (
+    
     <ExchangeContainer id='Exchange'>
+      <div id='modalPortal'></div>
       
+      <BuyModal open={isBuyOpen} onClose={() => setIsBuyOpen(false)}>
+            Modal
+          </BuyModal>
+          <AddPoolModal open={isEditPoolOpen} onClose={() => setisEditPoolOpen(false)}>
+            Modal
+          </AddPoolModal>
+          <RemovePoolModal open={isRemovePoolOpen} onClose={() => setisRemovePoolOpen(false)}>
+            Modal
+          </RemovePoolModal>
+          
       <ExchangeH1>Welcome back!</ExchangeH1>
       
       <ExchangeWrapper>
@@ -37,7 +55,7 @@ const Exchange = () => {
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
         
-        <StakeBtn>Buy JFLD</StakeBtn>
+        <StakeBtn onClick={() => setIsBuyOpen(true)}>Buy JFLD</StakeBtn>
         
       </ExchangeCard>
       <ExchangeCard>
@@ -46,11 +64,14 @@ const Exchange = () => {
         
         <ExchangeH3>in the pool</ExchangeH3>
 
-          <StakeBtn>Add to Pool</StakeBtn>
-          <UnStakeBtn>Remove from Pool</UnStakeBtn>
+          <StakeBtn onClick={() => setisEditPoolOpen(true)} >Add to Pool</StakeBtn>
           <ExchangeP>
             and earn JFLD Coins!
           </ExchangeP>
+          
+          
+          <UnStakeBtn onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
+          
         </ExchangeCard>
       <ExchangeCard>
         <ExchangeH2>0 JFLD</ExchangeH2>

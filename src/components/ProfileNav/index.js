@@ -14,10 +14,10 @@ import {
   NavBtnLink
 } from './PNavbarElements';
 import '../../App.css';
-
+import TransactionsModal from '../Modal/TransactionsModal'
 const ProfileNavbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-
+  const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -33,17 +33,20 @@ const ProfileNavbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-
+  
   
 
   return (
     <>
+     <TransactionsModal open={isTransactionsModalOpen} onClose={() => setisTransactionsModalOpen(false)}>
+            Modal
+          </TransactionsModal>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             
             <NavLogo onClick={toggleHome} to='/'>
-            <NavBtnLink to='/'> Return Home</NavBtnLink>
+            <NavBtnLink to='/'> Home</NavBtnLink>
             </NavLogo>
             
             <MobileIcon onClick={toggle}>
@@ -65,7 +68,7 @@ const ProfileNavbar = ({ toggle }) => {
               
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='profile'>Transaction</NavBtnLink>
+              <NavBtnLink onClick={() => setisTransactionsModalOpen(true)}>Transaction</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

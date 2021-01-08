@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   SidebarContainer,
   Icon,
@@ -9,20 +9,28 @@ import {
   SidebarRoute,
   SideBtnWrap
 } from './ProfileSidebarElements';
-import Home from '../../pages/index'
+import TransactionsModal from '../Modal/TransactionsModal'
+
+
 const ProfileSidebar = ({ isOpen, toggle }) => {
+  const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
+  
   return (
+    
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <TransactionsModal open={isTransactionsModalOpen} onClose={() => setisTransactionsModalOpen(false)}>
+            Modal
+          </TransactionsModal>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-        <SidebarLink to='/'>Return Home</SidebarLink>
+        <SidebarLink to='/'>Home</SidebarLink>
           
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='/profile'>Transactions</SidebarRoute>
+          <SidebarRoute onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
