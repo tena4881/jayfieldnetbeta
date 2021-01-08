@@ -1,15 +1,11 @@
 import { ethers } from "ethers";
 
 let provider;
+window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
+if (!this.provider.connected){
 
+}
+const signer = provider.getSigner();
 
-
-
-
-if (window.web3) {
-    window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
-    window.ethereum.enable();
-    const signer = provider.getSigner();
-  }
 
 export default provider;
