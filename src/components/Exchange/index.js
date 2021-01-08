@@ -25,34 +25,32 @@ const Exchange = () => {
     <ExchangeContainer id='Exchange'>
       
       <ExchangeH1>Welcome back!</ExchangeH1>
-      <ExchangeH2>You have:</ExchangeH2>
-      <ExchangeH22>000 JFLD</ExchangeH22>
-      <br></br>
+      
       <ExchangeWrapper>
       <ExchangeCard>
-        <ExchangeH2>ETH Balance:</ExchangeH2>
-        <ExchangeP>
-            (Your Wallet)
-          </ExchangeP>
-        <ExchangeH3>Ξ{balance}</ExchangeH3>
+        <ExchangeH2>Ξ{balance}</ExchangeH2>
+        
+        <ExchangeH3>In Your Wallet</ExchangeH3>
 
           <StakeBtn>Deposit Ethereum</StakeBtn>
           <ExchangeP>
             and earn JFLD Coins!
           </ExchangeP>
         </ExchangeCard>
-        <ExchangeCard>
-        <ExchangeH2>JFLD Balance:</ExchangeH2>
+      <ExchangeCard>
+        <ExchangeH2>000 JFLD</ExchangeH2>
         <ExchangeP>
             (Rewards for staking)
           </ExchangeP>
-        <ExchangeH22>0000 JFLD</ExchangeH22>
+        
+        <ExchangeH3>In Your Wallet</ExchangeH3>
 
-          <BurnBtn>Settel Coins</BurnBtn>
+        <BurnBtn>Settel Coins</BurnBtn>
           <ExchangeP>
             What is setteling?
           </ExchangeP>
         </ExchangeCard>
+        
         
         
       </ExchangeWrapper>

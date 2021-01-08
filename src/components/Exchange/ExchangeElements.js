@@ -8,7 +8,7 @@ export const ExchangeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ##f7f7f7;
+  background: #f7f7f7;
   margin-bottom: 250px;
 
   @media screen and (max-width: 768px) {
@@ -24,7 +24,7 @@ export const ExchangeContainer = styled.div`
 
 export const ExchangeWrapper = styled.div`
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -73,11 +73,10 @@ export const ExchangeIcon = styled.img`
 `;
 
 export const ExchangeH1 = styled.h1`
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
   margin-top: 20px;
-
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -123,8 +122,8 @@ export const BurnBtn = styled(LinkR)`
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;
-  font-size: 16px;
-  margin-top: 2rem;
+  font-size: 19px;
+  margin-top: .5rem;
   outline: none;
   
   border: none;
@@ -141,12 +140,13 @@ export const BurnBtn = styled(LinkR)`
 
 export const StakeBtn = styled(LinkR)`
   border-radius: 50px;
-  background: #ffc800;
+  background: #d9d9d9;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #fff;
-  font-size: 16px;
-  margin-top: 2rem;
+  color: #000;
+  font-size: 19px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
   outline: none;
   
   border: none;
@@ -156,7 +156,7 @@ export const StakeBtn = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #000;
+    background: green;
     color: #fff;
   }
 `;
