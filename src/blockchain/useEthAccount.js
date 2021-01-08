@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ethers } from 'ethers';
+import Fortmatic from 'fortmatic';
 
+const fm = new Fortmatic('pk_live_1DE09C9877C0D25A');
 let provider;
-window.ethereum.enable();
-provider = new ethers.providers.Web3Provider(window.ethereum);
+provider = new ethers.providers.Web3Provider(fm.getProvider());
 
 // Signer represents ethereum wallet in ethers.js. You cannot jussigt send
 // transactions with only provider, you will need signer (wallet) for this.
