@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import {ModalCard,Input,ModalH3, StakeBtn, ModalH2} from './ModalElements';
-
+import ProfileIcon from '../ProfileIcon/ProfileIcon'
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
@@ -31,6 +31,7 @@ export default function Modal({open, onClose}) {
       <div onClick={onClose} style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <ModalCard>
+        <ProfileIcon></ProfileIcon>
         <ModalH2>Transactions</ModalH2>
         .<br></br>
         .<br></br>

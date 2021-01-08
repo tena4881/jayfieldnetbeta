@@ -10,7 +10,7 @@ import {
   SideBtnWrap
 } from './ProfileSidebarElements';
 import TransactionsModal from '../Modal/TransactionsModal'
-
+import ProfileIcon from '../ProfileIcon/ProfileIcon'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
@@ -26,6 +26,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
+        <ProfileIcon></ProfileIcon>
         <SidebarLink to='/'>Home</SidebarLink>
           
         </SidebarMenu>

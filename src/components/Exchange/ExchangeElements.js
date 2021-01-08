@@ -76,7 +76,7 @@ export const ExchangeH1 = styled.h1`
   font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
-  margin-top: 15vh;
+  margin-top: 20vh;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }

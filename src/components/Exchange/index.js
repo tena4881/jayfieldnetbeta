@@ -16,19 +16,20 @@ import {
   StakeBtn,
   ConnectBtn
 } from './ExchangeElements';
-import useEthBalance from '../../useEthBalance';
+import useEthBalance from '../../blockchain/useEthBalance';
 import BuyModal from '../Modal/BuyModal'
 import AddPoolModal from '../Modal/AddPoolModal'
 import RemovePoolModal from '../Modal/RemovePoolModal'
+import ProfileIcon from '../ProfileIcon/ProfileIcon';
+import useEthAccount from '../../blockchain/useEthAccount';
 
 
 const Exchange = () => {
   const balance = useEthBalance();
-
+  const account = useEthAccount();
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
-  const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
 
   
 
@@ -48,6 +49,8 @@ const Exchange = () => {
           </RemovePoolModal>
           
       <ExchangeH1>Welcome back!</ExchangeH1>
+      <ProfileIcon account={account}></ProfileIcon>
+      <div>{account}</div>
       
       <ExchangeWrapper>
       <ExchangeCard>
