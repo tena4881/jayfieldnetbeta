@@ -11,43 +11,52 @@ import {
   SubtitleP,
   ExchangeP,
   BurnBtn,
-  StakeBtn
+  ExchangeH22,
+  StakeBtn,
+  ConnectBtn
 } from './ExchangeElements';
+import useEthBalance from '../../useEthBalance';
 
 const Exchange = () => {
+  const balance = useEthBalance();
+
+
   return (
     <ExchangeContainer id='Exchange'>
-      <ExchangeH1>Your Wallet</ExchangeH1>
-      <ExchangeH3>Earn JFLD by DAI</ExchangeH3>
-      <SubtitleP>
-            (Deposit DAI and earn JFLD)
-          </SubtitleP>
+      
+      <ExchangeH1>Welcome back!</ExchangeH1>
+      <ExchangeH2>You have:</ExchangeH2>
+      <ExchangeH22>000 JFLD</ExchangeH22>
+      <br></br>
       <ExchangeWrapper>
+      <ExchangeCard>
+        <ExchangeH2>ETH Balance:</ExchangeH2>
+        <ExchangeP>
+            (Your Wallet)
+          </ExchangeP>
+        <ExchangeH3>Ξ{balance}</ExchangeH3>
+
+          <StakeBtn>Deposit Ethereum</StakeBtn>
+          <ExchangeP>
+            and earn JFLD Coins!
+          </ExchangeP>
+        </ExchangeCard>
         <ExchangeCard>
         <ExchangeH2>JFLD Balance:</ExchangeH2>
         <ExchangeP>
             (Rewards for staking)
           </ExchangeP>
-        <ExchangeH3>4125 JFLD</ExchangeH3>
+        <ExchangeH22>0000 JFLD</ExchangeH22>
 
           <BurnBtn>Settel Coins</BurnBtn>
           <ExchangeP>
             What is setteling?
           </ExchangeP>
         </ExchangeCard>
-        <ExchangeCard>
-        <ExchangeH2>DAI Balance:</ExchangeH2>
-        <ExchangeP>
-            (Currently staking)
-          </ExchangeP>
-        <ExchangeH3>4125 DAI</ExchangeH3>
-
-          <StakeBtn>Deposit DAI</StakeBtn>
-          <ExchangeP>
-            and earn JFLD Coins!
-          </ExchangeP>
-        </ExchangeCard>
+        
+        
       </ExchangeWrapper>
+      
     </ExchangeContainer>
   );
 };

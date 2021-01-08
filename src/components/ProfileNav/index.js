@@ -13,6 +13,7 @@ import {
   NavBtn,
   NavBtnLink
 } from './PNavbarElements';
+import '../../App.css';
 
 const ProfileNavbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -42,10 +43,11 @@ const ProfileNavbar = ({ toggle }) => {
           <NavbarContainer>
             
             <NavLogo onClick={toggleHome} to='/'>
-              JayField/net
+            <NavBtnLink to='/'> Return Home</NavBtnLink>
             </NavLogo>
+            
             <MobileIcon onClick={toggle}>
-              <FaBars />
+              <FaBars style={{ color: 'black' }}/>
             </MobileIcon>
             <NavMenu>
               <NavItem>

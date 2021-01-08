@@ -11,10 +11,14 @@ import Footer from '../Footer';
 
 const SignIn = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  
+  
   
   return (
     <>
@@ -22,6 +26,7 @@ const SignIn = () => {
     <ProfileSidebar isOpen={isOpen} toggle={toggle} />
     <ProfileNavbar toggle={toggle} />
       <Exchange/>
+      
     <Footer />
 
       </Container>

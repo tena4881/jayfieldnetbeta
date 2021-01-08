@@ -87,6 +87,13 @@ export const ExchangeH2 = styled.h2`
   font-size: 2rem;
   margin-bottom: 10px;
 `;
+export const ExchangeH22 = styled.h2`
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: green;
+`;
 
 export const ExchangeH3 = styled.h3`
   font-size: 1.5rem;
@@ -134,12 +141,33 @@ export const BurnBtn = styled(LinkR)`
 
 export const StakeBtn = styled(LinkR)`
   border-radius: 50px;
-  background: #00b300;
+  background: #ffc800;
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;
   font-size: 16px;
   margin-top: 2rem;
+  outline: none;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #000;
+    color: #fff;
+  }
+`;
+export const ConnectBtn = styled(LinkR)`
+  border-radius: 50px;
+  background: #136207;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 6rem;
   outline: none;
   
   border: none;
