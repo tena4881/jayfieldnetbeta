@@ -99,6 +99,16 @@ export const ExchangeH3 = styled.h3`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+export const AccountNum = styled.h3`
+  font-size: .9rem;
+  font-weight: normal;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 375px) {
+    font-size: .6;
+  }
+`;
 
 export const ExchangeP = styled.p`
   font-size: .7rem;

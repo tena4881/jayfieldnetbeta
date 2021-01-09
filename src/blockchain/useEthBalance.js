@@ -35,10 +35,12 @@ export default function useEthBalance() {
   }, []);
 
   useEffect(() => {
+    
     fetchBalance();
   }, [fetchBalance]);
 
   
 
+  
   return balance;
 }

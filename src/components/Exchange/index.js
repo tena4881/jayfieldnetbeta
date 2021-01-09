@@ -10,6 +10,7 @@ import {
   ExchangeH3,
   SubtitleP,
   ExchangeP,
+  AccountNum,
   UnStakeBtn,
   BurnBtn,
   ExchangeH22,
@@ -27,6 +28,7 @@ import useEthAccount from '../../blockchain/useEthAccount';
 const Exchange = () => {
   const balance = useEthBalance();
   const account = useEthAccount();
+  
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
@@ -50,7 +52,7 @@ const Exchange = () => {
           
       <ExchangeH1>Welcome back,</ExchangeH1>
       <ProfileIcon account={account}></ProfileIcon>
-      <div>{account}</div>
+      <AccountNum>{account}</AccountNum>
       
       <ExchangeWrapper>
       <ExchangeCard>
@@ -63,7 +65,7 @@ const Exchange = () => {
       </ExchangeCard>
       <ExchangeCard>
       <ExchangeH3>You have</ExchangeH3>
-        <ExchangeH2>Ξ0</ExchangeH2>
+        <ExchangeH2>Ξ{balance}</ExchangeH2>
         
         <ExchangeH3>in the pool</ExchangeH3>
 

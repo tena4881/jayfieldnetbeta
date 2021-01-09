@@ -6,6 +6,7 @@ const fm = new Fortmatic('pk_live_1DE09C9877C0D25A');
 let provider;
 provider = new ethers.providers.Web3Provider(fm.getProvider());
 
+
 // Signer represents ethereum wallet in ethers.js. You cannot jussigt send
 // transactions with only provider, you will need signer (wallet) for this.
 // In our demo we use signer to query user ethereum address.
