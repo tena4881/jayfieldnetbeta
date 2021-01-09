@@ -25,7 +25,6 @@ const SignIn = () => {
     <ProfileNavbar toggle={toggle} />
     
       <Exchange/>
-    <Footer />
 
       </Container>
     </>
