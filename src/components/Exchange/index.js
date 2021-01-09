@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 
 import {
   ExchangeContainer,
@@ -17,28 +17,26 @@ import {
   StakeBtn,
   ConnectBtn
 } from './ExchangeElements';
-import useEthBalance from '../../blockchain/useEthBalance';
 import BuyModal from '../Modal/BuyModal'
 import AddPoolModal from '../Modal/AddPoolModal'
 import RemovePoolModal from '../Modal/RemovePoolModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
-import useEthAccount from '../../blockchain/useEthAccount';
-
+import { HandleLogout } from "../../blockchain/services";
+import {AppContext} from '../AppContext'
 
 const Exchange = () => {
-  const balance = useEthBalance();
-  const account = useEthAccount();
   
+  
+
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
-
+ 
+return (
   
-
-  return (
-    
     <ExchangeContainer id='Exchange'>
       <div id='modalPortal'></div>
+      
       
       <BuyModal open={isBuyOpen} onClose={() => setIsBuyOpen(false)}>
             Modal
@@ -50,9 +48,10 @@ const Exchange = () => {
             Modal
           </RemovePoolModal>
           
-      <ExchangeH1>Welcome back,</ExchangeH1>
-      <ProfileIcon account={account}></ProfileIcon>
-      <AccountNum>{account}</AccountNum>
+      <ExchangeH1>Hello!</ExchangeH1>
+      <br></br>
+      <ProfileIcon account={0}></ProfileIcon>
+      <AccountNum>{0}</AccountNum>
       
       <ExchangeWrapper>
       <ExchangeCard>
@@ -60,12 +59,12 @@ const Exchange = () => {
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
         
-        <StakeBtn to="#" onClick={() => setIsBuyOpen(true)}>Buy JFLD</StakeBtn>
+        <StakeBtn to="#" onClick={() => setIsBuyOpen(true)} id="clear">Buy JFLD</StakeBtn>
         
       </ExchangeCard>
       <ExchangeCard>
       <ExchangeH3>You have</ExchangeH3>
-        <ExchangeH2>Ξ{balance}</ExchangeH2>
+        <ExchangeH2>Ξ{0}</ExchangeH2>
         
         <ExchangeH3>in the pool</ExchangeH3>
 
@@ -91,7 +90,7 @@ const Exchange = () => {
         </ExchangeCard>
         
         <ExchangeCard>
-        <ExchangeH2>Ξ{balance}</ExchangeH2>
+        <ExchangeH2>Ξ{0}</ExchangeH2>
         
         <ExchangeH3>in Your Wallet</ExchangeH3>
 
@@ -107,6 +106,8 @@ const Exchange = () => {
       
     </ExchangeContainer>
   );
+  
+  
 };
 
 export default Exchange;

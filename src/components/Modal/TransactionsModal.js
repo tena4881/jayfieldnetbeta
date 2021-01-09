@@ -28,7 +28,7 @@ const OVERLAY_STYLES = {
 
 
 export default function Modal({open, onClose}) {
-  const account = useEthAccount();
+  //const account = useEthAccount();
   if (!open) return null
 
   return ReactDom.createPortal(
@@ -36,7 +36,7 @@ export default function Modal({open, onClose}) {
       <div onClick={onClose} style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <ModalCard>
-        <ProfileIcon account={account}></ProfileIcon>
+        <ProfileIcon account={"000"}></ProfileIcon>
         <ModalH2>Transactions</ModalH2>
         .<br></br>
         .<br></br>

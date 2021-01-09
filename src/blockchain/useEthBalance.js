@@ -1,15 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ethers } from 'ethers';
-import Fortmatic from 'fortmatic';
-
-const fm = new Fortmatic('pk_live_1DE09C9877C0D25A');
-let provider;
-provider = new ethers.providers.Web3Provider(fm.getProvider());
-
-// Signer represents ethereum wallet in ethers.js. You cannot just send
-// transactions with only provider, you will need signer (wallet) for this.
-// In our demo we use signer to query user ethereum address.
-const signer = provider.getSigner();
+import provider from './services';
+let web3;
+let fm = new Fortmatic('pk_live_1DE09C9877C0D25A');
+web3 = new Web3(fm.getProvider());
 
 
 export default function useEthBalance() {

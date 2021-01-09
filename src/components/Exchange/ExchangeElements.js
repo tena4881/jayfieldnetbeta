@@ -42,6 +42,26 @@ export const ExchangeWrapper = styled.div`
   }
 `;
 
+export const ConnectWrapper = styled.div`
+  max-width: 1000px;
+  margin: 30vh auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+  justify-items: center;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 375px) {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+`;
+
 export const ExchangeCard = styled.div`
   background: #fff;
   display: flex;
@@ -76,7 +96,7 @@ export const ExchangeH1 = styled.h1`
   font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
-  margin-top: 20vh;
+  margin-top: 15vh;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -198,7 +218,7 @@ export const ConnectBtn = styled(LinkR)`
   padding: 10px 22px;
   color: #fff;
   font-size: 18px;
-  margin-top: 6rem;
+  margin-top: 10px;
   outline: none;
   
   border: none;

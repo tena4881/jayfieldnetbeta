@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import {
   SidebarContainer,
   Icon,
@@ -7,15 +7,25 @@ import {
   SidebarMenu,
   SidebarLink,
   SidebarRoute,
-  SideBtnWrap
+  SideBtnWrap,
+  LogoutBtn
 } from './ProfileSidebarElements';
 import TransactionsModal from '../Modal/TransactionsModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
-import useEthAccount from '../../blockchain/useEthAccount'
+//import useEthAccount from '../../blockchain/useEthAccount'
+import {AppContext} from '../AppContext'
+import {HandleLogout} from '../../blockchain/services'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
+  
+  const [isLoggedIn, setisLoggedIn] = useContext(AppContext);
+  const toggleLogout = () => {
+      HandleLogout();
+      setisLoggedIn(false);
+        
+      }
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
-  const account = useEthAccount();
+  //const account = useEthAccount();
   
   return (
     
@@ -28,12 +38,12 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-        <ProfileIcon account={account}></ProfileIcon>
-        <SidebarLink to='/profile'>Menu Item TBD</SidebarLink>
-          
+        <ProfileIcon account={"000"}></ProfileIcon>
+        <SidebarRoute to='#' onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='#' onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
+          
+          <LogoutBtn to='#' onClick={() => setisTransactionsModalOpen(true)}>Logout</LogoutBtn>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

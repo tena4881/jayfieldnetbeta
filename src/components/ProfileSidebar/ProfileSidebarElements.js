@@ -53,14 +53,33 @@ export const SidebarMenu = styled.ul`
 
 export const SideBtnWrap = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 
 export const SidebarRoute = styled(LinkR)`
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+text-decoration: none;
+list-style: none;
+transition: 0.2s ease-in-out;
+text-decoration: none;
+color: #fff;
+cursor: pointer;
+
+&:hover {
+  color: #ffc800;
+  transition: 0.2s ease-in-out;
+}
+`;
+export const LogoutBtn = styled(LinkR)`
   border-radius: 50px;
   background: #ffc800;
   white-space: nowrap;
   padding: 16px 64px;
+  margin-top: 5px;
   color: #010606;
   font-size: 16px;
   outline: none;
@@ -74,21 +93,4 @@ export const SidebarRoute = styled(LinkR)`
     background: #fff;
     color: #010606;
   }
-`;
-export const SidebarLink = styled(LinkR)`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    list-style: none;
-    transition: 0.2s ease-in-out;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-
-    &:hover {
-      color: #ffc800;
-      transition: 0.2s ease-in-out;
-    }
 `;
