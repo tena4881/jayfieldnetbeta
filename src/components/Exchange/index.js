@@ -52,9 +52,9 @@ return (
       <ProfileIcon account={wallet.account}></ProfileIcon>
       <AccountNum>{wallet.account}</AccountNum>
       </ProfileCard>
-
+      <ExchangeH1>Wallet Overview</ExchangeH1>
       <ExchangeWrapper>
-        <ExchangeH1>Wallet Overview</ExchangeH1>
+        
       <ExchangeCard>
         <ExchangeH2>0 JFLD</ExchangeH2>
         <br></br>
