@@ -119,9 +119,28 @@ export const NavBtnLink = styled(LinkR)`
     color: #ffc800;
   }
 `;
+export const LogoutBtnLink = styled(LinkR)`
+  border-radius: 50px;
+  background: #ebebeb;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: red;
+    color: #fff;
+  }
+`;
 export const HomeBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #f5f5f5;
+  background: transparent;
   white-space: nowrap;
   color: #010606;
   width: 3rem;
@@ -136,8 +155,8 @@ export const HomeBtnLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #ffc800;
+    background: #ffc800;
+    color: #fff;
   }
 `;
 

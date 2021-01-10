@@ -22,7 +22,7 @@ import BuyModal from '../Modal/BuyModal'
 import AddPoolModal from '../Modal/AddPoolModal'
 import RemovePoolModal from '../Modal/RemovePoolModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
-import { HandleLogout } from "../../blockchain/services";
+
 import {AppContext} from '../AppContext'
 
 const Exchange = () => {
@@ -31,6 +31,7 @@ const Exchange = () => {
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
   const wallet = useContext(AppContext);
+
  
 return (
   
@@ -65,7 +66,7 @@ return (
         
       </ExchangeCard>
       <ExchangeCard>
-        <ExchangeH2>Ξ{120.2}</ExchangeH2>
+        <ExchangeH2>Ξ{wallet.ethBalance}</ExchangeH2>
         <br></br>
         <br></br>
         <br></br>

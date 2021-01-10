@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FaEllipsisV } from 'react-icons/fa';
+import { FaChevronCircleDown} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import {
@@ -44,7 +44,7 @@ const Navbar = ({ toggle }) => {
               JayField/net
             </NavLogo>
             <MobileIcon onClick={toggle}>
-              <FaEllipsisV />
+              <FaChevronCircleDown />
             </MobileIcon>
             <NavMenu>
               <NavItem>

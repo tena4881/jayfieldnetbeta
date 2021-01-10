@@ -13,7 +13,7 @@ import {
   WalletSigninContainer
 } from '../Exchange/ExchangeElements';
 
-import { HandleLogin } from "../../blockchain/services";
+import { HandleLogin, GetEthBalance } from "../../blockchain/services";
 
 
 
@@ -25,10 +25,15 @@ const ConnectWallet = () => {
       HandleLogin().then(result => {
         if(result > 0){
           wallet.setisLoggedIn(!wallet.isLoggedIn)
-          console.log(result[0])
           wallet.setAccount(result[0])
+          GetEthBalance().then(result2 => {
+            if(result2){
+              wallet.setEthBalance(result2)
+            }
+          })
         }
       })
+      console.log(wallet.ethBalance)
   }
 
 

@@ -7,12 +7,15 @@ export const AppContext = createContext();
 export const AppContextProvider = props => {
     const [isLoggedIn,setisLoggedIn] = useState(false);
     const [account,setAccount] = useState('0x');
+    const [ethBalance,setEthBalance] = useState(10);
 
   return (
     <AppContext.Provider value={{isLoggedIn,
                                   setisLoggedIn, 
                                   account,
-                                  setAccount}}>
+                                  setAccount,
+                                  ethBalance,
+                                  setEthBalance}}>
       {props.children}
     </AppContext.Provider>
   );

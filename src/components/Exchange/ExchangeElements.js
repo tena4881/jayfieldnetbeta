@@ -8,7 +8,7 @@ export const ExchangeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, rgba(222, 222, 222,1) 0%, rgba(237, 237, 237 ,1) 77%);
+  background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
@@ -105,24 +105,20 @@ export const ExchangeCard = styled.div`
   }
 `;
 export const ProfileCard = styled.div`
-  background: #f5f5f5;
+  background: #f7f7f7;
   display: flex;
   min-height: 100%;
   min-width:  100%;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
   max-height: auto;
-  padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+  padding: 25px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
-
- 
-
-  &:hover {
-    
-  }
+  
 `;
 
 export const ExchangeIcon = styled.img`

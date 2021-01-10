@@ -17,6 +17,7 @@
     "fortmatic": "^2.2.1",
     "framer-motion": "^3.1.4",
     "fs": "^0.0.1-security",
+    "magic-sdk": "^4.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",

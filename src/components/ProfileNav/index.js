@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { FaEllipsisV, FaHome } from 'react-icons/fa';
+import React, { useState, useEffect, useContext } from 'react';
+import { FaChevronCircleDown, FaHome } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import {
@@ -12,16 +12,19 @@ import {
   HomeContainer,
   HomeIcon,
   NavMenu,
+  LogoutBtnLink,
   NavBtn,
   NavBtnLink
 } from './PNavbarElements';
 import '../../App.css';
 import TransactionsModal from '../Modal/TransactionsModal'
+import { AppContext } from '../AppContext';
 
 const ProfileNavbar = ({ toggle }) => {
   
   const [scrollNav, setScrollNav] = useState(false);
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
+  const wallet = useContext(AppContext)
   
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -58,7 +61,7 @@ const ProfileNavbar = ({ toggle }) => {
               </HomeBtnLink>
             </HomeContainer>
             <MobileIcon onClick={toggle}>
-              <FaEllipsisV style={{ color: 'black' }}/>
+              <FaChevronCircleDown style={{ color: 'black' }}/>
             </MobileIcon>
             <NavMenu>
               <NavItem>
@@ -74,7 +77,7 @@ const ProfileNavbar = ({ toggle }) => {
               
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="#" onClick={() => setisTransactionsModalOpen(true)}>Transaction</NavBtnLink>
+              <LogoutBtnLink to="#" onClick={() => setisTransactionsModalOpen(true)}>Log out</LogoutBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
