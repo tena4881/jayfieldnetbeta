@@ -1,5 +1,5 @@
 
-import {AppContext, AppContextProvider} from '../AppContext'
+import {AppContext} from '../AppContext'
 import React, { useState, useContext } from 'react';
 import ProfileNavbar from '../ProfileNav';
 import ProfileSidebar from '../ProfileSidebar';
@@ -10,12 +10,14 @@ import ConnectWallet from '../WalletConn';
 const SignIn = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn] = useContext(AppContext);
+  const wallet = useContext(AppContext)
+  //const [isLoggedIn, setisLoggedIn] = useContext(AppContext);
   const toggle = () => {
     setIsOpen(!isOpen);
+    
   };
 
-  if(!isLoggedIn){
+  if(!wallet.isLoggedIn){
     return (
       <>
       <Container>

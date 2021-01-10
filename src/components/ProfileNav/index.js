@@ -17,9 +17,12 @@ import {
 } from './PNavbarElements';
 import '../../App.css';
 import TransactionsModal from '../Modal/TransactionsModal'
+
 const ProfileNavbar = ({ toggle }) => {
+  
   const [scrollNav, setScrollNav] = useState(false);
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
+  
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);

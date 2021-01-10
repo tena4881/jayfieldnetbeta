@@ -1,4 +1,4 @@
-import {AppContext, AppContextProvider} from '../components/AppContext'
+import { AppContextProvider} from '../components/AppContext'
 import React, {useState} from 'react';
 import ProfilePg from '../components/SignIn';
 
@@ -8,7 +8,7 @@ function Profile() {
   
   return (
     <>
-  <AppContextProvider>
+  <AppContextProvider >
     <ProfilePg />
   </AppContextProvider>
     

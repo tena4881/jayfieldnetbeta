@@ -17,11 +17,10 @@ import {AppContext} from '../AppContext'
 import {HandleLogout} from '../../blockchain/services'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
-  
-  const [isLoggedIn, setisLoggedIn] = useContext(AppContext);
+  const wallet = useContext(AppContext);
   const toggleLogout = () => {
       HandleLogout();
-      setisLoggedIn(false);
+      wallet.setisLoggedIn(false);
         
       }
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
@@ -38,12 +37,12 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-        <ProfileIcon account={"000"}></ProfileIcon>
+        <ProfileIcon account={wallet.account}></ProfileIcon>
         <SidebarRoute to='#' onClick={() => setisTransactionsModalOpen(true)}>Transactions</SidebarRoute>
         </SidebarMenu>
         <SideBtnWrap>
           
-          <LogoutBtn to='#' onClick={() => setisTransactionsModalOpen(true)}>Logout</LogoutBtn>
+          <LogoutBtn to='/' onClick={toggleLogout}>Logout</LogoutBtn>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

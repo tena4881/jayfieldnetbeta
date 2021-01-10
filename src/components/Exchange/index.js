@@ -13,6 +13,7 @@ import {
   AccountNum,
   UnStakeBtn,
   BurnBtn,
+  ProfileCard,
   ExchangeH22,
   StakeBtn,
   ConnectBtn
@@ -26,11 +27,10 @@ import {AppContext} from '../AppContext'
 
 const Exchange = () => {
   
-  
-
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
+  const wallet = useContext(AppContext);
  
 return (
   
@@ -47,21 +47,32 @@ return (
           <RemovePoolModal open={isRemovePoolOpen} onClose={() => setisRemovePoolOpen(false)}>
             Modal
           </RemovePoolModal>
-          
-      <ExchangeH1>Hello!</ExchangeH1>
-      <br></br>
-      <ProfileIcon account={0}></ProfileIcon>
-      <AccountNum>{0}</AccountNum>
-      
+          <ProfileCard>
+    
+      <ProfileIcon account={wallet.account}></ProfileIcon>
+      <AccountNum>{wallet.account}</AccountNum>
+      </ProfileCard>
+
       <ExchangeWrapper>
+        <ExchangeH1>Wallet Overview</ExchangeH1>
       <ExchangeCard>
         <ExchangeH2>0 JFLD</ExchangeH2>
-        
-        <ExchangeH3>in Your Wallet</ExchangeH3>
+        <br></br>
+        <br></br>
+        <br></br>
         
         <StakeBtn to="#" onClick={() => setIsBuyOpen(true)} id="clear">Buy JFLD</StakeBtn>
         
       </ExchangeCard>
+      <ExchangeCard>
+        <ExchangeH2>Ξ{120.2}</ExchangeH2>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <StakeBtn to="#">Buy Ethereum</StakeBtn>
+          
+        </ExchangeCard>
       <ExchangeCard>
       <ExchangeH3>You have</ExchangeH3>
         <ExchangeH2>Ξ{0}</ExchangeH2>
@@ -89,17 +100,7 @@ return (
           </ExchangeP>
         </ExchangeCard>
         
-        <ExchangeCard>
-        <ExchangeH2>Ξ{0}</ExchangeH2>
         
-        <ExchangeH3>in Your Wallet</ExchangeH3>
-
-        <StakeBtn to="#">Buy More Ethereum</StakeBtn>
-          
-          <ExchangeP>
-            Provided by MoonPay
-          </ExchangeP>
-        </ExchangeCard>
         
         
       </ExchangeWrapper>

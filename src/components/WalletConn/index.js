@@ -1,4 +1,4 @@
-import {AppContext} from '../AppContext'
+import {AppContext, AppContextProvider} from '../AppContext'
 import React,{useState,useContext} from 'react';
 
 import {
@@ -9,7 +9,8 @@ import {
   ExchangeH3,
   ExchangeH1,
   ExchangeP,
-  ConnectWrapper
+  ConnectWrapper,
+  WalletSigninContainer
 } from '../Exchange/ExchangeElements';
 
 import { HandleLogin } from "../../blockchain/services";
@@ -17,36 +18,44 @@ import { HandleLogin } from "../../blockchain/services";
 
 
 const ConnectWallet = () => {
+  const wallet = useContext(AppContext);
 
-  const [isLoggedIn, setisLoggedIn] = useContext(AppContext);
+
   const toggleLogin = () => {
       HandleLogin().then(result => {
         if(result > 0){
-          setisLoggedIn(!isLoggedIn)
+          wallet.setisLoggedIn(!wallet.isLoggedIn)
+          console.log(result[0])
+          wallet.setAccount(result[0])
         }
       })
   }
 
 
+
 return (
-    <ExchangeContainer id='Exchange'>
+    <WalletSigninContainer id='Exchange'>
       
       <div id='modalPortal'></div>
       
       
-      <ConnectWrapper>
+      <ConnectWrapper onClick={toggleLogin}>
      
-      <ExchangeCard>
+      <ExchangeCard >
         <ExchangeH3>Welcome back!</ExchangeH3>
-        <ExchangeP>(We missed you)</ExchangeP>
-          <ConnectBtn onClick={toggleLogin}>Connect Your Wallet</ConnectBtn>
+        <ExchangeP>Connect using your crypto wallet</ExchangeP>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <ConnectBtn>Connect</ConnectBtn>
         
           
     </ExchangeCard>
       
       </ConnectWrapper>
       
-    </ExchangeContainer>
+    </WalletSigninContainer>
   );
   
   

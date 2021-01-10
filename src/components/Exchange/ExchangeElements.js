@@ -8,7 +8,27 @@ export const ExchangeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f7f7f7;
+  background: radial-gradient(circle, rgba(222, 222, 222,1) 0%, rgba(237, 237, 237 ,1) 77%);
+
+  @media screen and (max-width: 768px) {
+    transition: 0.8s all ease;
+    height: auto;
+  }
+ 
+  @media screen and (max-width: 375px) {
+    transition: 0.8s all ease;
+    height: auto;
+  }
+  
+`;
+export const WalletSigninContainer = styled.div`
+  height: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(22, 30, 48,1) 0%, rgba(16, 21, 34 ,1) 77%);
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
@@ -63,9 +83,8 @@ export const ConnectWrapper = styled.div`
 `;
 
 export const ExchangeCard = styled.div`
-  background: #fff;
+  background: #f5f5f5;
   display: flex;
-  background: #fcfcfc;
   min-height: 350px;
   min-width:  350px;
   flex-direction: column;
@@ -85,6 +104,26 @@ export const ExchangeCard = styled.div`
     cursor: pointer;
   }
 `;
+export const ProfileCard = styled.div`
+  background: #f5f5f5;
+  display: flex;
+  min-height: 100%;
+  min-width:  100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  max-height: auto;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+ 
+
+  &:hover {
+    
+  }
+`;
 
 export const ExchangeIcon = styled.img`
   height: 160px;
@@ -96,7 +135,6 @@ export const ExchangeH1 = styled.h1`
   font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
-  margin-top: 15vh;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -211,9 +249,9 @@ export const UnStakeBtn = styled(LinkR)`
     color: #fff;
   }
 `;
-export const ConnectBtn = styled(LinkR)`
+export const ConnectBtn = styled.button`
   border-radius: 50px;
-  background: #136207;
+  background: #ffc800;
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;

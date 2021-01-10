@@ -121,7 +121,7 @@ export const NavBtnLink = styled(LinkR)`
 `;
 export const HomeBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #ffc800;
+  background: #f5f5f5;
   white-space: nowrap;
   color: #010606;
   width: 3rem;

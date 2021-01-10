@@ -1,9 +1,9 @@
 
-import React from 'react'
+import React, {useContext} from 'react'
 import ReactDom from 'react-dom'
 import {ModalCard,Input,ModalH3, StakeBtn, ModalH2} from './ModalElements';
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
-import useEthAccount from '../../blockchain/useEthAccount'
+import { AppContext } from '../AppContext';
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -28,6 +28,8 @@ const OVERLAY_STYLES = {
 
 
 export default function Modal({open, onClose}) {
+  const wallet = useContext(AppContext)
+
   //const account = useEthAccount();
   if (!open) return null
 
@@ -36,7 +38,7 @@ export default function Modal({open, onClose}) {
       <div onClick={onClose} style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <ModalCard>
-        <ProfileIcon account={"000"}></ProfileIcon>
+        <ProfileIcon account={wallet.account}></ProfileIcon>
         <ModalH2>Transactions</ModalH2>
         .<br></br>
         .<br></br>
