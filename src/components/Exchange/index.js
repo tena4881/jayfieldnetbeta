@@ -22,7 +22,7 @@ import BuyModal from '../Modal/BuyModal'
 import AddPoolModal from '../Modal/AddPoolModal'
 import RemovePoolModal from '../Modal/RemovePoolModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
-
+import {handleDeposit} from '../../blockchain/services'
 import {AppContext} from '../AppContext'
 import Lesson from '../Lesson/Lesson';
 
@@ -72,7 +72,7 @@ return (
         <br></br>
         <br></br>
 
-        <StakeBtn to="#">Buy Ethereum</StakeBtn>
+        <StakeBtn to="#" onClick={handleDeposit}>Buy Ethereum</StakeBtn>
           
         </ExchangeCard>
       <ExchangeCard>

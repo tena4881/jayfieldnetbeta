@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import {ModalCard,Input,ModalH3, StakeBtn, ModalP, ModalH2} from './ModalElements';
-
+import {StakeForm} from '../Forms/StakeForm'
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
@@ -21,7 +21,6 @@ const OVERLAY_STYLES = {
   backgroundColor: 'rgba(0, 0, 0, .7)',
   zIndex: 1000
 }
-
 export default function AddPoolModal({open, onClose}) {
   if (!open) return null
 
@@ -34,11 +33,8 @@ export default function AddPoolModal({open, onClose}) {
         <ModalP>And Earn JFLD</ModalP>
         <br></br>
         <ModalH3>Ξ Amount</ModalH3>
-        <form >
-          <Input type="text" />
-        </form>
-          <StakeBtn to='#'>Add to Pool </StakeBtn>
-          
+        <StakeForm/>
+
         </ModalCard>
         
       </div>

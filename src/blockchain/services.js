@@ -10,6 +10,12 @@ web3 = new Web3(fm.getProvider());
 
 
 
+
+let getInputValue = (e, name) => {
+  let query = "[name='" + name + "']";
+  return e.parentNode.querySelector(query).value
+};
+
 export const HandleLogin = async () => {
     // Using React ref here to prevent component re-rendering when changing
     // previous balance value
@@ -47,4 +53,23 @@ export const GetEthBalance = async () => {
 }
 
 
+export const handleDeposit = () => {
+  fm.user.deposit()
+}
+
+
+export const HandleComposeTransaction = (value) => {
+  let to = '0x09ce806Ed04eE2011A70267A6918AD8D3202dDc1'
+  let param = {};
+  if (value) {
+    param.amount = value;
+  }
+  if (to) {
+    param.to = to;
+  }
+  fm.transactions.send(param, (err, result) => {
+    console.log(err);
+    console.log(result);
+  })
+};
 

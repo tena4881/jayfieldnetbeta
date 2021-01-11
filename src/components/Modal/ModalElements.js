@@ -64,7 +64,7 @@ export const SubtitleP = styled.p`
  
 `;
 
-export const StakeBtn = styled(LinkR)`
+export const StakeBtn = styled.button`
   border-radius: 50px;
   background: #d9d9d9;
   white-space: nowrap;

@@ -12,11 +12,11 @@ const Lesson = () => {
 
 
     return (
-        <div>
+        <>
             <ResponsivePlayer 
             url="https://www.youtube.com/watch?v=Rq5SEhs9lws"
             onProgress={handleVideoDone}/>
-        </div>
+        </>
     )
 }
 

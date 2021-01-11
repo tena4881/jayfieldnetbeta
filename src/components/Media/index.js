@@ -17,6 +17,7 @@ import {
   MediaH2,
   MediaH3,
   SubtitleP,
+  BackBtn,
   MediaP,
   AccountNum,
   UnStakeBtn,
@@ -27,6 +28,7 @@ import {
   ConnectBtn
 } from './MediaElements';
 import Lesson from '../Lesson/Lesson';
+import ResponsivePlayer from '../Video/ResponsiveVidPlayer';
 
 
 const Media = () => {
@@ -39,30 +41,63 @@ const Media = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   }
+const handleVideoDone = state => {
+  console.log(state)
+}
 
 if(wallet.isLoggedIn){
-return (
+  if(wallet.ethBalance > 0){
+    return (
   
-    <MediaContainer id='Media'>
-      <div id='modalPortal'></div>
-      
-      
-     
-     <ProfileCard>
-    
-      <ProfileIcon account={wallet.account}></ProfileIcon>
-      <AccountNum>{wallet.account}</AccountNum>
-      </ProfileCard>
-      <MediaWrapper>
-      <Lesson/>
-      <MediaCard>
-      
-      </MediaCard>
-      
-      </MediaWrapper>
-      
-    </MediaContainer>
-  );
+      <MediaContainer >
+        
+       <ProfileCard>
+        
+        <MediaH1>JayField/Net Media</MediaH1>
+        </ProfileCard>
+        <MediaWrapper>
+        
+        <MediaCard>
+        <ResponsivePlayer 
+            url="https://www.youtube.com/watch?v=Rq5SEhs9lws"
+            onProgress={handleVideoDone}/>
+        
+          {wallet.ethBalance}
+        </MediaCard>
+        
+        </MediaWrapper>
+        
+      </MediaContainer>
+    );
+  }else{
+    return (
+  
+      <MediaContainer >
+        
+      <ProfileCard>
+       
+       <MediaH1>Not Enough ETH!</MediaH1>
+       <MediaH3>You need 3 ETH to view this page</MediaH3>
+       <MediaP>Buy some more below!</MediaP>
+       </ProfileCard>
+       <MediaWrapper>
+       
+       <MediaCard>
+       <MediaH3>You only have</MediaH3>
+       <MediaH2>Ξ{wallet.ethBalance}</MediaH2>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <StakeBtn to="#">Buy More</StakeBtn>
+        <BackBtn to="#">Earn More</BackBtn>
+       </MediaCard>
+       
+       </MediaWrapper>
+       
+     </MediaContainer>
+    );
+  }
 }else{
   return (
       <>

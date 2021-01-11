@@ -3,7 +3,7 @@ import './VidPlayerElements.css'
 
 const ResponsivePlayer = ({url, onProgress}) => {
       return (
-        <div className='player-wrapper'>
+        <>
           <ReactPlayer
             className='react-player'
             url={url}
@@ -11,7 +11,7 @@ const ResponsivePlayer = ({url, onProgress}) => {
             height='100%'
             onProgress= {onProgress}
           />
-        </div>
+          </>
       )
     
 }

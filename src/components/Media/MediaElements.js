@@ -2,27 +2,25 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
 export const MediaContainer = styled.div`
-  height: auto;
+  height: 100%;
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
-
+  background: #fff;
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
-    height: auto;
+    height: 100%;
   }
  
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    height: auto;
+    height: 100%;
   }
   
 `;
 export const WalletSigninContainer = styled.div`
-  height: auto;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -32,12 +30,10 @@ export const WalletSigninContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
-    height: auto;
   }
  
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    height: auto;
   }
   
 `;
@@ -46,7 +42,7 @@ export const MediaWrapper = styled.div`
   max-width: 1000px;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;
@@ -84,28 +80,22 @@ export const ConnectWrapper = styled.div`
 
 export const MediaCard = styled.div`
   background: #f5f5f5;
-  display: flex;
+  display: block;
   min-height: 350px;
   min-width:  350px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  max-height: 800px;
-  padding: 30px;
+ 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
  
 
-  &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
 `;
 export const ProfileCard = styled.div`
-  background: #f7f7f7;
+  background: #fafafa;
   display: flex;
   min-height: 100%;
   min-width:  100%;

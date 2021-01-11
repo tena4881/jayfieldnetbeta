@@ -4,7 +4,10 @@
   }
   
   .react-player {
+    padding-top: 56.25%; 
+    position: relative; 
+  }
+  
+  .react-player > div {
     position: absolute;
-    top: 0;
-    left: 0;
   }

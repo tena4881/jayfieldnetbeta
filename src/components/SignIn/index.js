@@ -6,7 +6,6 @@ import ProfileSidebar from '../ProfileSidebar';
 import {Container} from './SigninElements';
 import Exchange from '../Exchange';
 import ConnectWallet from '../WalletConn';
-
 const ProfilePage = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,6 @@ const ProfilePage = () => {
     return (
       <>
       <Container>
-      
       <ProfileSidebar isOpen={isOpen} toggle={toggle} />
       <ProfileNavbar toggle={toggle} />
       
