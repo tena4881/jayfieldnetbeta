@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
 import Profile from './pages/profile';
-
+import Video from './pages/video'
 
 function App() {
   
@@ -16,6 +16,7 @@ function App() {
         <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/profile' component={Profile} exact />
+        <Route path='/video' component={Video} exact />
         </Switch>
       </Router>
       

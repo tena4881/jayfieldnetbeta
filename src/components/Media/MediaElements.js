@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
-export const ExchangeContainer = styled.div`
+export const MediaContainer = styled.div`
   height: auto;
   display: flex;
   width: 100%;
@@ -42,7 +42,7 @@ export const WalletSigninContainer = styled.div`
   
 `;
 
-export const ExchangeWrapper = styled.div`
+export const MediaWrapper = styled.div`
   max-width: 1000px;
   margin: 3rem auto;
   display: grid;
@@ -82,7 +82,7 @@ export const ConnectWrapper = styled.div`
   }
 `;
 
-export const ExchangeCard = styled.div`
+export const MediaCard = styled.div`
   background: #f5f5f5;
   display: flex;
   min-height: 350px;
@@ -121,13 +121,13 @@ export const ProfileCard = styled.div`
   
 `;
 
-export const ExchangeIcon = styled.img`
+export const MediaIcon = styled.img`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
 `;
 
-export const ExchangeH1 = styled.h1`
+export const MediaH1 = styled.h1`
   font-size: 2rem;
   color: #000;
   margin-bottom: 10px;
@@ -136,10 +136,10 @@ export const ExchangeH1 = styled.h1`
   }
 `;
 
-export const ExchangeH2 = styled.h2`
+export const MediaH2 = styled.h2`
   font-size: 2rem;
 `;
-export const ExchangeH22 = styled.h2`
+export const MediaH22 = styled.h2`
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: 1rem;
@@ -147,7 +147,7 @@ export const ExchangeH22 = styled.h2`
   color: green;
 `;
 
-export const ExchangeH3 = styled.h3`
+export const MediaH3 = styled.h3`
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: .5rem;
@@ -164,7 +164,7 @@ export const AccountNum = styled.h3`
   }
 `;
 
-export const ExchangeP = styled.p`
+export const MediaP = styled.p`
   font-size: .7rem;
   text-align: center;
  

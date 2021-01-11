@@ -26,9 +26,9 @@ function HeroSection() {
         <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>JayField/Net</HeroH1>
+        <HeroH1 >JayField/Net</HeroH1>
         <HeroP>
-          Join the network to recive $50 in JFLD.
+          Join the network and get 100 JFLD!
         </HeroP>
         <HeroBtnWrapper>
           <Button

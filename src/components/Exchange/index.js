@@ -24,6 +24,7 @@ import RemovePoolModal from '../Modal/RemovePoolModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
 
 import {AppContext} from '../AppContext'
+import Lesson from '../Lesson/Lesson';
 
 const Exchange = () => {
   
@@ -53,7 +54,7 @@ return (
       <ProfileIcon account={wallet.account}></ProfileIcon>
       <AccountNum>{wallet.account}</AccountNum>
       </ProfileCard>
-      <ExchangeH1>Wallet Overview</ExchangeH1>
+      <ExchangeH1>Profile Overview</ExchangeH1>
       <ExchangeWrapper>
         
       <ExchangeCard>

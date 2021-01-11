@@ -97,7 +97,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/profile'>My Wallet</NavBtnLink>
+              <NavBtnLink to='/profile'>My Profile</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

@@ -9,11 +9,13 @@ import {
   ExchangeH3,
   ExchangeH1,
   ExchangeP,
+  BackBtn,
   ConnectWrapper,
   WalletSigninContainer
 } from '../Exchange/ExchangeElements';
 
 import { HandleLogin, GetEthBalance } from "../../blockchain/services";
+import ResponsivePlayer from '../Video/ResponsiveVidPlayer';
 
 
 
@@ -40,24 +42,19 @@ const ConnectWallet = () => {
 
 return (
     <WalletSigninContainer id='Exchange'>
-      
       <div id='modalPortal'></div>
+      <ConnectWrapper>
       
-      
-      <ConnectWrapper onClick={toggleLogin}>
-     
-      <ExchangeCard >
-        <ExchangeH3>Welcome back!</ExchangeH3>
-        <ExchangeP>Connect using your crypto wallet</ExchangeP>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <ConnectBtn>Connect</ConnectBtn>
-        
-          
-    </ExchangeCard>
-      
+          <ExchangeCard onClick={toggleLogin}>
+            <ExchangeH3>Welcome back!</ExchangeH3>
+            <ExchangeP>Connect using your crypto wallet</ExchangeP>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <ConnectBtn >Connect</ConnectBtn>
+        </ExchangeCard>
+        <BackBtn to="/">Back</BackBtn>
       </ConnectWrapper>
       
     </WalletSigninContainer>

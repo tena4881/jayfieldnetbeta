@@ -7,7 +7,7 @@ import {Container} from './SigninElements';
 import Exchange from '../Exchange';
 import ConnectWallet from '../WalletConn';
 
-const SignIn = () => {
+const ProfilePage = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const wallet = useContext(AppContext)
@@ -21,11 +21,7 @@ const SignIn = () => {
     return (
       <>
       <Container>
-      
-      <ProfileNavbar />
-      
         <ConnectWallet/>
-  
         </Container>
       </>
     );
@@ -49,4 +45,4 @@ const SignIn = () => {
   
 };
 
-export default SignIn;
+export default ProfilePage;
