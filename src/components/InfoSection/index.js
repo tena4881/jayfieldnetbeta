@@ -43,7 +43,7 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to='home'
+                    onClick={() => {window.location.href="/profile"}}
                     smooth={true}
                     duration={500}
                     spy={true}

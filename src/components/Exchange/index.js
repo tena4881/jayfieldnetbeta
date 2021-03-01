@@ -58,45 +58,46 @@ return (
       <ExchangeWrapper>
         
       <ExchangeCard>
-        <ExchangeH2>0 JFLD</ExchangeH2>
+        <ExchangeH2>0 JFC</ExchangeH2>
         <br></br>
         <br></br>
         <br></br>
         
-        <StakeBtn to="#" onClick={() => setIsBuyOpen(true)} id="clear">Buy JFLD</StakeBtn>
+        //<StakeBtn to="#" onClick={() => setIsBuyOpen(true)} id="clear">Get JFC</StakeBtn>
         
       </ExchangeCard>
       <ExchangeCard>
+      <ExchangeH3>Your Wallet</ExchangeH3>
         <ExchangeH2>Ξ{wallet.ethBalance}</ExchangeH2>
         <br></br>
         <br></br>
         <br></br>
 
-        <StakeBtn to="#" onClick={handleDeposit}>Buy Ethereum</StakeBtn>
+        //<StakeBtn to="#" onClick={handleDeposit}>Buy Ethereum</StakeBtn>
           
         </ExchangeCard>
       <ExchangeCard>
-      <ExchangeH3>You have</ExchangeH3>
+      <ExchangeH3>You have Contributed</ExchangeH3>
         <ExchangeH2>Ξ{0}</ExchangeH2>
         
         <ExchangeH3>in the pool</ExchangeH3>
 
           <StakeBtn to="#" onClick={() => setisEditPoolOpen(true)} >Add to Pool</StakeBtn>
           <ExchangeP>
-            and earn JFLD Coins!
+            and earn JayField Coins!
           </ExchangeP>
           
           
-          <UnStakeBtn  to="#" onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
+          //<UnStakeBtn  to="#" onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
           
         </ExchangeCard>
       <ExchangeCard>
-        <ExchangeH2>0 JFLD</ExchangeH2>
+        <ExchangeH2>0 JFC</ExchangeH2>
         <ExchangeH3>earned</ExchangeH3>
         <ExchangeP>
             (Rewards for staking)
           </ExchangeP>
-        <BurnBtn to="#">Settel Coins</BurnBtn>
+        <BurnBtn to="#">Settel JFC</BurnBtn>
           <ExchangeP>
             What is setteling?
           </ExchangeP>

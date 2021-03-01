@@ -3,8 +3,8 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? '#101522' : 'transparent')};
-  opacity: 85%;
+  background: ${({ scrollNav }) => (scrollNav ? 'WHITE' : 'white')};
+  opacity: 100%;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -18,7 +18,7 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
-    background: ${({ scrollNav }) => (scrollNav ? 'transparent' : 'transparent')};
+    background: ${({ scrollNav }) => (scrollNav ? '#101522' : 'transparent')};
   }
 `;
 
@@ -33,7 +33,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: #000;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.7rem;
