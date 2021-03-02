@@ -1,10 +1,10 @@
 import {useStoreApi} from '../storeApi';
 import {useWeb3} from '../getWeb3';
 
+ 
 export const ConnectWallet = () => {
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const web3 = useWeb3();
-  
   // get user account on button click
   const getUserAccount = async () => {
     if (window.ethereum) {

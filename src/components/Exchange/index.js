@@ -72,7 +72,7 @@ return (
       <ExchangeWrapper>
         
       <ExchangeCard>
-        <ExchangeH2>{balance} ETH</ExchangeH2>
+        <ExchangeH2>{balance} JFC</ExchangeH2>
         <br></br>
         <br></br>
         <br></br>
