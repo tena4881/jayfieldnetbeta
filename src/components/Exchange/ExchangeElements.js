@@ -9,13 +9,15 @@ export const ProfileContainer = styled.div`
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
-    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
-    width: 100vw; 
+    max-width: 100%;
+    overflow-x: hidden ;
     transition: 0.8s all ease;
     height: auto;
   }
@@ -24,18 +26,20 @@ export const ProfileContainer = styled.div`
 
 export const ExchangeContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
+    width: 100vw;
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
+    width: 100vw;
     height: auto;
   }
   
@@ -62,17 +66,19 @@ export const WalletSigninContainer = styled.div`
 `;
 
 export const ExchangeWrapper = styled.div`
-  max-width: 1000px;
+  width: 75vw;
   margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
 
   @media screen and (max-width: 1100px) {
+    width: 100vw;
     grid-template-columns: 1fr;
   }
 
   @media screen and (max-width: 375px) {
+    width: 100vw;
     grid-template-columns: 1fr;
     padding: 0 10px;
   }
