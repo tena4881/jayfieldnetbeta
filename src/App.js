@@ -1,6 +1,6 @@
 import React from "react";
 import routes from "./routes";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import {useStoreApi} from './storeApi';
 import {useWeb3} from './getWeb3';
 
