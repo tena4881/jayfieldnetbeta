@@ -87,9 +87,11 @@ return (
         
         <ExchangeH3>in the pool</ExchangeH3>
 
-          <StakeBtn to="#" onClick={() => setisEditPoolOpen(true)} >Add to Pool</StakeBtn>
+          
           <ExchangeP>
-            and earn JayField Coins!
+            Earn JayField Coins!
+            <br></br>
+            Coming Soon!
           </ExchangeP>
           
           
