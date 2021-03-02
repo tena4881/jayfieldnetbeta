@@ -15,7 +15,7 @@ import {
   BackBtn,
   ConnectWrapper,
   WalletSigninContainer
-} from '../../components/Profile/Profile';
+} from '../Profile/Profile';
 import Footer from '../../components/Footer/footer';
 
 

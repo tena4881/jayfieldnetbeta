@@ -19,6 +19,7 @@
     "react-scripts": "4.0.1",
     "react-sticky-header": "^0.2.0",
     "react-text-rotator": "^1.0.1",
+    "react-tradingview-widget": "^1.3.2",
     "reactstrap": "^8.8.1",
     "styled-components": "^5.2.1",
     "web3": "^1.3.1"

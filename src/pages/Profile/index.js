@@ -12,15 +12,14 @@ import {
   AccountNum,
   ProfileCard,
   ChartCard,
-} from './ExchangeElements';
-import BuyModal from '../Modal/BuyModal'
-import WalletModal from '../Modal/WalletModal'
-import AddPoolModal from '../Modal/AddPoolModal'
-import RemovePoolModal from '../Modal/RemovePoolModal'
-import ProfileIcon from '../ProfileIcon/ProfileIcon';
+} from './Profile';
+// import BuyModal from '../Modal/BuyModal'
+// import WalletModal from '../Modal/WalletModal'
+// import RemovePoolModal from '../Modal/RemovePoolModal'
+// import ProfileIcon from '../ProfileIcon/ProfileIcon';
 import {useStoreApi} from '../../storeApi';
-import ConnectWallet from '../WalletConn';
-import Footer from '../../components/Footer';
+import ConnectWallet from '../../WalletConnect';
+import Footer from '../../components/Footer/footer';
 
 const Exchange = () => {
   
@@ -41,19 +40,10 @@ return (
       <div id='modalPortal'></div>
       
       
-      <BuyModal open={isBuyOpen} onClose={() => setIsBuyOpen(false)}>
-            Modal
-          </BuyModal>
-          <AddPoolModal open={isEditPoolOpen} onClose={() => setisEditPoolOpen(false)}>
-            Modal
-          </AddPoolModal>
-          <RemovePoolModal open={isRemovePoolOpen} onClose={() => setisRemovePoolOpen(false)}>
-            Modal
-          </RemovePoolModal>
-          <WalletModal open={isWalletOpen} onClose={() => setisWalletOpen(false)}></WalletModal>
+     
           <ProfileCard>
     
-      <ProfileIcon account={address}></ProfileIcon>
+      
       <AccountNum>{address}</AccountNum>
       </ProfileCard>
       <ExchangeH3>Profile Overview</ExchangeH3>

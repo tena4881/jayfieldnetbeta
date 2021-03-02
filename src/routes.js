@@ -7,6 +7,7 @@ import Index6 from "./pages/Index6/Index6";
 import Index7 from "./pages/Index7/Index7";
 import Index8 from "./pages/Index8/Index8";
 import Index9 from "./pages/Index9/Index9";
+import Profile from "./pages/Profile/index";
 
 //Auth Pages
 import Signup from "./pages/Auth/Signup";
@@ -17,6 +18,7 @@ const routes = [
   { path: "/password-forget", component: PasswordForget },
   { path: "/login", component: Login },
   { path: "/sign-up", component: Signup },
+  { path: "/profile", component: Profile },
 
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },

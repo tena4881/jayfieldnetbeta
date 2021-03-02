@@ -82,13 +82,13 @@ class NavbarPage extends Component {
                     <div className="nav-button ms-auto">
                       <Nav navbar className="navbar-end">
                        <li>
-                         <div>
-                            <Link to="/login">Login </Link>
-                          </div> 
+                         
                         </li>
                       </Nav>
                     </div>
                   </ScrollspyNav>
+                  <Link to="/profile"><Button>Login</Button> 
+                  </Link>
                 </Collapse>
               </Container>
             </Navbar>

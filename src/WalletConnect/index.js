@@ -1,7 +1,7 @@
-import {AppContext, AppContextProvider} from '../AppContext'
+
 import React,{useState,useContext} from 'react';
-import {useStoreApi} from '../../storeApi';
-import {useWeb3} from '../../getWeb3';
+import {useStoreApi} from '../storeApi';
+import {useWeb3} from '../getWeb3';
 
 import {
   ExchangeContainer,
@@ -15,10 +15,8 @@ import {
   BackBtn,
   ConnectWrapper,
   WalletSigninContainer
-} from '../Exchange/ExchangeElements';
-import { HandleLogin, GetEthBalance } from "../../blockchain/services";
-import ResponsivePlayer from '../Video/ResponsiveVidPlayer';
-import Footer from '../Footer';
+} from '../pages/Profile/Profile';
+import Footer from '../components/Footer/footer';
 
 
 // ABI describes a smart contract interface developped in Solidity
