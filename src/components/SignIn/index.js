@@ -16,28 +16,20 @@ const ProfilePage = () => {
     
   };
 
-  if(!wallet.isLoggedIn){
-    return (
-      <>
-      <Container>
-        <ConnectWallet/>
-        </Container>
-      </>
-    );
-  }else{
-    return (
-      <>
-      <Container>
-      <ProfileSidebar isOpen={isOpen} toggle={toggle} />
-      <ProfileNavbar toggle={toggle} />
-      
-        <Exchange/>
   
-        </Container>
-      </>
-      
-    );
-  }
+  return (
+    <>
+    <Container>
+    <ProfileSidebar isOpen={isOpen} toggle={toggle} />
+    <ProfileNavbar toggle={toggle} />
+    
+      <Exchange/>
+
+      </Container>
+    </>
+    
+  );
+  
   
   
   

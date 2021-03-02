@@ -1,11 +1,29 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
+
+export const ProfileContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
+
+  @media screen and (max-width: 768px) {
+    transition: 0.8s all ease;
+    height: auto;
+  }
+ 
+  @media screen and (max-width: 375px) {
+    transition: 0.8s all ease;
+    height: auto;
+  }
+  
+`;
+
 export const ExchangeContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 

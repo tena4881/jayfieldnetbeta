@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import {HandleComposeTransaction} from '../../blockchain/services'
 import { Input, ModalP, StakeBtn } from "../Modal/ModalElements";
 export function StakeForm(props) {
   const [stakeAmount, setstakeAmount] = useState("");
   
   const handleSubmit = (evt) => {
       evt.preventDefault();
-      HandleComposeTransaction(stakeAmount);
+      //MODAL FOR SENDING ETH
   }
   return (
     

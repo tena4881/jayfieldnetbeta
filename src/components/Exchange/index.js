@@ -5,6 +5,7 @@ import {
   ExchangeContainer,
   ExchangeH1,
   ExchangeWrapper,
+  ProfileContainer,
   ExchangeCard,
   ExchangeIcon,
   ExchangeH2,
@@ -21,6 +22,7 @@ import {
   ConnectBtn
 } from './ExchangeElements';
 import BuyModal from '../Modal/BuyModal'
+import WalletModal from '../Modal/WalletModal'
 import AddPoolModal from '../Modal/AddPoolModal'
 import RemovePoolModal from '../Modal/RemovePoolModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
@@ -28,17 +30,25 @@ import {handleDeposit} from '../../blockchain/services'
 import {AppContext} from '../AppContext'
 import Lesson from '../Lesson/Lesson';
 import { themesList } from 'web3modal';
+import {useStoreApi} from '../../storeApi';
+import ConnectWallet from '../WalletConn';
+import Footer from '../../components/Footer';
 
 const Exchange = () => {
   
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
-  const wallet = useContext(AppContext);
-
- 
-return (
+  const [isWalletOpen,setisWalletOpen] = useState(false);
+  const { balance, address, message, setAddress, setBalance } = useStoreApi();
+ if(address == null){
+  return(
+    <ConnectWallet></ConnectWallet>
+  )
+ }
   
+return (
+  <ProfileContainer>
     <ExchangeContainer id='Exchange'>
       <div id='modalPortal'></div>
       
@@ -52,16 +62,17 @@ return (
           <RemovePoolModal open={isRemovePoolOpen} onClose={() => setisRemovePoolOpen(false)}>
             Modal
           </RemovePoolModal>
+          <WalletModal open={isWalletOpen} onClose={() => setisWalletOpen(false)}></WalletModal>
           <ProfileCard>
     
-      <ProfileIcon account={wallet.account}></ProfileIcon>
-      <AccountNum>{wallet.account}</AccountNum>
+      <ProfileIcon account={address}></ProfileIcon>
+      <AccountNum>{address}</AccountNum>
       </ProfileCard>
       <ExchangeH3>Profile Overview</ExchangeH3>
       <ExchangeWrapper>
         
       <ExchangeCard>
-        <ExchangeH2>0 JFC</ExchangeH2>
+        <ExchangeH2>{balance} ETH</ExchangeH2>
         <br></br>
         <br></br>
         <br></br>
@@ -107,6 +118,8 @@ return (
       </ExchangeWrapper>
       
     </ExchangeContainer>
+    <Footer/>
+    </ProfileContainer>
   );
   
   

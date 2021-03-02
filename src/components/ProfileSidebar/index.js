@@ -10,18 +10,21 @@ import {
   SideBtnWrap,
   LogoutBtn
 } from './ProfileSidebarElements';
+import {useStoreApi} from '../../storeApi';
 import TransactionsModal from '../Modal/TransactionsModal'
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
 //import useEthAccount from '../../blockchain/useEthAccount'
 import {AppContext} from '../AppContext'
-import {HandleLogout} from '../../blockchain/services'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
+  const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const wallet = useContext(AppContext);
+  /**
+ * Disconnect wallet button pressed.
+ */
   const toggleLogout = () => {
-      HandleLogout();
-      wallet.setisLoggedIn(false);
-        
+      console.log("Figure out how to Disconnect Metamask properly!");
+      
       }
   const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
   //const account = useEthAccount();
