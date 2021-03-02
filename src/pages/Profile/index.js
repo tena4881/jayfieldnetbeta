@@ -63,7 +63,7 @@ return (
         
       <ExchangeCard>
 
-        <ExchangeH2>JayField Coin Balance <br></br><br></br></ExchangeH2>
+        
         <ExchangeH3>{balance} JFC</ExchangeH3>
         <br></br>
         <br></br>
