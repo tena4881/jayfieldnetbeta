@@ -28,7 +28,7 @@ function HeroSection() {
       <HeroContent>
         <HeroH1 >JayField/Net</HeroH1>
         <HeroP>
-          Join the network and get 100 JFLD!
+          Join the network and get 100 JFC!
         </HeroP>
         <HeroBtnWrapper>
           <Button

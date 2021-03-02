@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
 export const ExchangeContainer = styled.div`
-  height: auto;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -46,11 +45,8 @@ export const ExchangeWrapper = styled.div`
   max-width: 1000px;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
   grid-gap: 16px;
-  padding: 0 50px;
-  justify-items: center;
 
   @media screen and (max-width: 1100px) {
     grid-template-columns: 1fr;
@@ -85,18 +81,52 @@ export const ConnectWrapper = styled.div`
 export const ExchangeCard = styled.div`
   background: #f5f5f5;
   display: flex;
-  min-height: 350px;
-  min-width:  350px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  max-height: 800px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
- 
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    min-height: 300px;
+  min-width:  300px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+export const ChartCard = styled.div`
+  background: #f5f5f5;
+  display: flex;
+  min-height: 600px;
+  min-width:  600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    min-height: 450px;
+  min-width:  450px;
+  }
+  @media screen and (max-width: 375px) {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    min-height: 300px;
+  min-width:  300px;
+  }
 
   &:hover {
     transform: scale(1.02);

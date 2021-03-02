@@ -1,4 +1,5 @@
 import React,{useState,useContext} from 'react';
+import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
 
 import {
   ExchangeContainer,
@@ -16,6 +17,7 @@ import {
   ProfileCard,
   ExchangeH22,
   StakeBtn,
+  ChartCard,
   ConnectBtn
 } from './ExchangeElements';
 import BuyModal from '../Modal/BuyModal'
@@ -25,6 +27,7 @@ import ProfileIcon from '../ProfileIcon/ProfileIcon';
 import {handleDeposit} from '../../blockchain/services'
 import {AppContext} from '../AppContext'
 import Lesson from '../Lesson/Lesson';
+import { themesList } from 'web3modal';
 
 const Exchange = () => {
   
@@ -54,7 +57,7 @@ return (
       <ProfileIcon account={wallet.account}></ProfileIcon>
       <AccountNum>{wallet.account}</AccountNum>
       </ProfileCard>
-      <ExchangeH1>Profile Overview</ExchangeH1>
+      <ExchangeH3>Profile Overview</ExchangeH3>
       <ExchangeWrapper>
         
       <ExchangeCard>
@@ -63,19 +66,10 @@ return (
         <br></br>
         <br></br>
         
-        //<StakeBtn to="#" onClick={() => setIsBuyOpen(true)} id="clear">Get JFC</StakeBtn>
+        
         
       </ExchangeCard>
-      <ExchangeCard>
-      <ExchangeH3>Your Wallet</ExchangeH3>
-        <ExchangeH2>Ξ{wallet.ethBalance}</ExchangeH2>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        //<StakeBtn to="#" onClick={handleDeposit}>Buy Ethereum</StakeBtn>
-          
-        </ExchangeCard>
+      
       <ExchangeCard>
       <ExchangeH3>You have Contributed</ExchangeH3>
         <ExchangeH2>Ξ{0}</ExchangeH2>
@@ -88,20 +82,24 @@ return (
           </ExchangeP>
           
           
-          //<UnStakeBtn  to="#" onClick={() => setisRemovePoolOpen(true)}>Remove from Pool</UnStakeBtn>
           
         </ExchangeCard>
-      <ExchangeCard>
-        <ExchangeH2>0 JFC</ExchangeH2>
-        <ExchangeH3>earned</ExchangeH3>
-        <ExchangeP>
-            (Rewards for staking)
-          </ExchangeP>
-        <BurnBtn to="#">Settel JFC</BurnBtn>
-          <ExchangeP>
-            What is setteling?
-          </ExchangeP>
-        </ExchangeCard>
+
+        
+      <ChartCard>
+      <ExchangeH3>Price of ETH</ExchangeH3>
+      <TradingViewWidget
+        symbol="ETHUSD"
+        theme={Themes.LIGHT}
+        style='2'
+        locale="fr"
+        autosize
+      />
+          
+          
+        </ChartCard>
+        
+      
         
         
         
