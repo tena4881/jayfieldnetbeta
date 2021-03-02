@@ -8,6 +8,7 @@ import {
   ExchangeCard,
   ExchangeH2,
   ExchangeH3,
+  ExchangeH1,
   ExchangeP,
   AccountNum,
   ProfileCard,
@@ -19,8 +20,10 @@ import {
 // import ProfileIcon from '../ProfileIcon/ProfileIcon';
 import {useStoreApi} from '../../storeApi';
 import ConnectWallet from '../../WalletConnect';
+import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
+import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 import Footer from '../../components/Footer/footer';
-
+import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
 const Exchange = () => {
   
   const [isBuyOpen,setIsBuyOpen] = useState(false);
@@ -28,6 +31,12 @@ const Exchange = () => {
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
   const [isWalletOpen,setisWalletOpen] = useState(false);
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    
+  };
+  
  if(address == null){
   return(
     <ConnectWallet></ConnectWallet>
@@ -35,7 +44,10 @@ const Exchange = () => {
  }
   
 return (
+  
   <ProfileContainer>
+     <ProfileSidebar isOpen={isOpen} toggle={toggle} />
+  	    <ProfileNavbar toggle={toggle} />
     <ExchangeContainer id='Exchange'>
       <div id='modalPortal'></div>
       
@@ -43,14 +55,16 @@ return (
      
           <ProfileCard>
     
-      
+          <ProfileIcon account={address}></ProfileIcon>
       <AccountNum>{address}</AccountNum>
       </ProfileCard>
       <ExchangeH3>Profile Overview</ExchangeH3>
       <ExchangeWrapper>
         
       <ExchangeCard>
-        <ExchangeH2>{balance} JFC</ExchangeH2>
+
+        <ExchangeH2>JayField Coin Balance <br></br><br></br></ExchangeH2>
+        <ExchangeH3>{balance} JFC</ExchangeH3>
         <br></br>
         <br></br>
         <br></br>
