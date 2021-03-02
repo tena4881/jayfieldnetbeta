@@ -9,12 +9,14 @@ export const ProfileContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 100vw;
+    overflow-x:hidden;
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
     max-width: 100vw;
+    overflow-x:hidden;
     transition: 0.8s all ease;
     height: auto;
   }
@@ -63,16 +65,19 @@ export const ExchangeWrapper = styled.div`
   width: 75vw;
   margin: 3rem auto;
   display: grid;
+  overflow-x:hidden;
   grid-template-columns: 1fr;
   grid-gap: 16px;
 
   @media screen and (max-width: 1100px) {
     width: 100vw;
+    overflow-x:hidden;
     grid-template-columns: 1fr;
   }
 
   @media screen and (max-width: 375px) {
     width: 100vw;
+    overflow-x:hidden;
     grid-template-columns: 1fr;
     padding: 0 10px;
   }
