@@ -4,20 +4,17 @@ import { Link as LinkR } from 'react-router-dom';
 
 export const ProfileContainer = styled.div`
   display: flex;
-  width: 100vw;
   flex-direction: column;
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
-    max-width: 100%;
-    overflow-x: hidden;
+    max-width: 100vw;
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
-    max-width: 100%;
-    overflow-x: hidden ;
+    max-width: 100vw;
     transition: 0.8s all ease;
     height: auto;
   }
@@ -26,20 +23,17 @@ export const ProfileContainer = styled.div`
 
 export const ExchangeContainer = styled.div`
   display: flex;
-  width: 100vw;
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
-    width: 100vw;
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    width: 100vw;
     height: auto;
   }
   
