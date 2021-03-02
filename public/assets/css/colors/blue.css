@@ -1,0 +1,57 @@
+/*  Theme Name: Dorsin | Responsive Bootstrap Landing Template
+    Author: Themesbrand
+    Version: 2.0.0
+    File Description: Main CSS file of the template
+*/
+
+
+.text-primary,.read-btn,
+.navbar-custom.navbar-white .navbar-nav li.active a,
+.navbar-custom.navbar-white .navbar-nav li a:hover,
+.navbar-custom.navbar-white .navbar-nav li a:focus,
+.navbar-custom.navbar-white .navbar-nav li a:active,
+.play-btn,.blog-title:hover,.social-icon:hover i{
+    color: #2762da !important;
+}
+
+
+.section-title-border, .services-box:hover i,.bg-primary,.btn-primary,.features-item-list li:before,.process-left-icon-1 i,
+.process-left-icon-2 i, .account-card .form-check-input:checked {
+    background-color: #2762da !important ;
+}
+
+
+
+.btn-primary,.play-btn,.account-card .form-check-input:checked {
+    border-color:#2762da !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary{
+	background-color: #2255bd;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary{
+	border-color: #2255bd !important;
+}
+
+
+
+
+

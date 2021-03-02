@@ -1,47 +1,31 @@
 {
-  "name": "jayfieldnet",
+  "name": "dorsin",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "15.5.0",
-    "npm": "7.3.0"
-  },
   "dependencies": {
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
-    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
-    "ethereum-react-components": "^1.14.0",
-    "ethers": "^4.0.48",
-    "fortmatic": "^2.2.1",
-    "framer-motion": "^3.1.4",
-    "fs": "^0.0.1-security",
-    "identity-wallet": "^2.0.0",
-    "magic-sdk": "^4.0.2",
+    "availity-reactstrap-validation": "^2.7.0",
+    "bootstrap": "^5.0.0-beta1",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "react-player": "^2.7.2",
+    "react-modal-video": "^1.2.6",
+    "react-particles-js": "^3.4.1",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
     "react-scripts": "4.0.1",
-    "react-scroll": "^1.8.1",
-    "react-spring": "^9.0.0-rc.3",
-    "react-tradingview-widget": "^1.3.2",
-    "react-web3-provider": "^1.1.2",
-    "serve": "^11.3.2",
-    "styled-components": "^5.2.1",
-    "web3": "^1.3.1",
-    "web3-react": "^5.0.5",
-    "web3modal": "^1.9.2"
+    "react-sticky-header": "^0.2.0",
+    "react-text-rotator": "^1.0.1",
+    "reactstrap": "^8.8.1",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
-    "noattn": "serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
