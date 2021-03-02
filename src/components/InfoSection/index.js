@@ -14,6 +14,9 @@ import {
   ImgWrap,
   Img
 } from './InfoElements';
+import {
+  NavBtnLink
+} from '../Navbar/NavbarElements';
 
 const InfoSection = ({
   lightBg,
@@ -42,8 +45,8 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button
-                    onClick={() => {window.location.href="/profile"}}
+                  <NavBtnLink
+                    to='/profile'
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -54,7 +57,7 @@ const InfoSection = ({
                     dark2={dark2 ? 1 : 0}
                   >
                     {buttonLabel}
-                  </Button>
+                  </NavBtnLink>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
