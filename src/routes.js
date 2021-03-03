@@ -16,9 +16,9 @@ import PasswordForget from "./pages/Auth/PasswordForget";
 
 const routes = [
   { path: "/password-forget", component: PasswordForget },
-  { path: "/login", component: Login },
+  { path: "/profile", component: Login },
   { path: "/sign-up", component: Signup },
-  { path: "/profile", component: Profile },
+  { path: "/login", component: Profile },
 
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },

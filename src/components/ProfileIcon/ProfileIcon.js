@@ -13,7 +13,7 @@ export default function ProfileIcon({account}) {
   
   return (
     <>
-    <div>
+    <div >
         <Identicon style={PROFILE_STYLES} address={account} />
       </div>
     </>)

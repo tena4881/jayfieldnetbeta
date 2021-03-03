@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
+//Importing Modal
+import ModalSection from "../../components/common/ModalSection";
 
 class Section extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+    };
+    this.callModal.bind(this);
+  }
+
+  callModal = () => {
+    this.refs.child.openModal();
+  };
+  
   render() {
     return (
       <React.Fragment>
@@ -35,16 +50,22 @@ class Section extends Component {
                       consectetur adipisicing eli.
                     </p>
                     <div className="mt-4">
-                    <img
-                    alt="hero"
-                    src='../assets/images/rocket.png'
-                  />
+                
+                      
+                    <iframe
+                        title="dorsin"
+                        src="http://player.vimeo.com/video/69988283?color=f15b72&amp;title=0&amp;byline=0&amp;portrait=0"
+                        width="900"
+                        height="350"
+                        className="frame-border"
+                      ></iframe>
                     </div>
                   </Col>
                 </Row>
               </Container>
             </div>
           </div>
+          
         </section>
       </React.Fragment>
     );

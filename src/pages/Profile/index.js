@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useState,useContext,useEffect} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
 
 import {
@@ -25,6 +25,9 @@ import Footer from '../../components/Footer/footer';
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
 import {useStoreApi} from '../../storeApi';
 import {useWeb3} from '../../getWeb3';
+import { useMetamask } from "use-metamask";
+import Balance from '../../balance'
+import Account from '../../account'
 const Exchange = () => {
   
   const [isBuyOpen,setIsBuyOpen] = useState(false);
@@ -43,13 +46,28 @@ const Exchange = () => {
 
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const web3 = useWeb3();
-  
- if(address == null){
-  return(
-    <ConnectWallet></ConnectWallet>
-  )
- }
-  
+
+  const { connect, getAccounts, getChain, metaState } = useMetamask();
+
+  useEffect(() => {
+      if (metaState.isAvailable) {
+        (async () => {
+          try {
+            /* you can get the information directly 
+            * by assigning them to a variable, 
+            * or from metaState.account and metaState.chain 
+            */
+            let account = await getAccounts();
+            
+            setAddress(account[0]);
+           
+          } catch (error) {
+            console.log(error);
+          }
+        })();
+      }
+    }, []);
+
 return (
   
   <ProfileContainer>
@@ -61,16 +79,15 @@ return (
       
      
           <ProfileCard>
-    
-          <ProfileIcon account={address}></ProfileIcon>
-      <AccountNum>{address}</AccountNum>
+        <Account/>
+         
       </ProfileCard>
       <ExchangeH3>Profile Overview</ExchangeH3>
       <ExchangeWrapper>
         
       <ExchangeCard>
         <ExchangeH2 >JFC Balance:</ExchangeH2>
-        <ExchangeH3 style={{color: 'green'}}>{balance} JFC </ExchangeH3>
+        <ExchangeH3 style={{color: 'green'}}><Balance/> </ExchangeH3>
       </ExchangeCard>
       
       <ExchangeCard>

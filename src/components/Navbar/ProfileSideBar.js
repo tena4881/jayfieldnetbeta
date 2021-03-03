@@ -22,7 +22,6 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
   function toggleLogout() {
       console.log("Figure out how to Disconnect Metamask properly!");
       setAddress(null);
-      window.location.reload(false);
       }
   //const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
   //const account = useEthAccount();
@@ -40,8 +39,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
         <SidebarRoute to='#' >COMING SOON!</SidebarRoute>
         </SidebarMenu>
         <SideBtnWrap>
-          
-          <LogoutBtn className="btn btn-primary mt-4 waves-effect waves-light" onClick={toggleLogout}>Logout</LogoutBtn>
+        <LogoutBtn to="/" onClick={toggleLogout}>Log out</LogoutBtn>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

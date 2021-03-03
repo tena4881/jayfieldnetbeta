@@ -34,7 +34,6 @@ const ProfileNavbar = ({ toggle }) => {
   function toggleLogout() {
     console.log("Figure out how to Disconnect Metamask properly!");
     setAddress(null);
-    window.location.reload(false);
     }
 
   useEffect(() => {

@@ -1,14 +1,13 @@
 import React from "react";
 import routes from "./routes";
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
-import ScrollToTop from './components/ScrolltoTop';
+import { useEffect, useState } from "react";
 
 function App() {
 
   return (
     <React.Fragment>
       <Router>
-        <ScrollToTop>
         <Switch>
         
           {routes.map((route, idx) => (
@@ -16,7 +15,6 @@ function App() {
           ))}
         
         </Switch>
-        </ScrollToTop>
       </Router>
     </React.Fragment>
   );

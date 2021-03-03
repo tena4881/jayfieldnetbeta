@@ -212,7 +212,7 @@ export const ExchangeH3 = styled.h3`
 export const AccountNum = styled.h3`
   font-size: .9rem;
   font-weight: normal;
-  margin-top: .5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 
   @media screen and (max-width: 375px) {

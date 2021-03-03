@@ -1,61 +1,52 @@
+import { useEffect, useState } from "react";
+import { useMetamask }         from "use-metamask";
+import { ethers }              from "ethers";
+import Web3                    from "web3";
 
-import React,{useState,useContext} from 'react';
-import {useStoreApi} from '../../storeApi';
-import {useWeb3} from '../../getWeb3';
+import Profile from "../Profile/ProfileInfo";
 
-import {
-  ExchangeContainer,
-  ConnectBtn,
-  ExchangeCard,
-  ExchangeH2,
-  ExchangeH3,
-  ProfileContainer,
-  ExchangeH1,
-  ExchangeP,
-  BackBtn,
-  ConnectWrapper,
-  WalletSigninContainer
-} from '../Profile/Profile';
-import Footer from '../../components/Footer/footer';
+function ConnectWallet() {
+  const { connect, metaState }              = useMetamask();
+  const [ web3interface, setWeb3Interface ] = useState("web3");
 
+  useEffect(() => {
+    if (metaState.isAvailable && !metaState.isConnected) {
+      (async () => {
+        try {
+          if (web3interface === "ethers")
+            await connect(ethers.providers.Web3Provider, "any");
+          else if (web3interface === "web3")
+            await connect(Web3);
+          else 
+            throw Error(`Unknown web3 interface: ${web3interface}`);
+        } catch (error) {
+          console.log(error);
+        }
+      })();
+    }
+  }, [metaState.isAvailable, web3interface]);
 
+  const handleWeb3Selector = (event) => setWeb3Interface(event.target.value);
 
-
-
-
-
-
-const ConnectWallet = () => {
-  const { balance, address, message, setAddress, setBalance } = useStoreApi();
-  const web3 = useWeb3();
-  
-
-  
-
-
-return (
-  <ProfileContainer>
-  <WalletSigninContainer id='Exchange'>
-        <div id='modalPortal'></div>
-        <ConnectWrapper>
-        
-            <ExchangeCard >
-              <ExchangeH3>Welcome back!</ExchangeH3>
-              <ExchangeP>Connect using your crypto wallet</ExchangeP>
-              
-              <ConnectBtn >Connect</ConnectBtn>
-          </ExchangeCard>
-          <BackBtn to="/">Back</BackBtn>
-        </ConnectWrapper>
-        
-      </WalletSigninContainer>
-      <Footer/>
-  </ProfileContainer>
-    
-    
+  return (
+    <div >
+      {
+        metaState.isAvailable
+        ? <Profile state={metaState} web3Handler={handleWeb3Selector}/>
+        : <div>
+          <p>You don't have Metamask installed</p>
+          <p>But wait, what is Metamask?</p>
+          <p>
+            <code>
+              <a href="https://metamask.io/">https://metamask.io</a>
+            </code>
+          </p>
+        </div>
+      }
+      
+      
+    </div>
   );
-  
-  
-};
+}
 
 export default ConnectWallet;
