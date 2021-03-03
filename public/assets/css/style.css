@@ -83,7 +83,7 @@ p {
 }
 
 .bg-overlay {
-  background: linear-gradient(to right, #90D5EC, #ff787f);
+  background: linear-gradient(to right, #0D324D, #7F5A83);
   opacity: 0.9;
   position: absolute;
   height: 100%;
