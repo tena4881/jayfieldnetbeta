@@ -2121,7 +2121,7 @@ ul.pattern .color8 {
   .navbar-custom {
     margin-top: 10px;
     padding: 0px 0px !important;
-    color: #000 !important;
+    color: transparent !important;
     background: transparent;
   }
   .navbar-custom .navbar-nav {
