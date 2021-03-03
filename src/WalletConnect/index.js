@@ -2,7 +2,6 @@
 import React,{useState,useContext} from 'react';
 import {useStoreApi} from '../storeApi';
 import {useWeb3} from '../getWeb3';
-
 import {
   ExchangeContainer,
   ConnectBtn,
@@ -417,11 +416,10 @@ var coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
 
 
 
-
 const ConnectWallet = () => {
+	
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const web3 = useWeb3();
-  
   // get user account on button click
   const getUserAccount = async () => {
     if (window.ethereum) {
@@ -453,11 +451,21 @@ const ConnectWallet = () => {
     
     
   };
-
+  class ScrollToTopOnMount extends React.Component {
+	componentDidMount() {
+	  window.scrollTo(0, 0);
+	}
+  
+	render() {
+	  return null;
+	}
+  }
 
 
 return (
+	
   <ProfileContainer>
+	  <ScrollToTopOnMount />
   <WalletSigninContainer id='Exchange'>
         <div id='modalPortal'></div>
         <ConnectWrapper>
@@ -471,7 +479,7 @@ return (
               <br></br>
               <ConnectBtn >Connect</ConnectBtn>
           </ExchangeCard>
-          <BackBtn to="/">Back</BackBtn>
+          <BackBtn to="/">Back Home</BackBtn>
         </ConnectWrapper>
         
       </WalletSigninContainer>

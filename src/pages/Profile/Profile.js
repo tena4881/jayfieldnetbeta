@@ -327,7 +327,7 @@ export const BackBtn = styled(LinkR)`
   white-space: nowrap;
   padding: 5px 11px;
   color: #000;
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 15px;
   outline: none;
   

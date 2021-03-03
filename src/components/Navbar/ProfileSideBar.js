@@ -19,9 +19,10 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
   /**
  * Disconnect wallet button pressed.
  */
-  const toggleLogout = () => {
+  function toggleLogout() {
       console.log("Figure out how to Disconnect Metamask properly!");
-      
+      setAddress(null);
+      window.location.reload(false);
       }
   //const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
   //const account = useEthAccount();
@@ -30,9 +31,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
     
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
      
-      <Icon onClick={toggle}>
-        <CloseIcon />
-      </Icon>
+      
       <SidebarWrapper>
         <SidebarMenu>
         <ProfileIcon account={address}></ProfileIcon>
@@ -40,7 +39,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
         </SidebarMenu>
         <SideBtnWrap>
           
-          <LogoutBtn to='/' >Logout</LogoutBtn>
+          <LogoutBtn onClick={toggleLogout}>Logout</LogoutBtn>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

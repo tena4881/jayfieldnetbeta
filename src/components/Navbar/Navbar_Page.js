@@ -46,19 +46,21 @@ class NavbarPage extends Component {
                 "navbar-custom sticky sticky-dark " + this.props.navClass
               }
             >
-              <Container>
+              <Container >
                 <NavbarBrand className="logo text-uppercase" href="/">
                   JayField/Net
                 </NavbarBrand>
+                
                 <NavbarToggler onClick={this.toggle}>
                   <i className="mdi mdi-menu"></i>
                 </NavbarToggler>
-
+                
                 <Collapse
                   id="navbarCollapse"
                   isOpen={this.state.isOpenMenu}
                   navbar
                 >
+                  
                   <ScrollspyNav
                     scrollTargetIds={targetId}
                     scrollDuration="800"
@@ -66,9 +68,9 @@ class NavbarPage extends Component {
                     activeNavClass="active"
                     className="navbar-collapse"
                   >
-                    <Nav navbar className="navbar-center" id="mySidenav">
+                    <Nav  navbar className="navbar-center" id="mySidenav">
                       {this.props.navItems.map((item, key) => (
-                        <NavItem
+                        <NavItem 
                           key={key}
                           className={item.navheading === "Home" ? "active" : ""}
                         >
@@ -78,20 +80,20 @@ class NavbarPage extends Component {
                           </NavLink>
                         </NavItem>
                       ))}
+                     
                     </Nav>
-                    <div className="nav-button ms-auto">
-                      <Nav navbar className="navbar-end">
-                       <li>
-                         
-                        </li>
-                      </Nav>
-                    </div>
+                    
                   </ScrollspyNav>
-                  <Link to="/profile"><Button>Login</Button> 
-                  </Link>
+                  
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
+                  <Link to="/profile"><Button>Login</Button></Link>
+               </div>
                 </Collapse>
+                
               </Container>
+             
             </Navbar>
+            
           }
           stickyOffset={-100}
         ></StickyHeader>
