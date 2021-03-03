@@ -2,7 +2,7 @@ import Web3 from 'web3';
 import {useEffect, useState} from 'react';
 
 export const useWeb3 = () => {
-    const [web3, setWeb3] = useState(null)
+    const [web3, setWeb3] = useState(null);
 
     useEffect(() => {
         var instance;
@@ -19,8 +19,7 @@ export const useWeb3 = () => {
             const provider = new Web3.provider.HttpProvider('http://127.0.0.1:8545');
             instance = new Web3(provider);
         }
-        setWeb3(instance)
+        setWeb3(instance);
     },[])
     return web3
 };
-

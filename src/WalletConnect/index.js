@@ -440,10 +440,10 @@ const ConnectWallet = () => {
     }
   };
 
-
+  
   const updateBalance = async fromAddress => {
     const contract = new web3.eth.Contract(abi, coinAddress)
-    contract.methods.totalSupply().call().then(function(res){
+    await contract.methods.balanceOf(fromAddress).call().then(function(res){
       console.log(res);
       setBalance(res);
   }).catch(function(err) {

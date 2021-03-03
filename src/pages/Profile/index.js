@@ -17,25 +17,32 @@ import {
 // import BuyModal from '../Modal/BuyModal'
 // import WalletModal from '../Modal/WalletModal'
 // import RemovePoolModal from '../Modal/RemovePoolModal'
-// import ProfileIcon from '../ProfileIcon/ProfileIcon';
-import {useStoreApi} from '../../storeApi';
+// import ProfileIcon from '../ProfileIcon/ProfileIcon';\
 import ConnectWallet from '../../WalletConnect';
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 import Footer from '../../components/Footer/footer';
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
+import {useStoreApi} from '../../storeApi';
+import {useWeb3} from '../../getWeb3';
 const Exchange = () => {
   
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
   const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
   const [isWalletOpen,setisWalletOpen] = useState(false);
-  const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
     
   };
+  
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  const { balance, address, message, setAddress, setBalance } = useStoreApi();
+  const web3 = useWeb3();
   
  if(address == null){
   return(
@@ -64,7 +71,7 @@ return (
       <ExchangeCard>
 
         
-        <ExchangeH3>{balance} JFC</ExchangeH3>
+        <ExchangeH3>{balance} JFC </ExchangeH3>
         <br></br>
         <br></br>
         <br></br>

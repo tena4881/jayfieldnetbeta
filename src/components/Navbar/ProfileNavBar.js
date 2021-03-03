@@ -30,16 +30,17 @@ const ProfileNavbar = ({ toggle }) => {
     }
   };
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
-  
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  //setInterval(refreshPage, 5000); // runs every 10 minutes (600).
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav);
   }, []);
 
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
-  
-  
+
 
   return (
     <>
