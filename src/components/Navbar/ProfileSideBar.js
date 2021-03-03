@@ -35,11 +35,13 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
         <ProfileIcon account={address}></ProfileIcon>
+        <br>
+        </br>
         <SidebarRoute to='#' >COMING SOON!</SidebarRoute>
         </SidebarMenu>
         <SideBtnWrap>
           
-          <LogoutBtn onClick={toggleLogout}>Logout</LogoutBtn>
+          <LogoutBtn className="btn btn-primary mt-4 waves-effect waves-light" onClick={toggleLogout}>Logout</LogoutBtn>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

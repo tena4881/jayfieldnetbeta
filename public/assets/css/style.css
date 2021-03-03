@@ -1417,8 +1417,7 @@ iframe {
 .is-sticky .navbar-custom {
   margin-top: 0px;
   padding: 10px 0px;
-  background-color: #272a33;
-  box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+  background-color: rgba(39, 42, 52, 0.93) ;
 }
 
 .bg-home {
@@ -2120,17 +2119,16 @@ ul.pattern .color8 {
 
 @media (min-width: 200px) and (max-width: 1024px) {
   .navbar-custom {
-    margin-top: 0px;
-    padding: 10px 0px !important;
-    box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
-    color: #ffffff !important;
-    background: #272a33;
+    margin-top: 10px;
+    padding: 0px 0px !important;
+    color: #000 !important;
+    background: transparent;
   }
   .navbar-custom .navbar-nav {
     margin-left: 0px;
   }
   .navbar-custom .navbar-nav li.active {
-    border-color: transparent;
+    border-color: black;
   }
   .navbar-custom .navbar-nav li a {
     transition: all 0.4s;
@@ -2138,10 +2136,10 @@ ul.pattern .color8 {
     color: rgba(255, 255, 255, 0.6) !important;
   }
   .navbar-custom > .container {
-    width: 90%;
+    width: 95%;
   }
   .navbar-white .navbar-toggler {
-    color: #272a33 !important;
+    color: #1C1E25 !important;
   }
   .navbar-button {
     margin-top: 15px;
@@ -2153,13 +2151,14 @@ ul.pattern .color8 {
     color: #ffffff !important;
   }
   .navbar-toggler {
-    font-size: 24px;
+    font-size: 40px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #ffffff;
+    color: transparent;
   }
   .navbar-toggler:focus {
     box-shadow: none;
+    color: black;
   }
   .home-title {
     font-size: 32px;

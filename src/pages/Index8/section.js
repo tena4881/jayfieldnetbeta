@@ -17,14 +17,17 @@ class Section extends Component {
           <div className="bg-overlay"></div>
           <div className="display-table">
             <div className="home-cell-bottom">
-              <Container>
+              <br></br>
+              <br></br>
+              <Container style={{height: '70vh', display: 'flex', justifyContent:'center'}}>
                 <Row>
                   <Col
                     lg={{ size: 8, offset: 2 }}
                     className="text-white text-center"
+                    
                   >
-                    <h1 className="home-title">
-                      We help startups to the MOON!
+                    <h1 className="text-uppercase">
+                      WE HELP STARTUPS TO THE MOON!
                     </h1>
                     <p className="pt-3 home-desc">
                       Etiam sed.Interdum consequat proin vestibulum class at a
@@ -34,7 +37,7 @@ class Section extends Component {
                     <div className="mt-4">
                     <img
                     alt="hero"
-                    src='../assets/images/JayFieldLogo3D.gif'
+                    src='../assets/images/rocket.png'
                   />
                     </div>
                   </Col>
