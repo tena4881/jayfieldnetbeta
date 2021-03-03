@@ -478,17 +478,14 @@ return (
               <ExchangeH3>Welcome back!</ExchangeH3>
 			  <ExchangeP>Looks like you're not connected.</ExchangeP>
               <ExchangeP>Connect using your Metamask wallet!</ExchangeP>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
+              
               <ConnectBtn className="btn btn-primary mt-4 waves-effect waves-light" >Connect</ConnectBtn>
           </ExchangeCard>
           <BackBtn to="/">Back Home</BackBtn>
         </ConnectWrapper>
         
       </WalletSigninContainer>
-      <Footer/>
+      
   </ProfileContainer>
     
     

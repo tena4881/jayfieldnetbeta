@@ -1417,7 +1417,7 @@ iframe {
 .is-sticky .navbar-custom {
   margin-top: 0px;
   padding: 10px 0px;
-  background-color: rgba(39, 42, 52, 0.93) ;
+  background-color: rgba(39, 42, 52, 0.0) ;
 }
 
 .bg-home {

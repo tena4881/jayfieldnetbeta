@@ -30,11 +30,13 @@ export const ExchangeContainer = styled.div`
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
+    
     transition: 0.8s all ease;
     height: auto;
   }
  
   @media screen and (max-width: 375px) {
+    
     transition: 0.8s all ease;
     height: auto;
   }
@@ -62,11 +64,10 @@ export const WalletSigninContainer = styled.div`
 `;
 
 export const ExchangeWrapper = styled.div`
-  width: 75vw;
+  width: 80vw;
   margin: 3rem auto;
   display: grid;
-  overflow-x:hidden;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 
   @media screen and (max-width: 1100px) {

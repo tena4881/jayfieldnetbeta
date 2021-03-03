@@ -42,10 +42,7 @@ return (
             <ExchangeCard >
               <ExchangeH3>Welcome back!</ExchangeH3>
               <ExchangeP>Connect using your crypto wallet</ExchangeP>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
+              
               <ConnectBtn >Connect</ConnectBtn>
           </ExchangeCard>
           <BackBtn to="/">Back</BackBtn>

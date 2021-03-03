@@ -69,28 +69,21 @@ return (
       <ExchangeWrapper>
         
       <ExchangeCard>
-
-        
-        <ExchangeH3>{balance} JFC </ExchangeH3>
-        <br></br>
-        <br></br>
-        <br></br>
-        
-        
-        
+        <ExchangeH2 >JFC Balance:</ExchangeH2>
+        <ExchangeH3 style={{color: 'green'}}>{balance} JFC </ExchangeH3>
       </ExchangeCard>
       
       <ExchangeCard>
-      <ExchangeH3>You have Contributed</ExchangeH3>
+      <ExchangeH3>You have Contributed:</ExchangeH3>
         <ExchangeH2>Ξ{0}</ExchangeH2>
         
-        <ExchangeH3>in the pool</ExchangeH3>
+        <ExchangeH3>to the pool</ExchangeH3>
 
-          
+        
           <ExchangeP>
-            Earn JayField Coins!
+          Contribute more and earn JayField Coins!
             <br></br>
-            Coming Soon!
+            (Coming Soon)
           </ExchangeP>
           
           
