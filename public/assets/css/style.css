@@ -2128,12 +2128,12 @@ ul.pattern .color8 {
     margin-left: 0px;
   }
   .navbar-custom .navbar-nav li.active {
-    border-color: black;
+    border-color:transparent;
   }
   .navbar-custom .navbar-nav li a {
     transition: all 0.4s;
     margin: 0px;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: transparent !important;
   }
   .navbar-custom > .container {
     width: 95%;
@@ -2148,7 +2148,7 @@ ul.pattern .color8 {
   .navbar-custom .navbar-nav li.active a,
   .navbar-custom .navbar-nav li a:hover,
   .navbar-custom .navbar-nav li a:active {
-    color: #ffffff !important;
+    color: transparent !important;
   }
   .navbar-toggler {
     font-size: 40px;
@@ -2158,7 +2158,7 @@ ul.pattern .color8 {
   }
   .navbar-toggler:focus {
     box-shadow: none;
-    color: black;
+    color: transparent;
   }
   .home-title {
     font-size: 32px;
