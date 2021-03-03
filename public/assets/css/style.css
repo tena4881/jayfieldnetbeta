@@ -2139,7 +2139,7 @@ ul.pattern .color8 {
     width: 95%;
   }
   .navbar-white .navbar-toggler {
-    color: #1C1E25 !important;
+    color: transparent !important;
   }
   .navbar-button {
     margin-top: 15px;
