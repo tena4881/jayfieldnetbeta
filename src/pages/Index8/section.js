@@ -50,16 +50,14 @@ class Section extends Component {
                       consectetur adipisicing eli.
                     </p>
                     <div className="mt-4">
-                
-                      
-                    <iframe
+                      <iframe
                         title="dorsin"
                         src="http://player.vimeo.com/video/69988283?color=f15b72&amp;title=0&amp;byline=0&amp;portrait=0"
-                        width="900"
-                        height="350"
+                        width="555"
+                        height="321"
                         className="frame-border"
                       ></iframe>
-                    </div>
+                      </div>
                   </Col>
                 </Row>
               </Container>
