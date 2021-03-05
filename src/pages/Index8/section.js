@@ -3,7 +3,6 @@ import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 //Importing Modal
 import ModalSection from "../../components/common/ModalSection";
-import VideoPlayer from '../../components/Video/VideoPlayer';
 class Section extends Component {
   constructor() {
     super();
@@ -50,7 +49,6 @@ class Section extends Component {
                       consectetur adipisicing eli.
                     </p>
                     <div className="mt-4">
-                    <VideoPlayer/>
                       </div>
                   </Col>
                 </Row>
