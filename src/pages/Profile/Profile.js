@@ -4,10 +4,13 @@ import { Link as LinkR } from 'react-router-dom';
 
 export const ProfileContainer = styled.div`
   display: flex;
+  
   flex-direction: column;
-  background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
+  background-color: #fff;
 
-  @media screen and (max-width: 768px) {
+
+
+  @media screen and (max-width: 1280px) {
     max-width: 100vw;
     overflow-x:hidden;
     transition: 0.8s all ease;
@@ -27,10 +30,11 @@ export const ExchangeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
-  background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1375px) {
     
     transition: 0.8s all ease;
     height: auto;
@@ -53,7 +57,7 @@ export const WalletSigninContainer = styled.div`
   align-items: center;
   background: radial-gradient(circle, rgba(22, 30, 48,1) 0%, rgba(16, 21, 34 ,1) 77%);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     transition: 0.8s all ease;
     height: auto;
   }
@@ -72,8 +76,9 @@ export const ExchangeWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1375px) {
     width: 100vw;
     overflow-x:hidden;
     margin-bottom: 30px;
@@ -98,7 +103,7 @@ export const ConnectWrapper = styled.div`
   padding: 0 50px;
   justify-items: center;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1400px) {
     grid-template-columns: 1fr;
   }
 
@@ -109,7 +114,10 @@ export const ConnectWrapper = styled.div`
 `;
 
 export const ExchangeCard = styled.div`
-  background: #f5f5f5;
+
+background-color: #1b2845;
+background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,12 +127,53 @@ export const ExchangeCard = styled.div`
   box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-    min-height: 300px;
-  min-width:  300px;
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
   }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+export const BalanceCard = styled.div`
+
+background-color: #42378f;
+background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
 
   &:hover {
     transform: scale(1.02);
@@ -133,7 +182,9 @@ export const ExchangeCard = styled.div`
   }
 `;
 export const ChartCard = styled.div`
-  background: #f5f5f5;
+background-color: #1b2845;
+background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+
   display: flex;
   min-height: 600px;
   min-width:  600px;
@@ -145,16 +196,18 @@ export const ChartCard = styled.div`
   box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1375px) {
     grid-template-columns: 1fr;
     padding: 0 10px;
     min-height: 450px;
+    margin: 0px 5vw 1px 5vw;
   min-width:  450px;
   }
   @media screen and (max-width: 375px) {
     grid-template-columns: 1fr;
     padding: 0 10px;
     min-height: 300px;
+    margin: 0px .4vw 1px .4vw;
   min-width:  300px;
   }
 
@@ -165,7 +218,8 @@ export const ChartCard = styled.div`
   }
 `;
 export const ProfileCard = styled.div`
-  background: #f7f7f7;
+  background-color: #fcfcfc;
+
   display: flex;
   min-height: 100%;
   min-width:  100%;
@@ -199,6 +253,10 @@ export const ExchangeH1 = styled.h1`
 export const ExchangeH2 = styled.h2`
   font-size: 2rem;
 `;
+export const ExchangeH2W = styled.h2`
+  font-size: 2rem;
+  color: white;
+`;
 export const ExchangeH22 = styled.h2`
   font-size: 1.5rem;
   font-weight: normal;
@@ -210,6 +268,13 @@ export const ExchangeH22 = styled.h2`
 export const ExchangeH3 = styled.h3`
   font-size: 1.5rem;
   font-weight: normal;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+`;
+export const ExchangeH3W = styled.h3`
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: white;
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
@@ -235,6 +300,12 @@ export const AccountNum = styled.h3`
 export const ExchangeP = styled.p`
   font-size: .7rem;
   text-align: center;
+ 
+`;
+export const ExchangePW = styled.p`
+  font-size: .7rem;
+  text-align: center;
+  color: white;
  
 `;
 

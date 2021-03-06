@@ -12,6 +12,10 @@ import {
   ExchangeP,
   AccountNum,
   ProfileCard,
+  ExchangeH2W,
+  ExchangeH3W,
+  BalanceCard,
+  ExchangePW,
   ConnectBtn,
   ChartCard,
   ExchangeH4
@@ -121,30 +125,31 @@ return (
       
       <ExchangeWrapper>
         
-      <ExchangeCard>
-        <ExchangeH2 >JFC Balance:</ExchangeH2>
-        <ExchangeH3 style={{color: 'green'}}><Balance/> </ExchangeH3>
-      </ExchangeCard>
+      <BalanceCard>
+        <ExchangeH2W >JFC Balance:</ExchangeH2W>
+        <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
+      </BalanceCard>
       
       <ExchangeCard>
-        <ExchangeH3>You have Contributed:</ExchangeH3>
-        <ExchangeH2>Ξ{0}</ExchangeH2>
-        <ExchangeH3>to the pool</ExchangeH3>
-        <ExchangeP>
+        <ExchangeH3W>You have Contributed:</ExchangeH3W>
+        <ExchangeH2W>Ξ{0}</ExchangeH2W>
+        <ExchangeH3W>to the pool</ExchangeH3W>
+        <ExchangePW>
           Contribute more and earn JayField Coins!
           <br></br>
           (Coming Soon)
-        </ExchangeP>
+        </ExchangePW>
       </ExchangeCard>
 
+      <ExchangeCard>
+        <ExchangeH2W >Something Cool:</ExchangeH2W>
+        <ExchangeH3W> Coming </ExchangeH3W>
+      </ExchangeCard>
       <ChartCard>
-        <ExchangeH3>Another Console Here</ExchangeH3>
-      </ChartCard>
-      <ChartCard>
-        <ExchangeH3>Price of ETH</ExchangeH3>
+        <ExchangeH3W>Price of ETH</ExchangeH3W>
         <TradingViewWidget
           symbol="ETHUSD"
-          theme={Themes.LIGHT}
+          theme={Themes.DARK}
           style='2'
           locale="fr"
           autosize
