@@ -81,15 +81,17 @@ return (
      
           <ProfileCard>
         <Account/>
-         
+        <ExchangeH2>Profile Overview</ExchangeH2>
       </ProfileCard>
-      <ExchangeH2>Profile Overview</ExchangeH2>
-      <ExchangeH4 to ='/addToWallet'>Can't see JFC in your MetaMask?</ExchangeH4>
+      
+      <ExchangeH4 to ='/addToWallet'>Don't see JFC in your MetaMask?</ExchangeH4>
       <ExchangeWrapper>
         
       <ExchangeCard>
+        
         <ExchangeH2 >JFC Balance:</ExchangeH2>
         <ExchangeH3 style={{color: 'green'}}><Balance/> </ExchangeH3>
+        
       </ExchangeCard>
       
       <ExchangeCard>

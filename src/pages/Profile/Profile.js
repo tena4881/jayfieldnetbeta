@@ -66,7 +66,7 @@ export const WalletSigninContainer = styled.div`
 
 export const ExchangeWrapper = styled.div`
   width: 80vw;
-  margin: 3rem auto;
+  margin: 0rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
@@ -212,7 +212,7 @@ export const ExchangeH3 = styled.h3`
 `;
 
 export const ExchangeH4 = styled(LinkR)`
-  font-size: .7rem;
+  font-size: .8rem;
   font-weight: normal;
   margin-top: .5rem;
   margin-bottom: 1rem;
