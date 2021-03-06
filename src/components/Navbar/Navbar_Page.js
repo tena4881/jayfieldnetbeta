@@ -50,7 +50,7 @@ class NavbarPage extends Component {
                 <NavbarBrand className="logo text-uppercase" href="/">
                   <img
                     alt="hero"
-                    src='../assets/images/shadedLogo.png'
+                    src='../assets/images/smaller_logo.png'
                   />
 
                 </NavbarBrand>

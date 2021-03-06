@@ -48,7 +48,7 @@ const Exchange = () => {
   const tokenAddress = '0xe5d9d8eeb5b225a465523e2065834d9ec0ed9ab8';
   const tokenSymbol = 'JFC';
   const tokenDecimals = 2;
-  const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeihs7xjboktr6inglotj3gnynysyxzsbffhdhzygp466cvzknovlce';
+  const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';
 
   
   
@@ -122,44 +122,39 @@ return (
       <ExchangeWrapper>
         
       <ExchangeCard>
-        
         <ExchangeH2 >JFC Balance:</ExchangeH2>
         <ExchangeH3 style={{color: 'green'}}><Balance/> </ExchangeH3>
-        
       </ExchangeCard>
       
       <ExchangeCard>
-      <ExchangeH3>You have Contributed:</ExchangeH3>
+        <ExchangeH3>You have Contributed:</ExchangeH3>
         <ExchangeH2>Ξ{0}</ExchangeH2>
-        
         <ExchangeH3>to the pool</ExchangeH3>
-
-        
-          <ExchangeP>
+        <ExchangeP>
           Contribute more and earn JayField Coins!
-            <br></br>
-            (Coming Soon)
-          </ExchangeP>
-          
-          
-          
-        </ExchangeCard>
+          <br></br>
+          (Coming Soon)
+        </ExchangeP>
+      </ExchangeCard>
 
-        
       <ChartCard>
-      <ExchangeH3>Price of ETH</ExchangeH3>
+        <ExchangeH3>Another Console Here</ExchangeH3>
+      </ChartCard>
+      <ChartCard>
+        <ExchangeH3>Price of ETH</ExchangeH3>
+        <TradingViewWidget
+          symbol="ETHUSD"
+          theme={Themes.LIGHT}
+          style='2'
+          locale="fr"
+          autosize
+        />
+      </ChartCard>
+       
+       
+      
 
 
-      <TradingViewWidget
-        symbol="ETHUSD"
-        theme={Themes.LIGHT}
-        style='2'
-        locale="fr"
-        autosize
-      />
-        </ChartCard>
-
-        
       </ExchangeWrapper>
       <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
     </ExchangeContainer>

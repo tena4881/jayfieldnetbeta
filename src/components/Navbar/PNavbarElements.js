@@ -131,28 +131,14 @@ export const LogoutBtnLink = styled(LinkR)`
   }
 `;
 export const HomeBtnLink = styled(LinkR)`
-  border-radius: 50px;
   background: transparent;
-  white-space: nowrap;
-  color: #010606;
-  width: 3rem;
-  height: 3rem;
-  font-size: 16px;
-  align-items: center;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #ffc800;
-    color: #fff;
-  }
+  
+  
 `;
 
 export const HomeContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 

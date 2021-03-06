@@ -22,7 +22,7 @@ const addToWallet = () => {
     const tokenAddress = '0xe5d9d8eeb5b225a465523e2065834d9ec0ed9ab8';
     const tokenSymbol = 'JFC';
     const tokenDecimals = 2;
-    const tokenImage = 'https://tenamade-team-bucket.storage.fleek.co/JFC_MetaMask.png';
+    const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';
   
     
     

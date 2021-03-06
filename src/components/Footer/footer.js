@@ -14,24 +14,10 @@ class Footer extends Component {
         child: [
           { link: "#", title: "Home" },
           { link: "#", title: "About us" },
-          { link: "#", title: "Careers" },
-          { link: "#", title: "Contact us" },
-        ],
-      },
-      {
-        title: "Information",
-        child: [
-          { link: "#", title: "Terms & Condition" },
-          { link: "#", title: "About us" },
-          { link: "#", title: "Jobs" },
-        ],
-      },
-      {
-        title: "Support",
-        child: [
           { link: "#", title: "FAQ" },
-          { link: "#", title: "Contact" },
+          { link: "#", title: "Contact us" },
           { link: "#", title: "Disscusion" },
+          { link: "#", title: "Terms & Condition" },
         ],
       },
     ],

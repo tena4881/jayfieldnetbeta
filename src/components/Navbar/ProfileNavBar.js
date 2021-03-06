@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FaChevronCircleDown, FaHome } from 'react-icons/fa';
+import { FaChevronCircleDown, FaHome,FaCog, FaHandshake } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
 import { animateScroll as scroll } from 'react-scroll';
@@ -48,17 +48,16 @@ const ProfileNavbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <HomeContainer>
-              <HomeBtnLink to='/'
-                    duration={500}
-                    exact='true'
-                    offset={-80}>
-              <HomeIcon><FaHome style={{ color: 'black' }}/></HomeIcon>
+          <HomeContainer>
+              <HomeBtnLink to='/'>
+              <HomeIcon><FaHandshake size={40} style={{ color: 'black' }}/></HomeIcon>
               </HomeBtnLink>
             </HomeContainer>
+            
             <MobileIcon onClick={toggle}>
-              <FaChevronCircleDown style={{ color: 'black' }}/>
+              <FaCog size={26} style={{ color: 'black' }}/>
             </MobileIcon>
+            
             <NavMenu>
               <NavItem>
                 <NavLinks
@@ -72,9 +71,7 @@ const ProfileNavbar = ({ toggle }) => {
               </NavItem>
               
             </NavMenu>
-            <NavBtn>
-              <LogoutBtnLink to="/" onClick={toggleLogout}>Log out</LogoutBtnLink>
-            </NavBtn>
+            
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
