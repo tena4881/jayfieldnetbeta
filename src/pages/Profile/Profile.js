@@ -217,6 +217,7 @@ export const ExchangeH4 = styled(LinkR)`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+
 export const AccountNum = styled.h3`
   font-size: .9rem;
   font-weight: normal;

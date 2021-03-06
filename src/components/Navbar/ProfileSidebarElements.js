@@ -5,10 +5,9 @@ import { FaTimes } from 'react-icons/fa';
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: radial-gradient(circle, rgba(22, 30, 48,1) 0%, rgba(16, 21, 34 ,1) 77%);
-  display: grid;
   align-items: center;
   top: 0;
   left: 0;
@@ -34,6 +33,7 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
+  position: flex;
   color: #fff;
 `;
 

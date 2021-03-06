@@ -12,6 +12,8 @@ import {
 } from './ProfileSidebarElements';
 import {useStoreApi} from '../../storeApi';
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
+import { HashLink as Link } from 'react-router-hash-link';
+import { ExchangeH2, AccountNum } from '../../pages/Profile/Profile';
 //import useEthAccount from '../../blockchain/useEthAccount'
 
 const ProfileSidebar = ({ isOpen, toggle }) => {
@@ -25,22 +27,28 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       }
   //const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
   //const account = useEthAccount();
-  
+  /*
+
+
+        <SidebarMenu >
+          <SidebarRoute to='#' >COMING SOON!</SidebarRoute>
+        </SidebarMenu>
+*/
+
   return (
     
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
-     
+      <SidebarWrapper style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
       
-      <SidebarWrapper>
-        <SidebarMenu>
-        <ProfileIcon account={address}></ProfileIcon>
-        <br>
-        </br>
-        <SidebarRoute to='#' >COMING SOON!</SidebarRoute>
-        </SidebarMenu>
-        <SideBtnWrap>
-        <LogoutBtn to="/" onClick={toggleLogout}>Log out</LogoutBtn>
-        </SideBtnWrap>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  >        
+          <ProfileIcon account={address}></ProfileIcon>
+          
+      </div>
+      <AccountNum >{address}</AccountNum>
+        
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
+                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Log Out </Link>
+        </div>
       </SidebarWrapper>
     </SidebarContainer>
   );
