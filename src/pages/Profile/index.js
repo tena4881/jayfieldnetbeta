@@ -1,6 +1,6 @@
 import React,{useState,useContext,useEffect} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
-
+import { Link } from "react-router-dom";
 import {
   ExchangeContainer,
   ExchangeWrapper,
@@ -41,14 +41,47 @@ const Exchange = () => {
     setIsOpen(!isOpen);
     
   };
-  
- 
-
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const web3 = useWeb3();
 
   const { connect, getAccounts, getChain, metaState } = useMetamask();
+  const tokenAddress = '0xe5d9d8eeb5b225a465523e2065834d9ec0ed9ab8';
+  const tokenSymbol = 'JFC';
+  const tokenDecimals = 2;
+  const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeihs7xjboktr6inglotj3gnynysyxzsbffhdhzygp466cvzknovlce';
 
+  
+  
+  const coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
+
+
+    //WHAT ARE THER REWARDS FOR COMPLEATING THIS TASK
+    async function addToMetamask(){
+      let ethereum = window.ethereum;
+      try {
+      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+      const wasAdded = await ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+          type: 'ERC20', // Initially only supports ERC20, but eventually more!
+          options: {
+              address: tokenAddress, // The address that the token is at.
+              symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+              decimals: tokenDecimals, // The number of decimals in the token
+              image: tokenImage, // A string url of the token logo
+          },
+          },
+      });
+      
+      if (wasAdded) {
+          console.log('Thanks for your interest!');
+      } else {
+          console.log('Your loss!');
+      }
+      } catch (error) {
+      console.log(error);
+      }
+  }
 
   useEffect(() => {
       if (metaState.isAvailable) {
@@ -81,10 +114,11 @@ return (
      
           <ProfileCard>
         <Account/>
-        <ExchangeH2>Profile Overview</ExchangeH2>
+        <ExchangeH3>Profile Overview</ExchangeH3>
       </ProfileCard>
       
-      <ExchangeH4 to ='/addToWallet'>Don't see JFC in your MetaMask?</ExchangeH4>
+      
+      
       <ExchangeWrapper>
         
       <ExchangeCard>
@@ -123,18 +157,13 @@ return (
         locale="fr"
         autosize
       />
-          
-          
         </ChartCard>
-        
-      
-        
-        
-        
+
         
       </ExchangeWrapper>
-      
+      <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
     </ExchangeContainer>
+    
     <Footer/>
     </ProfileContainer>
   );

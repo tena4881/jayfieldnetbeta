@@ -27,6 +27,7 @@ export const ExchangeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
   background: radial-gradient(circle, rgba(245, 245, 245,1) 0%, rgba(237, 237, 237 ,1) 77%);
 
   @media screen and (max-width: 768px) {
@@ -67,6 +68,7 @@ export const WalletSigninContainer = styled.div`
 export const ExchangeWrapper = styled.div`
   width: 80vw;
   margin: 0rem auto;
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
@@ -74,6 +76,7 @@ export const ExchangeWrapper = styled.div`
   @media screen and (max-width: 1100px) {
     width: 100vw;
     overflow-x:hidden;
+    margin-bottom: 30px;
     grid-template-columns: 1fr;
   }
 
@@ -113,7 +116,7 @@ export const ExchangeCard = styled.div`
   align-items: center;
   border-radius: 20px;
   padding: 15px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 600px) {
@@ -139,7 +142,7 @@ export const ChartCard = styled.div`
   align-items: center;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 600px) {
@@ -173,7 +176,7 @@ export const ProfileCard = styled.div`
   max-height: auto;
   margin-bottom: 60px;
   padding: 25px;
-  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   
 `;
