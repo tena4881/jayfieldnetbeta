@@ -13,13 +13,14 @@ import Profile from "./pages/Profile/index";
 import Signup from "./pages/Auth/Signup";
 import Login from "./pages/Auth/Login";
 import PasswordForget from "./pages/Auth/PasswordForget";
+import AddToWallet from "./WalletConnect/addJFCToWallet";
 
 const routes = [
   { path: "/password-forget", component: PasswordForget },
   { path: "/profile", component: Login },
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
-
+  { path: "/addToWallet", component: AddToWallet },
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },
   { path: "/home-seven", component: Index7 },
@@ -30,6 +31,7 @@ const routes = [
   { path: "/home-two", component: Index2 },
   { path: "/home-one", component: Index1 },
   { path: "/", component: Index8 },
+  
 ];
 
 export default routes;

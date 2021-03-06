@@ -46,6 +46,7 @@ export const WalletSigninContainer = styled.div`
   height: auto;
   display: flex;
   width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -209,6 +210,13 @@ export const ExchangeH3 = styled.h3`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+
+export const ExchangeH4 = styled(LinkR)`
+  font-size: .7rem;
+  font-weight: normal;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+`;
 export const AccountNum = styled.h3`
   font-size: .9rem;
   font-weight: normal;
@@ -303,7 +311,29 @@ export const UnStakeBtn = styled(LinkR)`
 `;
 export const ConnectBtn = styled.button`
   border-radius: 50px;
-  background: #ffc800;
+  background: #fb3e3e;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+  outline: none;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #000;
+    color: #fff;
+  }
+`;
+
+export const AddToWalletBTN = styled(LinkR)`
+  border-radius: 50px;
+  background: #fb3e3e;
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;

@@ -415,7 +415,6 @@ var coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
 
 
 
-
 const ConnectWallet = () => {
 	
   const { balance, address, message, setAddress, setBalance } = useStoreApi();

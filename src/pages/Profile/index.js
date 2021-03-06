@@ -12,7 +12,9 @@ import {
   ExchangeP,
   AccountNum,
   ProfileCard,
+  ConnectBtn,
   ChartCard,
+  ExchangeH4
 } from './Profile';
 // import BuyModal from '../Modal/BuyModal'
 // import WalletModal from '../Modal/WalletModal'
@@ -40,14 +42,13 @@ const Exchange = () => {
     
   };
   
-  function refreshPage() {
-    window.location.reload(false);
-  }
+ 
 
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const web3 = useWeb3();
 
   const { connect, getAccounts, getChain, metaState } = useMetamask();
+
 
   useEffect(() => {
       if (metaState.isAvailable) {
@@ -82,7 +83,8 @@ return (
         <Account/>
          
       </ProfileCard>
-      <ExchangeH3>Profile Overview</ExchangeH3>
+      <ExchangeH2>Profile Overview</ExchangeH2>
+      <ExchangeH4 to ='/addToWallet'>Can't see JFC in your MetaMask?</ExchangeH4>
       <ExchangeWrapper>
         
       <ExchangeCard>
@@ -110,6 +112,8 @@ return (
         
       <ChartCard>
       <ExchangeH3>Price of ETH</ExchangeH3>
+
+
       <TradingViewWidget
         symbol="ETHUSD"
         theme={Themes.LIGHT}
