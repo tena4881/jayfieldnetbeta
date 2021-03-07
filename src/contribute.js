@@ -209,8 +209,8 @@ export default function Contribute() {
   var gas = 21000;
   var attoethForGas = gasPrice * gas;
 
-  async function handle25Click(){
-    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.25;
+  async function handle01Click(){
+    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.01;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,
@@ -220,8 +220,8 @@ export default function Contribute() {
     
   }
 
-  async function handle50Click(){
-	var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.5;
+  async function handle05Click(){
+	var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.05;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,
@@ -232,8 +232,8 @@ export default function Contribute() {
   }
 
 
-  async function handle75Click(){
-    var amountToSend = (Web3.utils.toWei(balance)) *.75;
+  async function handle10Click(){
+    var amountToSend = (Web3.utils.toWei(balance)) *.1;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,
@@ -242,9 +242,10 @@ export default function Contribute() {
      });
     
   }
+  
 
-  async function handle100Click(){
-    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.99;
+  async function handle15Click(){
+    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.15;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,
@@ -256,10 +257,11 @@ export default function Contribute() {
  
   return (
     <div >
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle25Click} className="btn btn-primary mt-4 waves-effect waves-light">25% {}</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle50Click} className="btn btn-primary mt-4 waves-effect waves-light">50%</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle75Click} className="btn btn-primary mt-4 waves-effect waves-light">75%</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle100Click} className="btn btn-primary mt-4 waves-effect waves-light">100%</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle01Click} className="btn btn-primary mt-4 waves-effect waves-light">1% {}</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle05Click} className="btn btn-primary mt-4 waves-effect waves-light">5%</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle10Click} className="btn btn-primary mt-4 waves-effect waves-light">10%</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle15Click} className="btn btn-primary mt-4 waves-effect waves-light">15%</button>
+	<button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light">More...</button>
 </div>
   );
 }
