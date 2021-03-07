@@ -6,10 +6,9 @@ export const ProfileContainer = styled.div`
   display: flex;
   
   flex-direction: column;
-  background-color: #fff;
-
-
-
+  
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   @media screen and (max-width: 1280px) {
     max-width: 100vw;
     overflow-x:hidden;
@@ -33,6 +32,8 @@ export const ExchangeContainer = styled.div`
   justify-content: center;
   margin-bottom: 30px;
 
+  background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 
   @media screen and (max-width: 1375px) {
     
@@ -76,7 +77,8 @@ export const ExchangeWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 
   @media screen and (max-width: 1375px) {
     width: 100vw;
@@ -151,7 +153,6 @@ export const BalanceCard = styled.div`
 
 background-color: #42378f;
 background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
-
   display: flex;
   flex-direction: column;
   justify-content: center;

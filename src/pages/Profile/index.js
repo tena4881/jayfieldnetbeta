@@ -137,7 +137,7 @@ return (
         <ExchangeH2W >JFC Balance:</ExchangeH2W>
         <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
       </BalanceCard>
-      <ExchangeCard>
+      <BalanceCard>
         <ExchangeH3W >Contribute to JayField Net</ExchangeH3W>
         
         <ExchangePW>
@@ -150,7 +150,7 @@ return (
 
         <Contribute/>
         
-      </ExchangeCard>
+      </BalanceCard>
 
       <ExchangeCard>
         <ExchangeH3W>You have contributed:</ExchangeH3W>
