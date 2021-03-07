@@ -203,7 +203,7 @@ export default function Contribute() {
 		"type": "function"
 	}
 ];
-  const vaultAddress = "0x2D7C32E91CBFB3B4C4D81fE90b20e0a159823905";
+  const vaultAddress = "0x557fd4e5c433d5b4565056a42c21f7710776ee2a";
   const vaultContract = new metaState.web3.eth.Contract(VaultAbi, vaultAddress);
   var gasPrice = 20*10**9;
   var gas = 21000;
@@ -221,12 +221,19 @@ export default function Contribute() {
   }
 
   async function handle50Click(){
-	setIsBuyOpen(true);
+	var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.5;
+    await vaultContract.methods.Contribute().send({
+      from: metaState.account[0],
+      gas: 470000,
+      value: amountToSend, // in WEI, which is equivalent to 1 ether
+      gasPrice:0
+     });
      
   }
 
+
   async function handle75Click(){
-    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.75;
+    var amountToSend = (Web3.utils.toWei(balance)) *.75;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,

@@ -1,9 +1,14 @@
-// File: openzeppelin-solidity/contracts/utils/Context.sol
-
-// SPDX-License-Identifier: MIT
-
 pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
+pragma solidity 0.6.0;
 
+
+// File: openzeppelin-solidity/contracts/utils/Context.sol
+// SPDX-License-Identifier: MIT
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
@@ -26,11 +31,7 @@ abstract contract Context {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/IERC20.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
  */
@@ -106,11 +107,7 @@ interface IERC20 {
 }
 
 // File: openzeppelin-solidity/contracts/math/SafeMath.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
  * checks.
@@ -323,11 +320,7 @@ library SafeMath {
 }
 
 // File: openzeppelin-solidity/contracts/access/Ownable.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
@@ -393,15 +386,7 @@ abstract contract Ownable is Context {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
-
-
-
-
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -708,13 +693,7 @@ contract ERC20 is Context, IERC20, Ownable {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
-
-
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
  * tokens and those that they have an allowance for, in a way that can be
@@ -752,11 +731,6 @@ abstract contract ERC20Burnable is Context, ERC20 {
 }
 
 // File: contracts/JayFieldCoin.sol
-
-pragma solidity 0.6.0;
-
-
-
 contract JayFieldCoin is ERC20, ERC20Burnable {
 
     constructor(string memory _name, string memory _symbol) 

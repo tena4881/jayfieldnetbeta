@@ -200,8 +200,9 @@ const ContributeToVault = () => {
 	}
 ];
 
-  const coinAddress = "0x25482C0129Da13e39535288Ea1007Bfd11B8441d";
-  const vaultAddress = "0x2D7C32E91CBFB3B4C4D81fE90b20e0a159823905";
+const coinAddress = "0x6460131c3c275927e9B8Bd2B2D528f036dce2383";
+const vaultAddress = "FILL OUT ADDR";
+
   const vaultContract = new metaState.web3.eth.Contract(VaultAbi, vaultAddress);
   var ethBal;
 

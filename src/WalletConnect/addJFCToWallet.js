@@ -19,7 +19,7 @@ import {
 import Footer from '../components/Footer/footer';
 
 const addToWallet = () => {
-    const tokenAddress = '0xe5d9d8eeb5b225a465523e2065834d9ec0ed9ab8';
+    const tokenAddress = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8';
     const tokenSymbol = 'JFC';
     const tokenDecimals = 2;
     const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';

@@ -1,19 +1,19 @@
-pragma solidity ^0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
 
 import "./JayFieldCoin.sol";
 
 
 
-contract Test{
+contract JFVault{
     JayFieldCoin public token;
     
     event Contributed(uint amount);
-    event Sold(uint256 amount);
+    event ContributionFailed(uint256 _amount);
     address owner;
     address payable withdrawAddr;
-    uint rate;
     
     mapping(address => uint) balances;
+    mapping(address => uint) earnedJFC;
     mapping(address => uint) JFCAddress;
     
     
@@ -22,7 +22,6 @@ contract Test{
         owner = msg.sender;
         withdrawAddr = _withdrawAddr;
         token = _token;
-        rate = 10000;
     }
 
     modifier onlyOwner(){
@@ -53,14 +52,33 @@ contract Test{
        
     //allows people to contribute to JayField Net   
     function Contribute() payable public {
+        
+        //Check to make sure there is enough JFC in Vault
         uint256 vaultBalance = this.getVaultJFCBalance();
-        require(vaultBalance > 0,"Not enough JFC in the reserve" );
-        uint256 amountContributed = (msg.value)/(1 ether);
-        require(amountContributed > 0, "You need to contribute at least 0.02");
-        uint256 jftAmount = (amountContributed*10000)*100;
-        require(jftAmount <= vaultBalance, "Not enough JFC in the reserve");
-        token.transfer(msg.sender, jftAmount);
+        if(vaultBalance == 0){
+            revert("Not enough JFC in the vault to transfer");
+        }
+        
+        
+        //Takes contribution in WEI 
+        uint256 amountContributed = msg.value;
+        
+        //THIS determins how much JFC they will get based on contribution 
+        uint256 jfcAmount = (amountContributed*10000)/(10**18);
+        
+        //Converts JFC to mJFC
+        uint256 mJFC = jfcAmount*100;
+        
+        //THIS makes sure we have enough mJFC
+        //If yes, then send
+        if(mJFC >= vaultBalance){
+            revert("Not enough JFC in the vault to transfer");
+        }
+        
+        token.transfer(msg.sender, mJFC);
         balances[msg.sender] += msg.value;
+        earnedJFC[msg.sender] += mJFC;
+        emit Contributed(msg.value);
     }
 
     
@@ -68,7 +86,9 @@ contract Test{
         return token.balanceOf(_user);
     }
 
-
+    function updateOwner(address _newOwner) onlyOwner public{
+        owner = _newOwner;
+    }
     
     function getBalanceWithdrawAddr() view public returns(uint){
         return withdrawAddr.balance;
@@ -85,8 +105,17 @@ contract Test{
     function getContribution() view public returns(uint){
         return balances[msg.sender];
     }
+    
+    function getEarnedJFC() view public returns(uint){
+        return earnedJFC[msg.sender];
+    }
+    
+    function updateWithdrawAddress(address payable _newAddress) onlyOwner public returns(bool success){
+        withdrawAddr = _newAddress;
+        return true;
+    }
 
-
+     
     function Withdraw() onlyOwner public returns(bool success)  {
         uint256 amount = address(this).balance;
         withdrawAddr.transfer(amount);

@@ -1,9 +1,8 @@
-// File: openzeppelin-solidity/contracts/utils/Context.sol
-
-// SPDX-License-Identifier: MIT
-
 pragma solidity >=0.6.0 <0.8.0;
 
+
+// File: openzeppelin-solidity/contracts/utils/Context.sol
+// SPDX-License-Identifier: MIT
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
@@ -26,11 +25,7 @@ abstract contract Context {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/IERC20.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
  */
@@ -106,11 +101,7 @@ interface IERC20 {
 }
 
 // File: openzeppelin-solidity/contracts/math/SafeMath.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
  * checks.
@@ -323,11 +314,7 @@ library SafeMath {
 }
 
 // File: openzeppelin-solidity/contracts/access/Ownable.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
@@ -393,15 +380,7 @@ abstract contract Ownable is Context {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
-
-
-
-
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -708,13 +687,7 @@ contract ERC20 is Context, IERC20, Ownable {
 }
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol
-
 // SPDX-License-Identifier: MIT
-
-pragma solidity >=0.6.0 <0.8.0;
-
-
-
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
  * tokens and those that they have an allowance for, in a way that can be
@@ -752,11 +725,6 @@ abstract contract ERC20Burnable is Context, ERC20 {
 }
 
 // File: contracts/JayFieldCoin.sol
-
-pragma solidity 0.6.0;
-
-
-
 contract JayFieldCoin is ERC20, ERC20Burnable {
 
     constructor(string memory _name, string memory _symbol) 
@@ -764,4 +732,123 @@ contract JayFieldCoin is ERC20, ERC20Burnable {
         public  {
 
         }
+}
+
+contract JFVault {
+    JayFieldCoin public token;
+    
+    event Contributed(uint amount);
+    event ContributionFailed(uint256 _amount);
+    address owner;
+    address payable withdrawAddr;
+    
+    mapping(address => uint) balances;
+    mapping(address => uint) earnedJFC;
+    mapping(address => uint) JFCAddress;
+    
+    
+    
+    constructor(address payable _withdrawAddr, JayFieldCoin _token) payable public {
+        owner = msg.sender;
+        withdrawAddr = _withdrawAddr;
+        token = _token;
+    }
+
+    modifier onlyOwner(){
+        require(msg.sender == owner);
+        _;
+    }
+    
+    
+    
+    //TO-DO Make Only owner
+   function addJFCToVault(uint _amount) public onlyOwner {
+            uint toJFC = _amount * 100;
+            require(this.getUserJFCBalance(msg.sender) > 0, "You dont have JFC to add!");
+            require(toJFC > 0, "You need to add at least some JFC");
+            uint256 allowance = getAllowance();
+            token.increaseAllowance(address(this), toJFC);
+            require(allowance >= toJFC, "Check the token allowance");
+            token.transferFrom(msg.sender, address(this), toJFC);
+            
+            
+    } 
+    
+    function getAllowance() public  view returns(uint){
+        return token.allowance(msg.sender, address(this));
+    }
+    
+      
+       
+    //allows people to contribute to JayField Net   
+    function Contribute() payable public {
+        
+        //Check to make sure there is enough JFC in Vault
+        uint256 vaultBalance = this.getVaultJFCBalance();
+        if(vaultBalance == 0){
+            revert("Not enough JFC in the vault to transfer");
+        }
+        
+        
+        //Takes contribution in WEI 
+        uint256 amountContributed = msg.value;
+        
+        //THIS determins how much JFC they will get based on contribution 
+        uint256 jfcAmount = (amountContributed*10000)/(10**18);
+        
+        //Converts JFC to mJFC
+        uint256 mJFC = jfcAmount*100;
+        
+        //THIS makes sure we have enough mJFC
+        //If yes, then send
+        if(mJFC >= vaultBalance){
+            revert("Not enough JFC in the vault to transfer");
+        }
+        
+        token.transfer(msg.sender, mJFC);
+        balances[msg.sender] += msg.value;
+        earnedJFC[msg.sender] += mJFC;
+        emit Contributed(msg.value);
+    }
+
+    
+    function getUserJFCBalance(address _user) view public returns(uint){
+        return token.balanceOf(_user);
+    }
+
+    function updateOwner(address _newOwner) onlyOwner public{
+        owner = _newOwner;
+    }
+    
+    function getBalanceWithdrawAddr() view public returns(uint){
+        return withdrawAddr.balance;
+    }
+
+    function getVaultETHBalance() view public returns(uint){
+        return address(this).balance;
+    }
+    
+     function getVaultJFCBalance() view public returns(uint){
+        return token.balanceOf(address(this));
+    }
+    
+    function getContribution() view public returns(uint){
+        return balances[msg.sender];
+    }
+    
+    function getEarnedJFC() view public returns(uint){
+        return earnedJFC[msg.sender];
+    }
+    
+    function updateWithdrawAddress(address payable _newAddress) onlyOwner public returns(bool success){
+        withdrawAddr = _newAddress;
+        return true;
+    }
+
+     
+    function Withdraw() onlyOwner public returns(bool success)  {
+        uint256 amount = address(this).balance;
+        withdrawAddr.transfer(amount);
+        return true;
+    }
 }

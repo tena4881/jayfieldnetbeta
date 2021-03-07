@@ -395,7 +395,7 @@ export default function Balance() {
     }
   ];
   
-  const coinAddress = "0x25482C0129Da13e39535288Ea1007Bfd11B8441d";
+  const coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
   
   
   
@@ -417,17 +417,17 @@ export default function Balance() {
   }, [metaState]);
   return (
     <p>
-      {Number(JFCbalance) ? (
-        <>
-        <ExchangeH3>
-          {JFCbalance} 😲
-        </ExchangeH3>
-          
-          
-        </>
-      ) : (
-        "You don't have any JFC 😔"
-      )}
-    </p>
+    {Number(JFCbalance) ? (
+      <>
+      <ExchangeH3>
+        {JFCbalance} 😲
+      </ExchangeH3>
+        
+        
+      </>
+    ) : (
+      "You don't have any JFC 😔"
+    )}
+  </p>
   );
 }
