@@ -3,6 +3,7 @@ import React, { useReducer, useContext, createContext } from "react";
 const StoreContext = createContext();
 const initialState = {
   message: "",
+  balancew: 0,
   balance: 0,
   address: null
 };
@@ -15,11 +16,12 @@ const reducer = (state, action) => {
         address: action.address,
         message: action.message
       };
+    
     case "SET-BALANCE":
-      return {
-        ...state,
-        balance: action.balance
-      };
+    return {
+      ...state,
+      balance: action.balance
+    };
     default:
       throw new Error(`Unknown type of action: ${action.type}`);
   }

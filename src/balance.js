@@ -4,7 +4,7 @@ import Web3 from "web3";
 import {ExchangeH3} from './pages/Profile/Profile'
 export default function Balance() {
   const { metaState } = useMetamask();
-  const [balance, setBalance] = useState();
+  const [JFCbalance, setJFCBalance] = useState();
   const abi =[
     {
       "anonymous": false,
@@ -395,7 +395,7 @@ export default function Balance() {
     }
   ];
   
-  const coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
+  const coinAddress = "0x25482C0129Da13e39535288Ea1007Bfd11B8441d";
   
   
   
@@ -407,8 +407,7 @@ export default function Balance() {
         
         let contract = new metaState.web3.eth.Contract(abi, coinAddress);
         await contract.methods.balanceOf(metaState.account[0]).call().then(function(res){
-          console.log(res);
-          setBalance(parseFloat(res / 10 ** 2).toFixed(3));
+          setJFCBalance(parseFloat(res / 10 ** 2).toFixed(2));
         }).catch(function(err) {
           console.log(err);
         });
@@ -418,10 +417,10 @@ export default function Balance() {
   }, [metaState]);
   return (
     <p>
-      {Number(balance) ? (
+      {Number(JFCbalance) ? (
         <>
         <ExchangeH3>
-          {balance} 😲
+          {JFCbalance} 😲
         </ExchangeH3>
           
           

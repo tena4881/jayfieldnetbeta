@@ -65,8 +65,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       console.log(error);
       }
   }
-  //const [isTransactionsModalOpen,setisTransactionsModalOpen] = useState(false);
-  //const account = useEthAccount();
+
   /*
 
 

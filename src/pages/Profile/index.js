@@ -2,6 +2,7 @@ import React,{useState,useContext,useEffect} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
 import TransferToVault from '../../transferToVault';
 import   ContributeToVault from '../../contributeToVault';
+import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
 import {
   ExchangeContainer,
@@ -22,7 +23,7 @@ import {
   ChartCard,
   ExchangeH4
 } from './Profile';
-// import BuyModal from '../Modal/BuyModal'
+//import BuyModal from '../Modal/BuyModal'
 // import WalletModal from '../Modal/WalletModal'
 // import RemovePoolModal from '../Modal/RemovePoolModal'
 // import ProfileIcon from '../ProfileIcon/ProfileIcon';\
@@ -34,9 +35,13 @@ import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
 import {useStoreApi} from '../../storeApi';
 import {useWeb3} from '../../getWeb3';
 import { useMetamask } from "use-metamask";
-import Balance from '../../balance'
-import Account from '../../account'
+import Balance from '../../balance';
+import EthBalance from '../../getEthBal';
+import Account from '../../account';
+import Modal from '../../components/Modal/Modal';
+
 const Exchange = () => {
+  
   
   const [isBuyOpen,setIsBuyOpen] = useState(false);
   const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
@@ -48,6 +53,7 @@ const Exchange = () => {
     
   };
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
+  
   const web3 = useWeb3();
 
   const { connect, getAccounts, getChain, metaState } = useMetamask();
@@ -60,7 +66,7 @@ const Exchange = () => {
   
   const coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
 
-
+    
     //WHAT ARE THER REWARDS FOR COMPLEATING THIS TASK
     async function addToMetamask(){
       let ethereum = window.ethereum;
@@ -100,7 +106,7 @@ const Exchange = () => {
             let account = await getAccounts();
             
             setAddress(account[0]);
-           
+            
           } catch (error) {
             console.log(error);
           }
@@ -132,16 +138,18 @@ return (
         <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
       </BalanceCard>
       <ExchangeCard>
-        <ExchangeH3W >Contribute your ETH</ExchangeH3W>
+        <ExchangeH3W >Contribute to JayField Net</ExchangeH3W>
         
         <ExchangePW>
-          Available to contribute:
+          Available
         </ExchangePW>
-        <ExchangeH2W>Ξ{0}</ExchangeH2W>
-        <ContributeToVault/>
+        <ExchangeH3 style={{color: 'white'}}><EthBalance/> </ExchangeH3>
         <ExchangePW>
-          (Select amount)
+          (Select contribution amount)
         </ExchangePW>
+
+        <Contribute/>
+        
       </ExchangeCard>
 
       <ExchangeCard>

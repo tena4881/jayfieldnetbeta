@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { useMetamask } from "use-metamask";
 import Web3 from "web3";
 import {ExchangeH3} from './pages/Profile/Profile'
+import {useStoreApi} from './storeApi';
+import Modal from './components/Modal/Modal';
 
-const ContributeToVault = () => {
+export default function Contribute() {
+
+	const [isBuyOpen,setIsBuyOpen] = useState(false);
   const { metaState } = useMetamask();
-  
+  const { balance, address, message, setAddress, setBalance } = useStoreApi();
   const VaultAbi = [
 	{
 		"inputs": [
@@ -199,47 +203,56 @@ const ContributeToVault = () => {
 		"type": "function"
 	}
 ];
-
-  const coinAddress = "0x25482C0129Da13e39535288Ea1007Bfd11B8441d";
   const vaultAddress = "0x2D7C32E91CBFB3B4C4D81fE90b20e0a159823905";
   const vaultContract = new metaState.web3.eth.Contract(VaultAbi, vaultAddress);
-  var ethBal;
+  var gasPrice = 20*10**9;
+  var gas = 21000;
+  var attoethForGas = gasPrice * gas;
 
-  //Get User's ETH Balance
-  async function getETHBal(){
-    await metaState.web3.eth.getBalance(metaState.account[0]).then(function(res){
-      return res;
-    }).catch(function(err) {
-      console.log(err);
-    });
-  }
-  
-  
-  //Calc the ratios
-
-  //Update user's contribution amount
-  async function handleClick(){
+  async function handle25Click(){
+    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.25;
     await vaultContract.methods.Contribute().send({
       from: metaState.account[0],
       gas: 470000,
-      value: ethBal, // in WEI, which is equivalent to 1 ether
+      value: amountToSend, // in WEI, which is equivalent to 1 ether
       gasPrice:0
      });
     
   }
-  
-  
-  
+
+  async function handle50Click(){
+	setIsBuyOpen(true);
+     
+  }
+
+  async function handle75Click(){
+    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.75;
+    await vaultContract.methods.Contribute().send({
+      from: metaState.account[0],
+      gas: 470000,
+      value: amountToSend, // in WEI, which is equivalent to 1 ether
+      gasPrice:0
+     });
+    
+  }
+
+  async function handle100Click(){
+    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.99;
+    await vaultContract.methods.Contribute().send({
+      from: metaState.account[0],
+      gas: 470000,
+      value: amountToSend, // in WEI, which is equivalent to 1 ether
+      gasPrice:0
+     });
+    
+  }
+ 
   return (
-      <>
-        <div >
-            <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light" onClick={handleClick}>25%</button>
-            <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light" onClick={handleClick}>50%</button>
-            <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light" onClick={handleClick}>75%</button>
-            <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light" onClick={handleClick}>100%</button>
-        </div>
-      
-    </>
+    <div >
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle25Click} className="btn btn-primary mt-4 waves-effect waves-light">25% {}</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle50Click} className="btn btn-primary mt-4 waves-effect waves-light">50%</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle75Click} className="btn btn-primary mt-4 waves-effect waves-light">75%</button>
+    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle100Click} className="btn btn-primary mt-4 waves-effect waves-light">100%</button>
+</div>
   );
 }
-export default ContributeToVault;

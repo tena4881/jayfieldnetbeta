@@ -33,7 +33,7 @@ contract Test{
     
     
     //TO-DO Make Only owner
-   function addJFCToVault(uint _amount) public {
+   function addJFCToVault(uint _amount) public onlyOwner {
             uint toJFC = _amount * 100;
             require(this.getUserJFCBalance(msg.sender) > 0, "You dont have JFC to add!");
             require(toJFC > 0, "You need to add at least some JFC");
@@ -49,12 +49,9 @@ contract Test{
         return token.allowance(msg.sender, address(this));
     }
     
-    function jfcApprove(uint _amount) public returns(bool){
-        return token.approve(address(this), _amount);
-    }    
+      
        
     //allows people to contribute to JayField Net   
-    //Turn on JFC vault balance checker before produciton!!!
     function Contribute() payable public {
         uint256 vaultBalance = this.getVaultJFCBalance();
         require(vaultBalance > 0,"Not enough JFC in the reserve" );
