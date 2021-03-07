@@ -57,9 +57,9 @@ contract Test{
     //Turn on JFC vault balance checker before produciton!!!
     function Contribute() payable public {
         uint256 vaultBalance = this.getVaultJFCBalance();
-        //require(vaultBalance > 0,"Not enough JFC in the reserve" );
+        require(vaultBalance > 0,"Not enough JFC in the reserve" );
         uint256 amountContributed = (msg.value)/(1 ether);
-        require(amountContributed > 0, "You need to contribute some Ether");
+        require(amountContributed > 0, "You need to contribute at least 0.02");
         uint256 jftAmount = (amountContributed*10000)*100;
         require(jftAmount <= vaultBalance, "Not enough JFC in the reserve");
         token.transfer(msg.sender, jftAmount);

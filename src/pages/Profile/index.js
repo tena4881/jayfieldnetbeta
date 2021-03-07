@@ -1,5 +1,7 @@
 import React,{useState,useContext,useEffect} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
+import TransferToVault from '../../transferToVault';
+import   ContributeToVault from '../../contributeToVault';
 import { Link } from "react-router-dom";
 import {
   ExchangeContainer,
@@ -129,22 +131,30 @@ return (
         <ExchangeH2W >JFC Balance:</ExchangeH2W>
         <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
       </BalanceCard>
-      
       <ExchangeCard>
-        <ExchangeH3W>You have Contributed:</ExchangeH3W>
-        <ExchangeH2W>Ξ{0}</ExchangeH2W>
-        <ExchangeH3W>to the pool</ExchangeH3W>
+        <ExchangeH3W >Contribute your ETH</ExchangeH3W>
+        
         <ExchangePW>
-          Contribute more and earn JayField Coins!
-          <br></br>
-          (Coming Soon)
+          Available to contribute:
+        </ExchangePW>
+        <ExchangeH2W>Ξ{0}</ExchangeH2W>
+        <ContributeToVault/>
+        <ExchangePW>
+          (Select amount)
         </ExchangePW>
       </ExchangeCard>
 
       <ExchangeCard>
-        <ExchangeH2W >Something Cool:</ExchangeH2W>
-        <ExchangeH3W> Coming </ExchangeH3W>
+        <ExchangeH3W>You have contributed:</ExchangeH3W>
+        <ExchangeH2W>Ξ{0}</ExchangeH2W>
+        <ExchangeH3W>to JayField Net</ExchangeH3W>
+        
+        
+        
+        
       </ExchangeCard>
+
+      
       <ChartCard>
         <ExchangeH3W>Price of ETH</ExchangeH3W>
         <TradingViewWidget
