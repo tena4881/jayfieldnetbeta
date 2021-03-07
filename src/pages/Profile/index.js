@@ -153,9 +153,9 @@ return (
       </BalanceCard>
 
       <ExchangeCard>
-        <ExchangeH3W>You have contributed:</ExchangeH3W>
-        <ExchangeH2W>Ξ{0}</ExchangeH2W>
-        <ExchangeH3W>to JayField Net</ExchangeH3W>
+        <ExchangeH3>You have contributed:</ExchangeH3>
+        <ExchangeH2>Ξ{0}</ExchangeH2>
+        <ExchangeH3>to JayField Net</ExchangeH3>
         
         
         
@@ -164,10 +164,10 @@ return (
 
       
       <ChartCard>
-        <ExchangeH3W>Price of ETH</ExchangeH3W>
+        <ExchangeH3>Price of ETH</ExchangeH3>
         <TradingViewWidget
           symbol="ETHUSD"
-          theme={Themes.DARK}
+          theme={Themes.LIGHT}
           style='2'
           locale="fr"
           autosize

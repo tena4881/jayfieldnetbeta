@@ -7,8 +7,7 @@ export const ProfileContainer = styled.div`
   
   flex-direction: column;
   
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  
   @media screen and (max-width: 1280px) {
     max-width: 100vw;
     overflow-x:hidden;
@@ -32,8 +31,7 @@ export const ExchangeContainer = styled.div`
   justify-content: center;
   margin-bottom: 30px;
 
-  background-color: #ffffff;
-background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  
 
   @media screen and (max-width: 1375px) {
     
@@ -77,9 +75,7 @@ export const ExchangeWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-
+  
   @media screen and (max-width: 1375px) {
     width: 100vw;
     overflow-x:hidden;
@@ -117,8 +113,7 @@ export const ConnectWrapper = styled.div`
 
 export const ExchangeCard = styled.div`
 
-background-color: #1b2845;
-background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+background-color: #fafafa;
 
   display: flex;
   flex-direction: column;
@@ -183,8 +178,7 @@ background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
   }
 `;
 export const ChartCard = styled.div`
-background-color: #1b2845;
-background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+background-color: #fafafa;
 
   display: flex;
   min-height: 600px;
