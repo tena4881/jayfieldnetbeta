@@ -4,7 +4,7 @@ import Web3 from "web3";
 import {ExchangeH3} from './pages/Profile/Profile'
 import {useStoreApi} from './storeApi';
 import Modal from './components/Modal/Modal';
-
+import { Link } from "react-router-dom";
 export default function Contribute() {
 
 	const [isBuyOpen,setIsBuyOpen] = useState(false);
@@ -256,12 +256,15 @@ export default function Contribute() {
   }
  
   return (
+	  <>
     <div >
     <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle01Click} className="btn btn-primary mt-4 waves-effect waves-light">1% {}</button>
     <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle05Click} className="btn btn-primary mt-4 waves-effect waves-light">5%</button>
     <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle10Click} className="btn btn-primary mt-4 waves-effect waves-light">10%</button>
     <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle15Click} className="btn btn-primary mt-4 waves-effect waves-light">15%</button>
-	<button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} className="btn btn-primary mt-4 waves-effect waves-light">More...</button>
+	
 </div>
+<Link >More...</Link>
+</>
   );
 }

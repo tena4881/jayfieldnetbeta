@@ -125,11 +125,11 @@ return (
      
           <ProfileCard>
         <Account/>
-        <ExchangeH3>Profile Overview</ExchangeH3>
+        
       </ProfileCard>
      
       
-      
+      <ExchangeH3>Profile Overview</ExchangeH3>
       <ExchangeWrapper>
         
       <BalanceCard>
