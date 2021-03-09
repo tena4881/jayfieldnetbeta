@@ -41,12 +41,11 @@ class Section extends Component {
                     
                   >
                     <h1 className="text-uppercase">
-                      WE HELP STARTUPS TO THE MOON!
+                      Your Dedicated Business Brain 
                     </h1>
                     <p className="pt-3 home-desc">
-                      Etiam sed.Interdum consequat proin vestibulum class at a
-                      euismod mus luctus quam.Lorem ipsum dolor sit amet,
-                      consectetur adipisicing eli.
+                    JayField is a network of business owners in the know. 
+                    When you have an idea dont stop there make it official and create a business 
                     </p>
                     <div className="mt-4">
                       </div>

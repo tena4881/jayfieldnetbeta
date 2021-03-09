@@ -86,7 +86,7 @@ const ProfileSidebar = ({ isOpen, toggle }) => {
       <AccountNum >{address}</AccountNum>
         
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
-                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Log Out </Link>
+                  <Link to="/" className="btn btn-primary mt-4 waves-effect waves-light">Log Out </Link>
                 
         </div>
         <br></br>

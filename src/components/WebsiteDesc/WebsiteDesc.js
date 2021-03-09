@@ -11,7 +11,7 @@ class WebsiteDesc extends Component {
           <Container>
             <Row>
               <Col lg={12} className="text-center">
-                <h2 className="text-white">Build your dream business today</h2>
+                <h2 className="text-white">BUILD YOUR DREAM BUSINESS TODAY</h2>
                 <p className="pt-3 home-desc">
                   But nothing the copy said could convince her and so it didn’t
                   take long until a few insidious Copy Writers ambushed her.

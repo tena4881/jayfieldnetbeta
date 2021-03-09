@@ -1278,7 +1278,7 @@ iframe {
 
 .navbar-custom .navbar-nav li a {
   line-height: 26px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
   text-transform: capitalize;
   transition: all 0.5s;
@@ -1367,7 +1367,7 @@ iframe {
 .navbar-custom.navbar-white .navbar-nav li a,
 .navbar-custom.navbar-white .navbar-brand,
 .navbar-white .navbar-toggle {
-  color: #393f4f !important;
+  color: #ffffff !important;
 }
 
 /*---NAVBAR LIGHT--*/
@@ -1418,8 +1418,14 @@ iframe {
 
 .is-sticky .navbar-custom {
   margin-top: 0px;
-  padding: 10px 0px;
-  background-color: rgba(39, 42, 52, 0.0) ;
+  padding: 0px 0px;
+  opacity: .3;
+  background-image: linear-gradient(315deg, #f53844 0%, #42378f 87%);
+}
+
+.is-sticky .navbar-custom:hover {
+  opacity: 1;
+  padding: 15px 0px;
 }
 
 .bg-home {
@@ -1469,9 +1475,7 @@ iframe {
 
 .home-desc {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 15px;
-  max-width: 600px;
-  margin: 0 auto;
+  font-family: Futura; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 14.3px;
 }
 
 /* ------------- Demo 1 bg-pattern ------------- */
@@ -1810,6 +1814,9 @@ iframe {
 .pricing-box .plan-features p {
   padding-top: 5px;
 }
+.text-uppercase{
+  font-family: Futura; font-size: 32px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 30.8px; 
+}
 
 .price-active {
   box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.1) !important;
@@ -1894,9 +1901,9 @@ textarea.form-control {
 }
 
 .contact-social .social-icon {
-  border: 2px solid #afb5bd;
+  border: 2px solid white;
   border-radius: 50%;
-  color: #afb5bd;
+  color: white;
   width: 48px;
   height: 48px;
   display: block;
@@ -1907,6 +1914,7 @@ textarea.form-control {
 
 .contact-social .contact-title {
   font-size: 20px;
+  color: white;
 }
 
 .error_message {
@@ -1925,11 +1933,11 @@ textarea.form-control {
 
 .footer {
   padding: 50px 0;
-  background-color: #272a33;
+  background-color: white;
 }
 
 .footer h4 {
-  color: #ffffff;
+  color: #000;
 }
 
 .footer .footer-list li a {

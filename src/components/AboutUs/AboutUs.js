@@ -12,24 +12,26 @@ class AboutUs extends Component {
               <Col lg={5}>
                 <div className="features-box">
                   <h3>
-                    A digital web design studio creating modern & engaging
-                    online experiences
+                  The decentralized collaborative business headquarters. 
+                  Where Social meets business. 
                   </h3>
                   <p className="text-muted web-desc">
-                    Separated they live in Bookmarksgrove right at the coast of
-                    the Semantics, a large language ocean. A small river named
-                    Duden flows by their place and supplies it with the
-                    necessary regelialia.
+                  JayField Consulting is tailored to creating expertise, enhancing business literacy and ownership within our culture. 
+                  JayField ensures their clients are complient and knowledgable on the first steps of any venture no matter the industry.
                   </p>
                   <ul className="text-muted list-unstyled mt-4 features-item-list">
-                    <li className="">We put a lot of effort in design.</li>
+                    <li className="">Business Consultants</li>
                     <li className="">
-                      The most important ingredient of successful website.
+                      Business Processing
                     </li>
                     <li className="">
-                      Sed ut perspiciatis unde omnis iste natus error sit.
+                      Business Plan Drafting
                     </li>
-                    <li className="">Submit Your Orgnization.</li>
+                    <li className="">Notary Public</li>
+                    <li className="">Video Courses</li>
+                    <li className="">Tax Preperation</li>
+                    <li className="">Financial Tips</li>
+                    <li className="">Solution Expert</li>
                   </ul>
                   <Link
                     to="#"
