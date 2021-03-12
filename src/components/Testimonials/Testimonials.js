@@ -42,8 +42,8 @@ class Testimonials extends Component {
           <Container>
             {/* section title */}
             <SectionTitle
-              title="WHAT THEY'VE SAID"
-              desc="The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli."
+              title="Industries"
+              desc="Get Professional Management"
             />
 
             <Row className="mt-5">

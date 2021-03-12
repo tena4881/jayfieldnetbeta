@@ -11,16 +11,15 @@ class WebsiteDesc extends Component {
           <Container>
             <Row>
               <Col lg={12} className="text-center">
-                <h2 className="text-white">BUILD YOUR DREAM BUSINESS TODAY</h2>
+                <h2 className="text-white">NOT SURE WHAT THE FIRST STEP TO BUILDING YOUR DREAM BUSINESS IS?</h2>
                 <p className="pt-3 home-desc">
-                  But nothing the copy said could convince her and so it didn’t
-                  take long until a few insidious Copy Writers ambushed her.
+                  Our experience JayField Geeks will be glad to consult you over the phone for free to discuss the best plan of action for you.
                 </p>
                 <Link
                   to="#"
                   className="btn btn-white mt-4 waves-effect waves-light mb-5"
                 >
-                  View Plan & Pricing
+                  Contact Us
                 </Link>
               </Col>
             </Row>

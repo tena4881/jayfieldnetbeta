@@ -13,9 +13,9 @@ class Blog extends Component {
         {
           image: "assets/images/blog/img-1.jpg",
           category: "UI & UX Design",
-          title: "Doing a cross country road trip",
+          title: "Beauty Care Services",
           desc:
-            "She packed her seven versalia, put her initial into the belt and made herself on the way..",
+            "Get Professional ",
         },
         {
           image: "assets/images/blog/img-2.jpg",

@@ -69,7 +69,7 @@ class Index8 extends Component {
 
                 {/* blog <Blog/>*/}
                 
-
+                
                 {/* contact */}
                 <Contact/>
 
