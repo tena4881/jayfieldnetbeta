@@ -40,12 +40,12 @@ class Social extends Component {
               </Col>
               <Col lg={3} className="mt-4">
                 <p className="contact-title">
-                  <i className="pe-7s-call"></i> &nbsp;123 4556 789
+                  <i className="pe-7s-call"></i> &nbsp;646 552 6690
                 </p>
               </Col>
               <Col lg={3} className="mt-4 text-right">
                 <p className="contact-title">
-                  <i className="pe-7s-mail-open"></i>&nbsp; Support@info.com
+                  <i className="pe-7s-mail-open"></i>&nbsp; contact@jayfieldllc.com
                 </p>
               </Col>
             </Row>

@@ -14,7 +14,7 @@ import Blog from "../../components/Blog/Blog"
 import Contact from "../../components/Contact/Contact";
 import Social from "../../components/Social/Social";
 import Footer from "../../components/Footer/footer";
-
+import Network from '../../components/Team/Network';
 class Index8 extends Component {
     constructor(props) {
         super(props);
@@ -49,8 +49,7 @@ class Index8 extends Component {
                 {/* about us */}
                 <AboutUs/>
                 
-                {/* website description */}
-                <WebsiteDesc/>
+                
 
                 {/* pricing <Pricing/> */}
                 
@@ -58,14 +57,21 @@ class Index8 extends Component {
                 {/* team */}
                 <Team/>
 
-                {/* process */}
-                <Process/>
+                {/* Network */}
+                <Network/>
+
+                
+                {/* process <Process/> */}
+                
 
                 {/* testimonial */}
                 <Testimonials/>
-
-                {/* get started */}
-                <GetStart/>
+                
+                {/* website description */}
+                <WebsiteDesc/>
+                
+                {/* get started <GetStart/>*/}
+                
 
                 {/* blog <Blog/>*/}
                 

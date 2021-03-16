@@ -12,25 +12,69 @@ class Testimonials extends Component {
       clients: [
         {
           image: "assets/images/testimonials/user-2.jpg",
-          title: "RUBEN REED ",
-          subTitle: "Charleston",
+          title: "Beauty Care ",
           desc:
-            "I feel confident imposing change on myself. It's a lot more fun progressing than looking back. That's why I need to throw curve balls.",
+          <p>
+            Business Registration <br></br>
+              Client Contracts <br></br>
+              E-Commerce <br></br>
+              Building Business Credit <br></br>
+              Inventory Management 
+            
+        </p>,
         },
         {
           image: "assets/images/testimonials/user-1.jpg",
-          title: "MICHAEL P. HOWLETT ",
-          subTitle: "Worcester",
+          title: "Retail & Services ",
           desc:
-            "Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of nature and its beauty.",
+            <p>
+              Bookkeeping <br></br>
+              Business Planning <br></br>
+              Business Registration <br></br>
+              Financial Projections <br></br>
+            </p>,
         },
         {
           image: "assets/images/testimonials/user-3.jpg",
-          title: "THERESA D. SINCLAIR",
-          subTitle: "Lynchburg",
+          title: "Media & Arts",
           desc:
-            "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+          <p>
+          Creative Publishsing <br></br>
+          Split Sheets & Agreements <br></br>
+          Business Registration <br></br>
+        </p>,
         },
+        {
+          image: "assets/images/testimonials/user-3.jpg",
+          title: "Cryptocurrency",
+          desc:
+          <p>
+          Community Curation <br></br>
+          Governance Token Creation <br></br>
+          Porfolio Management <br></br>
+        </p>,
+        },
+        {
+          image: "assets/images/testimonials/user-3.jpg",
+          title: "Real Estate",
+          desc:
+          <p>
+          Assets Management <br></br>
+          Property Location <br></br>
+          Strategic Accounting <br></br>
+        </p>,
+        },
+        {
+          image: "assets/images/testimonials/user-3.jpg",
+          title: "Real Estate",
+          desc:
+          <p>
+          Assets Management <br></br>
+          Property Location <br></br>
+          Strategic Accounting <br></br>
+        </p>,
+        },
+        
       ],
     };
   }
