@@ -153,9 +153,8 @@ return (
       </BalanceCard>
 
       <ExchangeCard>
-        <ExchangeH3>You have contributed:</ExchangeH3>
-        <ExchangeH2>Ξ{0}</ExchangeH2>
-        <ExchangeH3>to JayField Net</ExchangeH3>
+        <ExchangeH3>Coming Soon!</ExchangeH3>
+        
         
         
         

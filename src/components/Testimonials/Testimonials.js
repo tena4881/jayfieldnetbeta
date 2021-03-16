@@ -87,7 +87,7 @@ class Testimonials extends Component {
             {/* section title */}
             <SectionTitle
               title="Industries"
-              desc="Get Professional Management"
+              desc="Get professional management in:"
             />
 
             <Row className="mt-5">
