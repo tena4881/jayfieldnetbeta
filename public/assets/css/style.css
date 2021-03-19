@@ -112,7 +112,7 @@ hr {
 
 ::selection {
   background-color: #272a33;
-  color: #ffffff;
+  color: #000;
 }
 
 .h1,
@@ -716,7 +716,7 @@ iframe {
 }
 
 .btn-soft-dark {
-  background-color: rgba(39, 42, 51, 0.25) !important;
+  background-color: rgba(39, 42, 51, 0.1) !important;
   color: #272a33 !important;
 }
 

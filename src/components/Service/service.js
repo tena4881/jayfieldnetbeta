@@ -60,7 +60,7 @@ class Process extends Component {
             {/* section title */}
             <SectionTitle
               title="Business Brain"
-              desc="Take the first step in digitizing your business. Allow your Business Brain to guide you to become the best CEO you can be!"
+              desc=""
             />
 
             <Row className="mt-4">
