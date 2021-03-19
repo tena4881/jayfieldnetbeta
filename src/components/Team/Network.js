@@ -43,7 +43,7 @@ class Clients extends Component {
             {/* section title */}
             <SectionTitle
               title="Network"
-              desc="It is a long established fact that create category leading brand experiences a reader will be distracted by the readable content of a page when looking at its layout."
+              desc=""
             />
 
             <Row className="mt-5">

@@ -15,7 +15,9 @@ class WebsiteDesc extends Component {
                 <p className="pt-3 home-desc">
                   Our experience JayField Geeks will be glad to consult you over the phone for free to discuss the best plan of action for you.
                 </p>
-                
+                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
+                  <a href="https://jayfield.setmore.com/" className="btn btn-primary mt-4 waves-effect waves-light">Contact Us </a>
+               </div>
               </Col>
             </Row>
           </Container>

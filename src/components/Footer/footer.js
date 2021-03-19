@@ -10,7 +10,7 @@ class Footer extends Component {
   state = {
     links: [
       {
-        title: "JAYFIELD NET",
+        title: "JAYFIELDNET",
         child: [
           // { link: "#", title: "Home" },
           // { link: "#", title: "About us" },
@@ -78,6 +78,10 @@ class Footer extends Component {
               <Col lg={3} className="mt-4">
                 <p className="contact-title">
                   <i className="pe-7s-call"></i> &nbsp;646 552 6690
+                </p>
+                <p className="contact-title">
+                  <i ></i> &nbsp;477 Madison Ave <br></br>
+                  <i ></i> &nbsp;New York, NY  10022
                 </p>
               </Col>
               <Col lg={3} className="mt-4 text-right">

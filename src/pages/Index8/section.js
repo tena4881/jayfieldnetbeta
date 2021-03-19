@@ -49,6 +49,9 @@ class Section extends Component {
                     </p>
                     <div className="mt-4">
                       </div>
+                      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
+                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Members Click Here </Link>
+               </div>
                   </Col>
                 </Row>
               </Container>

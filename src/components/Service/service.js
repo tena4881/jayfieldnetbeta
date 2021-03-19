@@ -12,7 +12,7 @@ class Process extends Component {
       services1: [
         {
           icon: "pe-7s-magic-wand",
-          title: "Registration and Business Formation",
+          title: "Registration & Business Formation",
           desc:
             "",
         },

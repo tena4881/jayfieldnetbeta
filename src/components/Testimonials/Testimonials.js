@@ -15,33 +15,10 @@ class Testimonials extends Component {
           title: "Beauty Care ",
           desc:
           <p>
-            Business Registration <br></br>
               Client Contracts <br></br>
               E-Commerce <br></br>
-              Building Business Credit <br></br>
               Inventory Management 
             
-        </p>,
-        },
-        {
-          image: "assets/images/testimonials/user-1.jpg",
-          title: "Retail & Services ",
-          desc:
-            <p>
-              Bookkeeping <br></br>
-              Business Planning <br></br>
-              Business Registration <br></br>
-              Financial Projections <br></br>
-            </p>,
-        },
-        {
-          image: "assets/images/testimonials/user-3.jpg",
-          title: "Media & Arts",
-          desc:
-          <p>
-          Creative Publishsing <br></br>
-          Split Sheets & Agreements <br></br>
-          Business Registration <br></br>
         </p>,
         },
         {
@@ -54,26 +31,50 @@ class Testimonials extends Component {
           Porfolio Management <br></br>
         </p>,
         },
+        
+        {
+          image: "assets/images/testimonials/user-3.jpg",
+          title: "Digital Artist",
+          desc:
+          <p>
+          Creative Publishsing <br></br>
+          Split Sheets & Agreements <br></br>
+          Music Tokenization <br></br>
+        </p>,
+        },
+        {
+          image: "assets/images/testimonials/user-3.jpg",
+          title: "Health & Wellness",
+          desc:
+          <p>
+          Marketing Assitance <br></br>
+          Property Location <br></br>
+          Production & Supply<br></br>
+        </p>,
+        },
+        {
+          image: "assets/images/testimonials/user-1.jpg",
+          title: "Retail & Services ",
+          desc:
+            <p>
+              Bookkeeping <br></br>
+              Business Planning <br></br>
+              Financial Projections <br></br>
+            </p>,
+        },
+        
         {
           image: "assets/images/testimonials/user-3.jpg",
           title: "Real Estate",
           desc:
           <p>
-          Assets Management <br></br>
+          Management Strategy <br></br>
+          Product Management <br></br>
           Property Location <br></br>
-          Strategic Accounting <br></br>
+          
         </p>,
         },
-        {
-          image: "assets/images/testimonials/user-3.jpg",
-          title: "Real Estate",
-          desc:
-          <p>
-          Assets Management <br></br>
-          Property Location <br></br>
-          Strategic Accounting <br></br>
-        </p>,
-        },
+        
         
       ],
     };
@@ -87,7 +88,6 @@ class Testimonials extends Component {
             {/* section title */}
             <SectionTitle
               title="Industries"
-              desc="Get professional management in:"
             />
 
             <Row className="mt-5">

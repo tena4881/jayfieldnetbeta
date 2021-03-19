@@ -92,7 +92,7 @@ class NavbarPage extends Component {
                   
                 </Collapse>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
-                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Login </Link>
+                  
                </div>
               </Container>
              
