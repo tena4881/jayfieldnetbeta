@@ -147,7 +147,7 @@ background-color: #fafafa;
 export const BalanceCard = styled.div`
 
 background-color: #42378f;
-background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
   display: flex;
   flex-direction: column;
   justify-content: center;

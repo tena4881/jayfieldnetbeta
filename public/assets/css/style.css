@@ -83,7 +83,7 @@ p {
 }
 
 .bg-overlay {
-  background: linear-gradient(to right, #0D324D, #7F5A83);
+  background: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
   opacity: 0.9;
   position: absolute;
   height: 100%;
@@ -1420,7 +1420,7 @@ iframe {
   margin-top: 0px;
   padding: 0px 0px;
   opacity: .3;
-  background-image: linear-gradient(315deg, #f53844 0%, #42378f 87%);
+  background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
 }
 
 .is-sticky .navbar-custom:hover {
