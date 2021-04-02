@@ -5,7 +5,10 @@ import {ExchangeH3} from './pages/Profile/Profile'
 import {useStoreApi} from './storeApi';
 import Modal from './components/Modal/Modal';
 import { Link } from "react-router-dom";
+import ControlledInput from "./components/SimpleForm";
 export default function Contribute() {
+
+	
 
 	const [isBuyOpen,setIsBuyOpen] = useState(false);
   const { metaState } = useMetamask();
@@ -209,6 +212,23 @@ export default function Contribute() {
   var gas = 21000;
   var attoethForGas = gasPrice * gas;
 
+  
+
+
+  const [amount, setAmount] = useState();
+  const handleSubmit = async event => {
+	
+	event.preventDefault();
+	var amountToSend = (Web3.utils.toWei(amount))
+    await vaultContract.methods.Contribute().send({
+      from: metaState.account[0],
+      gas: 470000,
+      value: amountToSend, // in WEI, which is equivalent to 1 ether
+      gasPrice:0
+     });
+    
+	console.log(amount)
+  }
   async function handle01Click(){
     var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.01;
     await vaultContract.methods.Contribute().send({
@@ -220,50 +240,29 @@ export default function Contribute() {
     
   }
 
-  async function handle05Click(){
-	var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.05;
-    await vaultContract.methods.Contribute().send({
-      from: metaState.account[0],
-      gas: 470000,
-      value: amountToSend, // in WEI, which is equivalent to 1 ether
-      gasPrice:0
-     });
-     
-  }
-
-
-  async function handle10Click(){
-    var amountToSend = (Web3.utils.toWei(balance)) *.1;
-    await vaultContract.methods.Contribute().send({
-      from: metaState.account[0],
-      gas: 470000,
-      value: amountToSend, // in WEI, which is equivalent to 1 ether
-      gasPrice:0
-     });
-    
-  }
   
-
-  async function handle15Click(){
-    var amountToSend = (Web3.utils.toWei(balance) - attoethForGas) *.15;
-    await vaultContract.methods.Contribute().send({
-      from: metaState.account[0],
-      gas: 470000,
-      value: amountToSend, // in WEI, which is equivalent to 1 ether
-      gasPrice:0
-     });
-    
-  }
  
+
   return (
 	  <>
-    <div >
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle01Click} className="btn btn-primary mt-4 waves-effect waves-light">1% {}</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle05Click} className="btn btn-primary mt-4 waves-effect waves-light">5%</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle10Click} className="btn btn-primary mt-4 waves-effect waves-light">10%</button>
-    <button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} onClick={handle15Click} className="btn btn-primary mt-4 waves-effect waves-light">15%</button>
-	
-</div>
+	  <form onSubmit={e => {handleSubmit(e)}}>
+        <br />
+        <input 
+          name='amount' 
+          type='text'
+          onChange={e => setAmount(e.target.value) }
+		  value={amount}
+		  placeholder={"Enter ETH Amount"}
+		  type="number"
+		  min="0.1"
+        />
+		<br>
+		</br>
+		<div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} >
+		<button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} type="button" onClick={handleSubmit} className="btn btn-primary mt-4 waves-effect waves-light">Submit</button>
+		</div>
+	  </form>
+    
 <Link >More...</Link>
 </>
   );

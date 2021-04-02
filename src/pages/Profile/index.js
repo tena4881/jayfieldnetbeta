@@ -144,9 +144,6 @@ return (
           Available
         </ExchangePW>
         <ExchangeH3 style={{color: 'white'}}><EthBalance/> </ExchangeH3>
-        <ExchangePW>
-          (Select contribution amount)
-        </ExchangePW>
 
         <Contribute/>
         
