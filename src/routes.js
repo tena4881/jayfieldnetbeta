@@ -8,6 +8,7 @@ import Index7 from "./pages/Index7/Index7";
 import Index8 from "./pages/Index8/Index8";
 import Index9 from "./pages/Index9/Index9";
 import Profile from "./pages/Profile/index";
+import SocailMedia from "./pages/SocailMedia/index";
 
 //Auth Pages
 import Signup from "./pages/Auth/Signup";
@@ -20,6 +21,7 @@ const routes = [
   { path: "/profile", component: Login },
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
+  { path: "/connect", component: SocailMedia },
   { path: "/addToWallet", component: AddToWallet },
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },
