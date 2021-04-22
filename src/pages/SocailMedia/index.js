@@ -430,7 +430,7 @@ const SocailMedia = () => {
   
   return (
     <div>
-    {JFCbalance >= 100 ? (
+    {Number(JFCbalance) >= 100 ? (
       <>
       <LinkTree />
         
