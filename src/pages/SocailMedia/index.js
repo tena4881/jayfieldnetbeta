@@ -1,12 +1,9 @@
-import React,{useState,useContext,useEffect} from 'react';
-import LinkTree from '../../components/Linktree';
+import { useEffect, useState } from "react";
 import { useMetamask } from "use-metamask";
-import {useStoreApi} from '../../storeApi';
-import {useWeb3} from '../../getWeb3';
-
-const SocailMedia = () => {
-
-    const { metaState } = useMetamask();
+import Web3 from "web3";
+import Linktree from "../../components/Linktree"
+export default function SocailMedia() {
+  const { metaState } = useMetamask();
   const [JFCbalance, setJFCBalance] = useState();
   const abi =[
     {
@@ -418,22 +415,17 @@ const SocailMedia = () => {
       })();
     }
   }, [metaState]);
-  
   return (
-    <div>
-    {Number(JFCbalance) >= 100 ? (
+    <p>
+    {Number(JFCbalance) ? (
       <>
-      <LinkTree />
+      <Linktree/>
+        
         
       </>
     ) : (
-      "You need at least 100 JFC to accsess this page 😔."
+      "You at least 100 JFC to view 😔"
     )}
-  </div>
-      
-    );
-    
-    
-  };
-  
-  export default SocailMedia;
+  </p>
+  );
+}
