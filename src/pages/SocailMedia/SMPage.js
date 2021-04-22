@@ -15,6 +15,7 @@ import {
   ExchangeP,
   AccountNum,
   ProfileCard,
+  SinglePageWrapper,
   ExchangeH2W,
   ExchangeH3W,
   BalanceCard,
@@ -131,17 +132,13 @@ return (
      </ProfileCard>
     
      
-     <ExchangeH3>JayFieldNet Connect</ExchangeH3>
-     <ExchangeWrapper>
-       
-     <BalanceCard>
-    
-       <ExchangeH2W >JFC Balance:</ExchangeH2W>
-       <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
-     </BalanceCard>
+     
+     <SinglePageWrapper>
+     
      
 
      <ExchangeCard>
+     <ExchangeH3>JayFieldNet</ExchangeH3>
        <SocailMedia/>
        
        
@@ -157,8 +154,8 @@ return (
      
 
 
-     </ExchangeWrapper>
-     <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
+     </SinglePageWrapper>
+     
    </ExchangeContainer>
    
    <Footer/>

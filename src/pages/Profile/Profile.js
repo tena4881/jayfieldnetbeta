@@ -90,6 +90,28 @@ export const ExchangeWrapper = styled.div`
     padding: 0 10px;
   }
 `;
+export const SinglePageWrapper = styled.div`
+  width: 80vw;
+  margin: 0rem auto;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  
+  @media screen and (max-width: 1375px) {
+    width: 100vw;
+    overflow-x:hidden;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 100vw;
+    overflow-x:hidden;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+`;
 
 export const ConnectWrapper = styled.div`
   max-width: 1000px;
@@ -144,11 +166,79 @@ background-color: #fafafa;
     cursor: pointer;
   }
 `;
+export const ExchangeCard2 = styled.div`
+
+background-color: #42378f;
+background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
 export const BalanceCard = styled.div`
 
 background-color: #42378f;
 background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+
+export const BalanceCard2 = styled.div`
+
+background-color: #42378f;
+background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
+  display: flex;
+  max-height: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

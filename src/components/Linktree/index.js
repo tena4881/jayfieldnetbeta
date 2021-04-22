@@ -16,7 +16,7 @@ const whatsappLogo = require('./images/whatsapp.svg');
 export default function LinkTree() {
   return (
     <Container>
-      <Header picture='https://jayfieldnet.io/assets/images/smaller_logo.png' title='JayField Consulting' subtitle='Your Dedicated Business Brain' />
+      <Header picture='https://jayfieldnet.io/assets/images/smaller_logo.png' title='JayField Consulting' subtitle='Connect with us!' />
       <Button link='https://www.facebook.com/JayFieldLLC/' icon={facebookLogo} name='Facebook' backgroundColor={variables.facebookColor} />
       <Button link='https://www.instagram.com/jayfieldusa/' icon={instagramLogo} name='Instagram' backgroundColor={variables.instagramColor} />
       

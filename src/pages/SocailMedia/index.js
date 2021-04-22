@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { Button } from "react-scroll";
 import { useMetamask } from "use-metamask";
 import Web3 from "web3";
 import Linktree from "../../components/Linktree"
+import NoJFC from "../../components/NoJFC";
+
 export default function SocailMedia() {
   const { metaState } = useMetamask();
   const [JFCbalance, setJFCBalance] = useState();
@@ -416,16 +419,17 @@ export default function SocailMedia() {
     }
   }, [metaState]);
   return (
-    <p>
-    {Number(JFCbalance) ? (
+    <div>
+    {Number(JFCbalance) >= 100 ? (
       <>
       <Linktree/>
-        
-        
       </>
     ) : (
-      "You at least 100 JFC to view 😔"
+        <>
+        <NoJFC/>
+        
+      </>
     )}
-  </p>
+  </div>
   );
 }
