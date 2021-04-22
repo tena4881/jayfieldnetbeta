@@ -158,7 +158,7 @@ return (
      
    </ExchangeContainer>
    
-   <Footer/>
+  
    </ProfileContainer>
   );
   
