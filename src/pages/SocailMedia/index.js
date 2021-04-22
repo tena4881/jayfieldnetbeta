@@ -438,7 +438,7 @@ const SocailMedia = () => {
   
   return (
     <p>
-    {balance == 100 ? (
+    {balance >= 100 ? (
       <>
       <LinkTree />
         
