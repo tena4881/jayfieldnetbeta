@@ -7,7 +7,7 @@ import {useWeb3} from '../../getWeb3';
 const SocailMedia = () => {
 
     const { balance, address, message, setAddress, setBalance } = useStoreApi();
-  
+    const [JFCbalance, setJFCBalance] = useState();
     const web3 = useWeb3();
 
     const { connect, getAccounts, getChain, metaState } = useMetamask();
@@ -410,44 +410,35 @@ const SocailMedia = () => {
       
   
   
-    useEffect(() => {
-        if (metaState.isAvailable) {
+      useEffect(() => {
+        const { account, isConnected, web3 } = metaState;
+        
+        if (account.length && isConnected && web3) {
           (async () => {
-            try {
-              /* you can get the information directly 
-              * by assigning them to a variable, 
-              * or from metaState.account and metaState.chain 
-              */
-             let contract = new metaState.web3.eth.Contract(abi, coinAddress);
-              let account = await getAccounts();
-              
-              setAddress(account[0]);
-              await contract.methods.balanceOf(metaState.account[0]).call().then(function(res){
-                setBalance(parseFloat(res / 10 ** 2).toFixed(2));
-              }).catch(function(err) {
-                console.log(err);
-              });
-
-            } catch (error) {
-              console.log(error);
-            }
+            
+            let contract = new metaState.web3.eth.Contract(abi, coinAddress);
+            await contract.methods.balanceOf(metaState.account[0]).call().then(function(res){
+              setJFCBalance(parseFloat(res / 10 ** 2).toFixed(2));
+            }).catch(function(err) {
+              console.log(err);
+            });
+            
           })();
         }
-      }, []);
+      }, [metaState]);
  
   
   return (
-    <p>
-    {balance >= 100 ? (
+    <div>
+    {JFCbalance >= 100 ? (
       <>
       <LinkTree />
         
-        
       </>
     ) : (
-      "You don't have 100 JFC 😔 (You need 100 JFC to accsess this page)."
+      "You need at least 100 JFC to accsess this page 😔."
     )}
-  </p>
+  </div>
       
     );
     
