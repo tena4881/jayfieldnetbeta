@@ -445,7 +445,7 @@ const SocailMedia = () => {
         
       </>
     ) : (
-      "You don't have any JFC 😔"
+      "You don't have 100 JFC 😔 (You need 100 JFC to accsess this page)."
     )}
   </p>
       
