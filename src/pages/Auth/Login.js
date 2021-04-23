@@ -6,7 +6,7 @@ import Web3                    from "web3";
 import Profile from "../Profile/ProfileInfo";
 
 function ConnectWallet() {
-  const { connect, metaState }              = useMetamask();
+  const { connect, metaState } = useMetamask();
   const [ web3interface, setWeb3Interface ] = useState("web3");
 
   useEffect(() => {
