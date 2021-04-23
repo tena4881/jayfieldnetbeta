@@ -7,8 +7,26 @@ import NoJFC from "../../components/NoJFC";
 import {useStoreApi} from '../../storeApi';
 export default function SocailMedia() {
   
+  const { connect, getAccounts, getChain, metaState } = useMetamask();
   
-
+  useEffect(() => {
+    if (metaState.isAvailable) {
+      (async () => {
+        try {
+          /* you can get the information directly 
+          * by assigning them to a variable, 
+          * or from metaState.account and metaState.chain 
+          */
+          let account = await getAccounts();
+          
+          setAddress(account[0]);
+          
+        } catch (error) {
+          console.log(error);
+        }
+      })();
+    }
+  }, []);
   const { balance, address, message, setAddress, setBalance } = useStoreApi();
 
   return (
