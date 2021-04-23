@@ -399,28 +399,13 @@ export default function SocailMedia() {
   ];
   
   const coinAddress = "0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8";
+  const { account, isConnected, web3 } = metaState;
   
+  console.log(JFCbalance)
   
-  
-  useEffect(() => {
-    const { account, isConnected, web3 } = metaState;
-    
-    if (account.length && isConnected && web3) {
-      (async () => {
-        
-        let contract = new metaState.web3.eth.Contract(abi, coinAddress);
-        await contract.methods.balanceOf(metaState.account[0]).call().then(function(res){
-          setJFCBalance(parseFloat(res / 10 ** 2).toFixed(2));
-        }).catch(function(err) {
-          console.log(err);
-        });
-        
-      })();
-    }
-  }, [metaState]);
   return (
     <div>
-    {Number(JFCbalance) >= 100 ? (
+    {JFCbalance != 0 ? (
       <>
       <Linktree/>
       </>
