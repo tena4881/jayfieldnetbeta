@@ -4,6 +4,7 @@ import TransferToVault from '../../transferToVault';
 import   ContributeToVault from '../../contributeToVault';
 import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
+import {JFCContext} from '../../GlobalStates/JFCContext';
 import {
   ExchangeContainer,
   ExchangeWrapper,
@@ -150,6 +151,7 @@ return (
       </BalanceCard>
 
       <ExchangeCard>
+
         <ExchangeH3>Coming Soon!</ExchangeH3>
         
         

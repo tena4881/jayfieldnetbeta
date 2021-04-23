@@ -140,7 +140,7 @@ return (
      <ExchangeCard>
      <ExchangeH3>JayFieldNet</ExchangeH3>
        <SocailMedia/>
-       
+       <p>{balance}</p>
        
        
        

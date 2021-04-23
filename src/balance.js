@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useMetamask } from "use-metamask";
 import Web3 from "web3";
 import {ExchangeH3} from './pages/Profile/Profile'
+
 export default function Balance() {
   const { metaState } = useMetamask();
   const [JFCbalance, setJFCBalance] = useState();
