@@ -32,7 +32,7 @@ import ConnectWallet from '../../WalletConnect';
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 import Footer from '../../components/Footer/footer';
-import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
+// import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
 import {useStoreApi} from '../../storeApi';
 import {useWeb3} from '../../getWeb3';
 import { useMetamask } from "use-metamask";
@@ -455,36 +455,6 @@ const SMPage = () => {
   
   
   
-  useEffect(() => {
-    const { account, isConnected, web3 } = metaState;
-    
-    if (account.length && isConnected && web3) {
-      (async () => {
-        
-        let contract = new metaState.web3.eth.Contract(abi, coinAddress);
-        await contract.methods.balanceOf(metaState.account[0]).call().then(function(res){
-          setBalance(parseFloat(res / 10 ** 2).toFixed(2));
-        }).catch(function(err) {
-          console.log(err);
-        });
-        
-      })();
-    }
-    else{
-      (async () => {
-        try {
-          if (web3interface === "ethers")
-            await connect(ethers.providers.Web3Provider, "any");
-          else if (web3interface === "web3")
-            await connect(Web3);
-          else 
-            throw Error(`Unknown web3 interface: ${web3interface}`);
-        } catch (error) {
-          console.log(error);
-        }
-      })();
-    }
-  },  [metaState.isAvailable, web3interface]);
   
 return (
   

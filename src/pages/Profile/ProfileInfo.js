@@ -18,37 +18,14 @@ import {
   WalletSigninContainer
 } from './Profile';
 import Footer from '../../components/Footer/footer';
-export default function Profile({ state, web3Handler }) {
+export default function Profile() {
 
   function refreshPage() {
     window.location.reload(false);
   }
     return (
         <div>
-        {!state.isConnected ? (
-          <ProfileContainer>
-    
-          <WalletSigninContainer id='Exchange'>
-                <div id='modalPortal'></div>
-                
-                <ConnectWrapper>
-                
-                    <ExchangeCard >
-                      <ExchangeH3>Welcome back!</ExchangeH3>
-                      <ExchangeP>Connect using your crypto wallet</ExchangeP>
-                      
-                      
-                      <ConnectBtn onClick={refreshPage}>Connect</ConnectBtn>
-                  </ExchangeCard>
-                  <BackBtn to="/" >Back</BackBtn>
-                </ConnectWrapper>
-                
-              </WalletSigninContainer>
-              <Footer/>
-          </ProfileContainer>
-        ) : (
-          <Exchange></Exchange>
-        )}
-      </div>
+        NOT HERE
+       </div>
     )
 }

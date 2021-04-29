@@ -18,7 +18,7 @@ import AddToWallet from "./WalletConnect/addJFCToWallet";
 
 const routes = [
   { path: "/password-forget", component: PasswordForget },
-  { path: "/profile", component: Login },
+  { path: "/profile", component: Profile },
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
   { path: "/connect", component: SocailMedia },

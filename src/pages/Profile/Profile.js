@@ -370,9 +370,16 @@ export const ExchangeH4 = styled(LinkR)`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+export const ExchangeH4W = styled(LinkR)`
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: .5rem;
+  color: white;
+  margin-bottom: 1rem;
+`;
 
 export const AccountNum = styled.h3`
-  font-size: .9rem;
+  font-size: .7rem;
   font-weight: normal;
   margin-top: 1rem;
   margin-bottom: 1rem;

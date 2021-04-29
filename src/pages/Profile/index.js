@@ -1,10 +1,9 @@
-import React,{useState,useContext,useEffect} from 'react';
+import React,{useState} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
-import TransferToVault from '../../transferToVault';
-import   ContributeToVault from '../../contributeToVault';
 import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
-import {JFCContext} from '../../GlobalStates/JFCContext';
+import { formatUnits } from '@ethersproject/units'
+import AccountHeader from '../../components/AccountHeader/'
 import {
   ExchangeContainer,
   ExchangeWrapper,
@@ -12,6 +11,7 @@ import {
   ExchangeCard,
   ExchangeH2,
   ExchangeH3,
+  ExchangeH4W,
   ExchangeH1,
   ExchangeP,
   AccountNum,
@@ -24,49 +24,23 @@ import {
   ChartCard,
   ExchangeH4
 } from './Profile';
-//import BuyModal from '../Modal/BuyModal'
-// import WalletModal from '../Modal/WalletModal'
-// import RemovePoolModal from '../Modal/RemovePoolModal'
-// import ProfileIcon from '../ProfileIcon/ProfileIcon';\
-import ConnectWallet from '../../WalletConnect';
+import {JFCBalance, EtherBalance} from '../../balance'
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
-import Footer from '../../components/Footer/footer';
-import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
-import {useStoreApi} from '../../storeApi';
-import {useWeb3} from '../../getWeb3';
-import { useMetamask } from "use-metamask";
-import Balance from '../../balance';
-import EthBalance from '../../getEthBal';
-import Account from '../../account';
-import Modal from '../../components/Modal/Modal';
 
-const Exchange = () => {
+
+export default function Exchange(){
+  const [isOpen, setIsOpen] = useState(false);  
   
-  
-  const [isBuyOpen,setIsBuyOpen] = useState(false);
-  const [isEditPoolOpen,setisEditPoolOpen] = useState(false);
-  const [isRemovePoolOpen,setisRemovePoolOpen] = useState(false);
-  const [isWalletOpen,setisWalletOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
     
   };
-  const { balance, address, message, setAddress, setBalance } = useStoreApi();
-  
-  const web3 = useWeb3();
-
-  const { connect, getAccounts, getChain, metaState } = useMetamask();
   const tokenAddress = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8';
   const tokenSymbol = 'JFC';
   const tokenDecimals = 2;
   const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';
 
-  
-  
-
-    
     //WHAT ARE THER REWARDS FOR COMPLEATING THIS TASK
     async function addToMetamask(){
       let ethereum = window.ethereum;
@@ -95,96 +69,63 @@ const Exchange = () => {
       }
   }
 
-  useEffect(() => {
-      if (metaState.isAvailable) {
-        (async () => {
-          try {
-            /* you can get the information directly 
-            * by assigning them to a variable, 
-            * or from metaState.account and metaState.chain 
-            */
-            let account = await getAccounts();
-            
-            setAddress(account[0]);
-            
-          } catch (error) {
-            console.log(error);
-          }
-        })();
-      }
-    }, []);
+  
+  //const userBalance = useEtherBalance(account)
+  //const JFCBalance = useTokenBalance(account, tokenAddress)
 
 return (
-  
-  <ProfileContainer>
-     <ProfileSidebar isOpen={isOpen} toggle={toggle} />
-  	    <ProfileNavbar toggle={toggle} />
-    <ExchangeContainer id='Exchange'>
-      <div id='modalPortal'></div>
-      
-      
-     
-          <ProfileCard>
-        <Account/>
-        
-      </ProfileCard>
-     
-      
-      <ExchangeH3>Profile Overview</ExchangeH3>
-      <ExchangeWrapper>
-        
-      <BalanceCard>
-     
-        <ExchangeH2W >JFC Balance:</ExchangeH2W>
-        <ExchangeH3 style={{color: 'white'}}><Balance/> </ExchangeH3>
-      </BalanceCard>
-      <BalanceCard>
-        <ExchangeH3W >Contribute to JayField Net</ExchangeH3W>
-        
-        <ExchangePW>
-          Available
-        </ExchangePW>
-        <ExchangeH3 style={{color: 'white'}}><EthBalance/> </ExchangeH3>
+  <div>
+      <ProfileNavbar toggle={toggle} />
+              <ProfileSidebar isOpen={isOpen} toggle={toggle} />
+              <ExchangeContainer id='Exchange'>
+                      <AccountHeader/>
+                      
+                      <ExchangeH3>Profile Overview</ExchangeH3>
+                <ExchangeWrapper>
+                   <BalanceCard>
+                     <ExchangeH2W >JFC Balance:</ExchangeH2W>
+                     <JFCBalance/>
+                    </BalanceCard>
+                    <BalanceCard>
+                      <ExchangeH3W >Contribute to JayField Net</ExchangeH3W>
+                      <ExchangeH4W>
+                      Ether balance: 
+                      </ExchangeH4W>
+                      <EtherBalance/>
 
-        <Contribute/>
+                      <Contribute/>
         
-      </BalanceCard>
+                    </BalanceCard>
 
-      <ExchangeCard>
+                  <ExchangeCard>
 
-        <ExchangeH3>Coming Soon!</ExchangeH3>
-        
-        
-        
-        
-        
-      </ExchangeCard>
+                    <ExchangeH3>Coming Soon!</ExchangeH3>
+                      </ExchangeCard>
 
       
-      <ChartCard>
-        <ExchangeH3>Price of ETH</ExchangeH3>
-        <TradingViewWidget
-          symbol="ETHUSD"
-          theme={Themes.LIGHT}
-          style='2'
-          locale="fr"
-          autosize
-        />
-      </ChartCard>
+                <ChartCard>
+                  
+                  <TradingViewWidget
+                    symbol="ETHUSD"
+                    theme={Themes.LIGHT}
+                    style='2'
+                    locale="fr"
+                    autosize
+                  />
+                </ChartCard>
+              </ExchangeWrapper>
+              <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
+              
+           
+                
+                
+                
+            </ExchangeContainer>
+            
+            
        
-       
-      
-
-
-      </ExchangeWrapper>
-      <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
-    </ExchangeContainer>
-    
-    <Footer/>
-    </ProfileContainer>
+    </div>
   );
   
   
 };
-
-export default Exchange;

@@ -9,22 +9,7 @@ function ConnectWallet() {
   const { connect, metaState } = useMetamask();
   const [ web3interface, setWeb3Interface ] = useState("web3");
 
-  useEffect(() => {
-    if (metaState.isAvailable && !metaState.isConnected) {
-      (async () => {
-        try {
-          if (web3interface === "ethers")
-            await connect(ethers.providers.Web3Provider, "any");
-          else if (web3interface === "web3")
-            await connect(Web3);
-          else 
-            throw Error(`Unknown web3 interface: ${web3interface}`);
-        } catch (error) {
-          console.log(error);
-        }
-      })();
-    }
-  }, [metaState.isAvailable, web3interface]);
+  
 
   const handleWeb3Selector = (event) => setWeb3Interface(event.target.value);
 

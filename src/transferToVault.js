@@ -5,7 +5,7 @@ import {ExchangeH3} from './pages/Profile/Profile'
 
 const TransferToVault = () => {
   const { metaState } = useMetamask();
-  const [balance, setBalance] = useState();
+  //const [balance, setBalance] = useState();
   const abi =[
     {
       "anonymous": false,

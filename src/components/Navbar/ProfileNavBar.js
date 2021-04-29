@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { FaChevronCircleDown, FaHome,FaCog, FaHandshake } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import ProfileIcon from '../ProfileIcon/ProfileIcon'
+// import ProfileIcon from '../ProfileIcon/ProfileIcon'
 import { animateScroll as scroll } from 'react-scroll';
 import {
   MobileIcon,
@@ -17,7 +17,6 @@ import {
   NavBtn,
   NavBtnLink
 } from './PNavbarElements';
-import {useStoreApi} from '../../storeApi';
 const ProfileNavbar = ({ toggle }) => {
   
   const [scrollNav, setScrollNav] = useState(false);
@@ -29,16 +28,7 @@ const ProfileNavbar = ({ toggle }) => {
       setScrollNav(false);
     }
   };
-  const { balance, address, message, setAddress, setBalance } = useStoreApi();
-  
-  function toggleLogout() {
-    console.log("Figure out how to Disconnect Metamask properly!");
-    setAddress(null);
-    }
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeNav);
-  }, []);
 
 
 

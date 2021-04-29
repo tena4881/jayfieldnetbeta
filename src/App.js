@@ -1,7 +1,7 @@
 import React from "react";
 import routes from "./routes";
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
-import { useEffect, useState } from "react";
+
 function App() {
 
   return (
