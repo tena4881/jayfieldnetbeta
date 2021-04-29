@@ -7,7 +7,8 @@ export default function Account() {
     const { account } = useEthers()
     return (
         <div >
-            <ProfileIcon account={account}></ProfileIcon>
+            {account}
+            {/* <ProfileIcon account={account}></ProfileIcon> */}
         </div>
         
     )

@@ -9,13 +9,17 @@ export default function AccountHeader() {
 
     const handleConnect = async event => {
 		activateBrowserWallet();
+    }
+    
+    const handleDisconnect = async event => {
+		activateBrowserWallet();
 	}
     return (
         
         <ProfileCard>
             {account ? (
                 <>
-                <ProfileIcon account={account}></ProfileIcon>
+                {/* <ProfileIcon account={account}></ProfileIcon> */}
                 <AccountNum >{account}</AccountNum>
                 <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button>
             </>
