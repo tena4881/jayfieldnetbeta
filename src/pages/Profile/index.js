@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
 import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
+import {  useEthers } from '@usedapp/core'
 import { formatUnits } from '@ethersproject/units'
 import AccountHeader from '../../components/AccountHeader/'
 import {
@@ -31,7 +32,7 @@ import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 
 export default function Exchange(){
   const [isOpen, setIsOpen] = useState(false);  
-  
+  const { account } = useEthers();
   const toggle = () => {
     setIsOpen(!isOpen);
     
@@ -74,8 +75,12 @@ export default function Exchange(){
   //const JFCBalance = useTokenBalance(account, tokenAddress)
 
 return (
+
+  
   <div>
-      <ProfileNavbar toggle={toggle} />
+    {account ? (
+                <>
+                <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} />
               <ExchangeContainer id='Exchange'>
                       <AccountHeader/>
@@ -115,12 +120,14 @@ return (
                 </ChartCard>
               </ExchangeWrapper>
               <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
-              
-           
-                
-                
-                
             </ExchangeContainer>
+            </>
+            ) : (
+            <>
+            <AccountHeader/>
+            </>
+            )}
+      
             
             
        
