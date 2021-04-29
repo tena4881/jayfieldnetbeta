@@ -370,6 +370,12 @@ export const ExchangeH4 = styled(LinkR)`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+export const JFCBalanceHead = styled.h4`
+  font-size: .1 em;
+  font-weight: bold;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+`;
 export const ExchangeH4W = styled(LinkR)`
   font-size: 1rem;
   font-weight: normal;

@@ -35,6 +35,17 @@ export function JFCBalance() {
     </div>
   )
 }
+export function JFCBalanceBlack() {
+    const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
+  const { account } = useEthers()
+  const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
+
+  return (
+    <div>
+    {jfcBalance && <ExchangeH4>JFC Balance: {formatUnits(jfcBalance, 2)}</ExchangeH4>}
+    </div>
+  )
+}
 
 export function EtherBalance() {
   const { account } = useEthers()
