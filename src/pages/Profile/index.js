@@ -31,8 +31,8 @@ import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 
 
 export default function Exchange(){
+  
   const [isOpen, setIsOpen] = useState(false);  
-  const { account } = useEthers();
   const toggle = () => {
     setIsOpen(!isOpen);
     
@@ -41,7 +41,7 @@ export default function Exchange(){
   const tokenSymbol = 'JFC';
   const tokenDecimals = 2;
   const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';
-
+  const { activateBrowserWallet, account, deactivate} = useEthers();
     //WHAT ARE THER REWARDS FOR COMPLEATING THIS TASK
     async function addToMetamask(){
       let ethereum = window.ethereum;
@@ -83,7 +83,7 @@ return (
                 <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} />
               <ExchangeContainer id='Exchange'>
-                      <AccountHeader/>
+                      <AccountHeader account ={account} activateBrowserWallet={activateBrowserWallet} />
                       
                       <ExchangeH3>Profile Overview</ExchangeH3>
                 <ExchangeWrapper>

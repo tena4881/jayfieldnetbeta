@@ -5,7 +5,7 @@ import AccountHeader from '../../components/AccountHeader/'
 import {TPPage1} from './tpp'
 import { formatUnits , formatEther} from '@ethersproject/units'
 export default function SocailMedia({ state, web3Handler }) {
-  const { account } = useEthers();
+  const { activateBrowserWallet,deactivate,account} = useEthers();
   
   return (
     
@@ -13,11 +13,11 @@ export default function SocailMedia({ state, web3Handler }) {
       
       {account  ? (
       <>
-        <TPPage1/>
+        <TPPage1 account={account}/>
       </>
     ) : (
         <>
-        <AccountHeader/>
+        <AccountHeader account={account}/>
         
       </>
     )}

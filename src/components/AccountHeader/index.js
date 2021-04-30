@@ -4,11 +4,12 @@ import {AccountNum, ExchangeH3, JFCBalanceHead, ProfileCard} from '../../pages/P
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
-export default function AccountHeader() {
+export default function AccountHeader({account}) {
 
-    const { activateBrowserWallet, deactivate, account } = useEthers();
+ 
+    const { activateBrowserWallet,deactivate} = useEthers();
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
-  
+   
     const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
 
 
@@ -17,11 +18,12 @@ export default function AccountHeader() {
         
         <ProfileCard>
             {account ? (
+      
                 <>
                 {/* <ProfileIcon account={account}></ProfileIcon> */}
                 <AccountNum >{account}</AccountNum>
                 <JFCBalanceBlack/>
-                <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button>
+                {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
             </>
             ) : (
             <>

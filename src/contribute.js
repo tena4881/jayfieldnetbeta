@@ -9,24 +9,18 @@ import { TransactionStatus, useContractCall, useContractFunction, useEtherBalanc
 
 
 export default function Contribute() {
-	//const { account, library } = useEthers()
+	const { account, library } = useEthers()
 	const jfcVaultInterface = new utils.Interface(jfcVaultAbi)
 	const vaultAddress = "0x557fd4e5c433d5b4565056a42c21f7710776ee2a";
-	const { metaState } = useMetamask();
 	const vaultContract = new Contract('0x557fd4e5c433d5b4565056a42c21f7710776ee2a', jfcVaultInterface)
-	//const { state, send } = useContractFunction(vaultContract, 'deposit')
+	const { state, send } = useContractFunction(vaultContract, 'Contribute')
   
-	var gasPrice = 20*10**9;
-	var gas = 21000;
-	var attoethForGas = gasPrice * gas;
 	const [amount, setAmount] = useState();
 
-	const handleSubmit = async event => {
-		
-		event.preventDefault();
-		//send(amount);
+	const onClick = () => {
 		console.log(amount)
-	}
+		send(utils.parseEther(amount))
+	  }
 	
 
   
@@ -34,7 +28,7 @@ export default function Contribute() {
 
   return (
 	  <>
-	  <form onSubmit={e => {handleSubmit(e)}}>
+	  <form onSubmit={onClick}>
         <br />
         <input 
           name='amount' 
@@ -48,7 +42,7 @@ export default function Contribute() {
 		<br>
 		</br>
 		<div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} >
-		<button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} type="button" onClick={handleSubmit} className="btn btn-primary mt-4 waves-effect waves-light">Submit</button>
+		<button style={{height: 'auto', width : 'auto', marginLeft: '5px'}} type="button" onClick={onClick} className="btn btn-primary mt-4 waves-effect waves-light">Submit</button>
 		</div>
 	  </form>
     

@@ -3,21 +3,21 @@ import NoJFC from "../../components/NoJFC";
 import { useEtherBalance, useEthers, useTokenBalance } from '@usedapp/core'
 import AccountHeader from '../../components/AccountHeader'
 import { formatUnits , formatEther} from '@ethersproject/units'
-export function TPPage1() {
+export function TPPage1({account}) {
   const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
-  const { account } = useEthers()
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
-  const jfcBal = formatUnits(jfcBalance, 2)
+  console.log(jfcBalance)
+  //const jfcBal = formatUnits(jfcBalance, 2)
   return (
     <div>
-    {jfcBal >= 339 ? (
+  {formatUnits(jfcBalance,2) >= 339 ? (
       <>
-      <AccountHeader/>
+      <AccountHeader account={account}/>
       <Linktree/>
       </>
     ) : (
         <>
-        <AccountHeader/>
+        <AccountHeader account={account}/>
         <NoJFC/>
         
       </>
