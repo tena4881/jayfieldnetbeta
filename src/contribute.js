@@ -34,7 +34,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 	  'Contribute'
 	)
 	const onClick = () => {
-		console.log(utils.format(value))
+	  console.log(utils.parseEther(value))
 	  send(utils.parseEther(value))
 	  setValue('0')
 	}
@@ -56,10 +56,16 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 	  </InputRow>
 	)
   }
+  const ErrorMessage = ({ transaction }) => {
+	return <ErrorRow>{'errorMessage' in transaction && transaction.errorMessage}</ErrorRow>
+  }
+  
 	const TransactionForm = ({ balance, send, title, ticker, transaction }) => {
 		return (
+			<>
 			<InputComponent ticker={ticker} transactionStatus={transaction.status} send={send} />
-		
+			<ErrorMessage transaction={transaction} />
+			</>
 		)
 	}
 	
@@ -130,4 +136,11 @@ const SmallButton = styled(Button)`
 const FormTicker = styled.div`
   padding: 0 16px;
   font-weight: 1000;
+`
+
+const ErrorRow = styled.div`
+  height: 16px;
+  font-size: 14px;
+  margin: 8px auto 32px auto;
+  color: ${Colors.Red['400']};
 `
