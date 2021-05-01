@@ -1,17 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
 import {AccountNum, ExchangeH3, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
-export default function AccountHeader({account}) {
+import UserContext from '../../components/User/user';
+export default function AccountHeader() {
 
- 
-    const { activateBrowserWallet,deactivate} = useEthers();
+  
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
-   
-    const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
-
+    const {activateBrowserWallet, account} = useContext(UserContext);
 
     
     return (

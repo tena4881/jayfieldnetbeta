@@ -6,14 +6,10 @@ import { useEtherBalance, useEthers, useTokenBalance } from '@usedapp/core'
 
 function App() {
   const { activateBrowserWallet,deactivate,account} = useEthers();
-  const user = {
-    account: {account},
-    activate: {activateBrowserWallet},
-    deactivate: {deactivate},
-  }
+  
   return (
       <React.Fragment>
-        <UserContext.Provider value={user}>
+        <UserContext.Provider value={{account,activateBrowserWallet,deactivate}}>
           <Router>
               <Switch>
                   {routes.map((route, idx) => (

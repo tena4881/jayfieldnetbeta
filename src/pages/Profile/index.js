@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import TradingViewWidget, { Themes, BarStyles,IntervalTypes }  from 'react-tradingview-widget';
 import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ import {
 import {JFCBalance, EtherBalance} from '../../balance'
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
-
+import UserContext from '../../components/User/user';
 
 export default function Exchange(){
   
@@ -41,7 +41,6 @@ export default function Exchange(){
   const tokenSymbol = 'JFC';
   const tokenDecimals = 2;
   const tokenImage = 'https://ipfs.fleek.co/ipfs/bafybeibigw72plrzzkg7lby2mdqkfwvwgnvohwi7ycovzsoejkr5ndhf4e';
-  const { activateBrowserWallet, account, deactivate} = useEthers();
     //WHAT ARE THER REWARDS FOR COMPLEATING THIS TASK
     async function addToMetamask(){
       let ethereum = window.ethereum;
@@ -69,7 +68,7 @@ export default function Exchange(){
       console.log(error);
       }
   }
-
+  const {account} = useContext(UserContext);
   
   //const userBalance = useEtherBalance(account)
   //const JFCBalance = useTokenBalance(account, tokenAddress)
@@ -83,7 +82,7 @@ return (
                 <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} />
               <ExchangeContainer id='Exchange'>
-                      <AccountHeader account ={account} activateBrowserWallet={activateBrowserWallet} />
+                      <AccountHeader/>
                       
                       <ExchangeH3>Profile Overview</ExchangeH3>
                 <ExchangeWrapper>

@@ -50,7 +50,7 @@ class Section extends Component {
                     <div className="mt-4">
                       </div>
                       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
-                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Members Click Here </Link>
+                  <Link to="/profile" className="btn btn-primary mt-4 waves-effect waves-light">Digital Dashboard </Link>
                </div>
                   </Col>
                 </Row>
