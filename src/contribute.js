@@ -10,16 +10,24 @@ import { TransactionStatus, useContractCall, useContractFunction, useEtherBalanc
 
 export default function Contribute() {
 	const { account, library } = useEthers()
-	const jfcVaultInterface = new utils.Interface(jfcVaultAbi)
-	const vaultAddress = "0x557fd4e5c433d5b4565056a42c21f7710776ee2a";
-	const vaultContract = new Contract('0x557fd4e5c433d5b4565056a42c21f7710776ee2a', jfcVaultInterface)
-	const { state, send } = useContractFunction(vaultContract, 'Contribute')
+	// const jfcVaultInterface = new utils.Interface(jfcVaultAbi)
+	// const vaultAddress = "0x557fd4e5c433d5b4565056a42c21f7710776ee2a";
+	// const vaultContract = new Contract('0x557fd4e5c433d5b4565056a42c21f7710776ee2a', jfcVaultInterface)
+	// const { state, send } = useContractCall(
+	// 	account &&
+    //     vaultAddress && {
+    //       abi: jfcVaultAbi,
+    //       address: vaultAddress,
+    //       method: 'Contribute',
+    //       args: [account],
+    //     }
+    // )
   
 	const [amount, setAmount] = useState();
 
 	const onClick = () => {
-		console.log(amount)
-		send(utils.parseEther(amount))
+		console.log(parseFloat(amount))
+		
 	  }
 	
 

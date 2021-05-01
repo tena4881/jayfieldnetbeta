@@ -9,11 +9,12 @@ export function TPPage1() {
   const {account} = useContext(UserContext);
   const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
-  console.log(jfcBalance)
-  //const jfcBal = formatUnits(jfcBalance, 2)
+  
+  const jfcBal = parseFloat(jfcBalance)
+  console.log(jfcBal)
   return (
     <div>
-  {parseFloat(jfcBalance) >= 339 ? (
+  {parseFloat(jfcBalance) >= 100 ? (
       <>
       <AccountHeader account={account}/>
       <Linktree/>

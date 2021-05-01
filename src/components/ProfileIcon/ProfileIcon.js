@@ -1,21 +1,12 @@
-// import React from 'react'
-// import ReactDom from 'react-dom'
-
-// import { Identicon } from 'ethereum-react-components';
-
-// const PROFILE_STYLES = {
-//   border: '2px solid',
-// }
-
-
-
-// export default function ProfileIcon({account}) {
-  
-//   return (
-//     <>
-//     <div >
-//         <Identicon style={PROFILE_STYLES} address={account} />
-//       </div>
-//     </>)
-  
-// }
+import useContext from 'react';
+import reactHashAvatar from 'react-hash-avatar'
+import renderHTML from 'react-render-html'
+import UserContext from '../../components/User/user';
+ 
+ export default function ProfileIcon({account}) {
+    return (
+    <div>
+        {renderHTML(reactHashAvatar({account}, { size: 100, radius: 20 } ))}
+    </div>
+    )
+    }
