@@ -6,7 +6,7 @@ import UserContext from '../../components/User/user';
  export default function ProfileIcon({account}) {
     return (
     <div>
-        {renderHTML(reactHashAvatar({account}, { size: 100, radius: 20 } ))}
+        {renderHTML(reactHashAvatar({account}, { size: 50, radius: 100 } ))}
     </div>
     )
     }

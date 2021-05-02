@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
-import {AccountNum, ExchangeH3, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
+import {AccountNum, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
@@ -17,21 +17,26 @@ export default function AccountHeader() {
 
     return (
         
-        <ProfileCard>
+        <HeaderCard>
             {account ? (
       
                 <>
-                {/* <ProfileIcon account={{account}}></ProfileIcon> */}
-                <AccountNum >{account}</AccountNum>
+                {/* <ProfileIcon account={''}></ProfileIcon> */}
                 <JFCBalanceBlack/>
+                <AccountNum >{account}</AccountNum>
+                
                 {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
             </>
             ) : (
             <>
-            <ExchangeH3>No wallet connected 😔</ExchangeH3>
+            <div style={{display: 'flex', flexDirection: 'column',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+            
+            <ExchangeH3W>No wallet connected 😔</ExchangeH3W>
+            
             <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => activateBrowserWallet()}>Connect</button>
+            </div>
             </>
             )}
-        </ProfileCard>
+        </HeaderCard>
     )
 }

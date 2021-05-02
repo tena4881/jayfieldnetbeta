@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FaChevronCircleDown, FaHome,FaCog, FaHandshake } from 'react-icons/fa';
+import { FaChevronCircleDown, FaCaretDown,FaHome,FaCog, FaHandshake } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 // import ProfileIcon from '../ProfileIcon/ProfileIcon'
 import { animateScroll as scroll } from 'react-scroll';
@@ -40,13 +40,14 @@ const ProfileNavbar = ({ toggle }) => {
           <NavbarContainer>
           <HomeContainer>
               <HomeBtnLink to='/'>
-              <HomeIcon><FaHandshake size={40} style={{ color: 'black' }}/></HomeIcon>
+              <HomeIcon><FaHome size={40} style={{ color: 'black' }}/></HomeIcon>
               </HomeBtnLink>
             </HomeContainer>
             
             <MobileIcon onClick={toggle}>
-              <FaCog size={26} style={{ color: 'black' }}/>
+              <FaCaretDown size={26} style={{ color: 'black' }}/>
             </MobileIcon>
+            
             
             <NavMenu>
               <NavItem>

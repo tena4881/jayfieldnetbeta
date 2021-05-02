@@ -319,7 +319,58 @@ export const ProfileCard = styled.div`
   transition: all 0.2s ease-in-out;
   
 `;
+export const HeaderCard = styled.div`
+background-color: #42378f;
+background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
+  
 
+  display: flex;
+  min-height: 100%;
+  min-width:  100%;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  margin-bottom: 60px;
+  padding: 25px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  
+`;
+export const HeaderBalance = styled.div`
+
+background-color: white;
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
 export const ExchangeIcon = styled.img`
   height: 160px;
   width: 160px;
@@ -370,6 +421,12 @@ export const ExchangeH4 = styled(LinkR)`
   margin-top: .5rem;
   margin-bottom: 1rem;
 `;
+export const ExchangeH4B = styled(LinkR)`
+  font-size: .8rem;
+  font-weight: normal;
+  color: black;
+  
+`;
 export const JFCBalanceHead = styled.h4`
   font-size: .1 em;
   font-weight: bold;
@@ -381,13 +438,14 @@ export const ExchangeH4W = styled(LinkR)`
   font-weight: normal;
   margin-top: .5rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 `;
 
 export const AccountNum = styled.h3`
   font-size: .7rem;
   font-weight: normal;
   margin-top: 1rem;
+  color: white;
   margin-bottom: 1rem;
 
   @media screen and (max-width: 375px) {

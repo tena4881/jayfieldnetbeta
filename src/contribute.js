@@ -7,6 +7,7 @@ import jfcVaultAbi from './abi/jfcVaultAbi.json'
 import { utils } from 'ethers'
 import styled from 'styled-components'
 import { Button } from './components/base/button'
+import {ExchangeH4W} from './pages/Profile/Profile'
 import UserContext from './components/User/user'
 import { TransactionStatus, useContractCall, useContractFunction, useEtherBalance, useEthers } from '@usedapp/core'
 import { BorderRad, Colors } from './global/styles'
@@ -40,6 +41,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 	}
   
 	return (
+		<>
 	  <InputRow>
 		<Input
 		  id={`${ticker}Input`}
@@ -53,7 +55,9 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 		<SmallButton disabled={!account || isMining} onClick={onClick}>
 		  {buttonContent}
 		</SmallButton>
-	  </InputRow>
+	  </InputRow>  
+	  <ExchangeH4W>*Earn JFC</ExchangeH4W>
+			</>
 	)
   }
   const ErrorMessage = ({ transaction }) => {
@@ -72,6 +76,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 
   
 	  return (
+		  <>
 		<TransactionForm
 		  balance={etherBalance}
 		  send={(value) => send({ value })}
@@ -79,6 +84,8 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 		  ticker="ETH"
 		  transaction={state}
 		/>
+		
+	  </>
 	  )
 
   
@@ -88,10 +95,10 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 
 const InputRow = styled.div`
   display: flex;
-  margin: 0 auto;
+  margin: auto auto;
   color: white;
   align-items: center;
-  border: ${Colors.Gray['300']} 1px solid;
+  border: ${Colors.Gray['300']} 2px solid;
   border-radius: ${BorderRad.m};
   overflow: hidden;
 `
@@ -99,8 +106,8 @@ const InputRow = styled.div`
 
 const Input = styled.input`
   height: 100%;
-  width: 100px;
-  padding: 0 0 0 24px;
+  width: 33%;
+  padding: 3px 30px;
   border: 0;
   border-radius: ${BorderRad.m};
   -moz-appearance: textfield;
@@ -110,7 +117,7 @@ const Input = styled.input`
     margin: 0;
   }
   &:focus {
-    outline: transparent auto 1px;
+    outline: black auto 40px;
   }
   &:focus-visible {
     box-shadow: inset 0 0 0 2px ${Colors.Black['900']};
@@ -118,18 +125,18 @@ const Input = styled.input`
 `
 const SmallButton = styled(Button)`
   display: flex;
+  height: 100%;
   justify-content: center;
-  min-width: 95px;
-  height: unset;
-  padding: 8px 24px;
+  width: 100%;
+  padding: 10px 10px;
   &:disabled {
     color: ${Colors.Gray['600']};
     cursor: unset;
   }
   &:disabled:hover,
   &:disabled:focus {
-    background-color: unset;
-    color: unset;
+    background-color: green;
+    color: white;
   }
 `
 

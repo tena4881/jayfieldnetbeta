@@ -3,20 +3,21 @@ import { Container } from './styles';
 import Button from './Button';
 import variables from './variables';
 import Header from './Header';
+import { ExchangeH1, ProfileCard } from '../../pages/Profile/Profile';
 
-const facebookLogo = require('./images/facebook.svg');
-const githubLogo = require('./images/github.svg');
-const youtubeLogo = require('./images/youtube.svg');
-const instagramLogo = require('./images/instagram.svg');
-const linkedinLogo = require('./images/linkedin-in.svg');
-const reactLogo = require('./images/react.svg');
-const twitterLogo = require('./images/twitter.svg');
-const whatsappLogo = require('./images/whatsapp.svg');
+import facebookLogo from './images/facebook.svg'
+import githubLogo from './images/github.svg'
+import youtubeLogo from './images/youtube.svg'
+import instagramLogo from './images/instagram.svg'
+import linkedinLogo from './images/linkedin-in.svg'
+import reactLogo from './images/react.svg'
+import twitterLogo from './images/twitter.svg'
+import whatsappLogo from './images/whatsapp.svg'
 
 export default function LinkTree() {
   return (
-    <Container>
-      <Header title='JayField Consulting' subtitle='Connect with us!' />
+    <ProfileCard>
+      <ExchangeH1>Connect with us!</ExchangeH1>
       <Button link='https://www.facebook.com/JayFieldLLC/' icon={facebookLogo} name='Facebook' backgroundColor={variables.facebookColor} />
       <Button link='https://www.instagram.com/jayfieldusa/' icon={instagramLogo} name='Instagram' backgroundColor={variables.instagramColor} />
       
@@ -26,6 +27,6 @@ export default function LinkTree() {
       <Button link='https://www.linkedin.com/in/danielgomesp/' icon={linkedinLogo} name='LinkedIn' backgroundColor={variables.linkedinColor} />
       <Button link='https://twitter.com/jayfieldllc' icon={twitterLogo} name='Twitter' backgroundColor={variables.twitterColor} />
       <Button link='https://jayfieldnet.io' icon={twitterLogo} name='Website' backgroundColor={variables.siteColor} />
-    </Container>
+    </ProfileCard>
   )
 }

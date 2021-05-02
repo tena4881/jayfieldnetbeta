@@ -9,12 +9,14 @@ import {
   ExchangeH2,
   ExchangeH3,
   ExchangeH4W,
+  ExchangeH4B,
   ExchangeH1,
   ExchangeP,
   AccountNum,
   ProfileCard,
   ExchangeH2W,
   ExchangeH3W,
+  HeaderBalance,
   BalanceCard,
   ExchangePW,
   ConnectBtn,
@@ -41,9 +43,9 @@ export function JFCBalanceBlack() {
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
 
   return (
-    <div>
-    {jfcBalance && <ExchangeH4>JFC Balance: {formatUnits(jfcBalance, 2)}</ExchangeH4>}
-    </div>
+    <>
+    {jfcBalance && <HeaderBalance><ExchangeH4B to='/profile'>{formatUnits(jfcBalance, 2)} JFC </ExchangeH4B></HeaderBalance>}
+    </>
   )
 }
 
@@ -53,7 +55,7 @@ export function EtherBalance() {
 
   return (
     <div>
-      {etherBalance && <ExchangeH3W>{formatEther(etherBalance)}</ExchangeH3W>}
+      {etherBalance && <ExchangeH3W>Ξ {formatEther(etherBalance)}</ExchangeH3W>}
     </div>
   )
 }

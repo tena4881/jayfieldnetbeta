@@ -11,14 +11,14 @@ export const Container = styled.a`
   justify-content: center;
   margin: 10px auto;
   text-decoration: none;
-  width: 100%;
+  width: 70%;
   
   
 }
 `;
 
 export const Icon = styled.img`
-  height: 20px;
+  height: 40px;
   margin: 0 5px;
   padding: 5px;
 `;

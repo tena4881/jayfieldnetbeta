@@ -79,8 +79,8 @@ return (
   <div>
     {account ? (
                 <>
-                <ProfileNavbar toggle={toggle} />
-              <ProfileSidebar isOpen={isOpen} toggle={toggle} />
+                {/* <ProfileNavbar toggle={toggle} />
+              <ProfileSidebar isOpen={isOpen} toggle={toggle} /> */}
               <ExchangeContainer id='Exchange'>
                       <AccountHeader/>
                       
@@ -91,15 +91,12 @@ return (
                      <JFCBalance/>
                     </BalanceCard>
                     <BalanceCard>
-                      <ExchangeH3W >Contribute to JayField Net</ExchangeH3W>
-                      <ExchangeH4W>
-                      Ether balance: 
-                      </ExchangeH4W>
+                      <ExchangeH3W >Ether Balance</ExchangeH3W>
+                      
                       <EtherBalance/>
-
+                      <ExchangeH4W>Contribute your Ether</ExchangeH4W>
                       <Contribute/>
-        
-                    </BalanceCard>
+                      </BalanceCard>
 
                   <ExchangeCard>
 
