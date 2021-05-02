@@ -302,7 +302,24 @@ background-color: #fafafa;
   }
 `;
 export const ProfileCard = styled.div`
-  background-color: #f1f1f1;
+  background-color: #344055;
+
+  display: flex;
+  min-height: 100%;
+  min-width:  100%;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  margin-bottom: 60px;
+  padding: 25px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  
+`;
+export const MainCard = styled.div`
+  background-color: #fff;
 
   display: flex;
   min-height: 100%;
