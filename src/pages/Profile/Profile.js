@@ -367,6 +367,22 @@ export const MainCard = styled.div`
   transition: all 0.2s ease-in-out;
   
 `;
+export const MainCard1 = styled.div`
+  background-color: #fff;
+  display: flex;
+  min-height: 100%;
+  min-width:  100%;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  margin-bottom: 60px;
+  padding: 25px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  
+`;
 export const HeaderCard = styled.div`
 background-color: #42378f;
 background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);

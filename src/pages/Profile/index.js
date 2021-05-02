@@ -106,7 +106,7 @@ return (
                   <BalanceCard>
 
                     <ExchangeH4Link to='/connect'>Explore The Brain</ExchangeH4Link>
-                    </BalanceCard>
+                  </BalanceCard>
 
       
                 <ChartCard>
