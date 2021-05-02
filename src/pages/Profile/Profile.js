@@ -168,8 +168,7 @@ background-color: #fafafa;
 `;
 export const ExchangeCard2 = styled.div`
 
-background-color: #42378f;
-background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,7 +455,7 @@ export const AccountNum = styled.h3`
   font-size: .7rem;
   font-weight: normal;
   margin-top: 1rem;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
 
   @media screen and (max-width: 375px) {

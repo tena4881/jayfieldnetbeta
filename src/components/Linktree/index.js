@@ -13,9 +13,9 @@ import linkedinLogo from './images/linkedin-in.svg'
 import reactLogo from './images/react.svg'
 import twitterLogo from './images/twitter.svg'
 import whatsappLogo from './images/whatsapp.svg'
-
 export default function LinkTree() {
   return (
+    <>
     <ProfileCard>
       <ExchangeH3>Our Brain Begins Here</ExchangeH3>
       <ExchangeH4>Connect with us</ExchangeH4>
@@ -29,5 +29,7 @@ export default function LinkTree() {
       <Button link='https://twitter.com/jayfieldllc' icon={twitterLogo} name='Twitter' backgroundColor={variables.twitterColor} />
       
     </ProfileCard>
+   
+  </>
   )
 }

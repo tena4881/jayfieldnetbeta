@@ -17,26 +17,26 @@ export default function AccountHeader() {
 
     return (
         
-        <ExchangeCard2>
+        <>
             {account ? (
       
-                <>
+                <ExchangeCard2>
                 {/* <ProfileIcon account={''}></ProfileIcon> */}
                 <JFCBalanceBlack/>
                 <AccountNum >{account}</AccountNum>
                 
                 {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
-            </>
+            </ExchangeCard2>
             ) : (
             <>
             <div style={{display: 'flex', flexDirection: 'column',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
             
-            <ExchangeH3W>No wallet connected 😔</ExchangeH3W>
+            <ExchangeH3>No wallet connected 😔</ExchangeH3>
             
             <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => activateBrowserWallet()}>Connect</button>
             </div>
             </>
             )}
-        </ExchangeCard2>
+        </>
     )
 }
