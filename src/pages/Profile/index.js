@@ -86,7 +86,7 @@ return (
               <ProfileSidebar isOpen={isOpen} toggle={toggle} /> */}
               <ExchangeContainer id='Exchange'>
                       {/* <AccountHeader/> */}
-                      <ExchangeH3>Hello:</ExchangeH3>
+                      <ExchangeH3>Hello</ExchangeH3>
                       <ExchangeH4B>{account} ,</ExchangeH4B>
                       <ExchangeH3><br></br>Welcome to your</ExchangeH3>
                      <ExchangeH4>Digital Dashboard</ExchangeH4>
