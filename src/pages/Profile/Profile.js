@@ -166,6 +166,39 @@ background-color: #fafafa;
     cursor: pointer;
   }
 `;
+export const BodyCard = styled.div`
+
+background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
 export const ExchangeCard2 = styled.div`
 
 
@@ -384,6 +417,7 @@ background-color: white;
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
+    color:green;
     cursor: pointer;
   }
 `;
