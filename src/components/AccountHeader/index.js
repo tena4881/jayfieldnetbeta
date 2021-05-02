@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
-import {AccountNum, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
+import {AccountNum,ExchangeCard2, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
@@ -17,7 +17,7 @@ export default function AccountHeader() {
 
     return (
         
-        <HeaderCard>
+        <ExchangeCard2>
             {account ? (
       
                 <>
@@ -37,6 +37,6 @@ export default function AccountHeader() {
             </div>
             </>
             )}
-        </HeaderCard>
+        </ExchangeCard2>
     )
 }

@@ -201,9 +201,9 @@ background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d,
 `;
 export const BalanceCard = styled.div`
 
-background-color: #42378f;
-background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
-  display: flex;
+background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -303,7 +303,7 @@ background-color: #fafafa;
   }
 `;
 export const ProfileCard = styled.div`
-  background-color: #fcfcfc;
+  background-color: #f1f1f1;
 
   display: flex;
   min-height: 100%;
@@ -416,10 +416,21 @@ export const ExchangeH3W = styled.h3`
 `;
 
 export const ExchangeH4 = styled(LinkR)`
-  font-size: .8rem;
+  font-size: 1.3rem;
+  color: black;
   font-weight: normal;
   margin-top: .5rem;
   margin-bottom: 1rem;
+  
+`;
+
+export const ExchangeH4Link = styled(LinkR)`
+  font-size: 1.3rem;
+  color: white;
+  font-weight: normal;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  
 `;
 export const ExchangeH4B = styled(LinkR)`
   font-size: .8rem;

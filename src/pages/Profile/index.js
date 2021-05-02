@@ -13,6 +13,7 @@ import {
   ExchangeH2,
   ExchangeH3,
   ExchangeH4W,
+  ExchangeH4B,
   ExchangeH1,
   ExchangeP,
   AccountNum,
@@ -21,8 +22,10 @@ import {
   ExchangeH3W,
   BalanceCard,
   ExchangePW,
+  ExchangeH4Link,
   ConnectBtn,
   ChartCard,
+  ExchangeCard2,
   ExchangeH4
 } from './Profile';
 import {JFCBalance, EtherBalance} from '../../balance'
@@ -82,26 +85,27 @@ return (
                 {/* <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} /> */}
               <ExchangeContainer id='Exchange'>
-                      <AccountHeader/>
-                      
-                      <ExchangeH3>Profile Overview</ExchangeH3>
+                      {/* <AccountHeader/> */}
+                      <ExchangeH3>Hello:</ExchangeH3>
+                      <ExchangeH4B>{account} ,</ExchangeH4B>
+                      <ExchangeH3><br></br>Welcome to your</ExchangeH3>
+                     <ExchangeH4>Digital Dashboard</ExchangeH4>
                 <ExchangeWrapper>
-                   <BalanceCard>
-                     <ExchangeH2W >JFC Balance:</ExchangeH2W>
+                   <ExchangeCard>
+                     <ExchangeH2 >JFC Balance:</ExchangeH2>
                      <JFCBalance/>
-                    </BalanceCard>
-                    <BalanceCard>
-                      <ExchangeH3W >Ether Balance</ExchangeH3W>
-                      
+                    </ExchangeCard>
+                    <ExchangeCard2>
+                      <ExchangeH3W >Ether Balance</ExchangeH3W>\
                       <EtherBalance/>
-                      <ExchangeH4W>Contribute your Ether</ExchangeH4W>
+                      <ExchangeH2><br></br></ExchangeH2>
                       <Contribute/>
-                      </BalanceCard>
+                    </ExchangeCard2>
 
-                  <ExchangeCard>
+                  <BalanceCard>
 
-                    <ExchangeH3>Coming Soon!</ExchangeH3>
-                      </ExchangeCard>
+                    <ExchangeH4Link to='/connect'>Explore The Brain</ExchangeH4Link>
+                    </BalanceCard>
 
       
                 <ChartCard>

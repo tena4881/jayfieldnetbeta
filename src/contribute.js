@@ -32,7 +32,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 	const buttonContent = isMining ? (
 	  <p>Loading</p>
 	) : (
-	  'Contribute'
+	  'Contribute*'
 	)
 	const onClick = () => {
 	  console.log(utils.parseEther(value))
@@ -56,7 +56,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 		  {buttonContent}
 		</SmallButton>
 	  </InputRow>  
-	  <ExchangeH4W>*Earn JFC</ExchangeH4W>
+	  <ExchangeH4W>*Contibute Ether and Earn JFC</ExchangeH4W>
 			</>
 	)
   }

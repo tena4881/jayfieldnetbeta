@@ -33,7 +33,7 @@ export function JFCBalance() {
 
   return (
     <div>
-    {jfcBalance && <ExchangeH3W>{formatUnits(jfcBalance, 2)}</ExchangeH3W>}
+    {jfcBalance && <ExchangeH3>{formatUnits(jfcBalance, 2)}</ExchangeH3>}
     </div>
   )
 }
