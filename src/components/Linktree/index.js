@@ -3,7 +3,7 @@ import { Container } from './styles';
 import Button from './Button';
 import variables from './variables';
 import Header from './Header';
-import { ExchangeH1, ProfileCard } from '../../pages/Profile/Profile';
+import { ExchangeH3,ExchangeH4, ProfileCard } from '../../pages/Profile/Profile';
 
 import facebookLogo from './images/facebook.svg'
 import githubLogo from './images/github.svg'
@@ -17,7 +17,8 @@ import whatsappLogo from './images/whatsapp.svg'
 export default function LinkTree() {
   return (
     <ProfileCard>
-      <ExchangeH1>Connect with us!</ExchangeH1>
+      <ExchangeH3>Our Brain Begins Here</ExchangeH3>
+      <ExchangeH4>Connect with us</ExchangeH4>
       <Button link='https://www.facebook.com/JayFieldLLC/' icon={facebookLogo} name='Facebook' backgroundColor={variables.facebookColor} />
       <Button link='https://www.instagram.com/jayfieldusa/' icon={instagramLogo} name='Instagram' backgroundColor={variables.instagramColor} />
       
@@ -26,7 +27,7 @@ export default function LinkTree() {
       
       <Button link='https://www.linkedin.com/in/danielgomesp/' icon={linkedinLogo} name='LinkedIn' backgroundColor={variables.linkedinColor} />
       <Button link='https://twitter.com/jayfieldllc' icon={twitterLogo} name='Twitter' backgroundColor={variables.twitterColor} />
-      <Button link='https://jayfieldnet.io' icon={twitterLogo} name='Website' backgroundColor={variables.siteColor} />
+      
     </ProfileCard>
   )
 }

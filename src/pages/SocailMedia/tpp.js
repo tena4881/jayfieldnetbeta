@@ -5,6 +5,7 @@ import { useEtherBalance, useEthers, useTokenBalance } from '@usedapp/core'
 import AccountHeader from '../../components/AccountHeader'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import UserContext from '../../components/User/user';
+import {ExchangeWrapper} from '../Profile/Profile'
 export function TPPage1() {
   const {account} = useContext(UserContext);
   const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
