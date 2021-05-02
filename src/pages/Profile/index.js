@@ -12,6 +12,7 @@ import {
   ExchangeCard,
   ExchangeH2,
   ExchangeH3,
+  MainCard,
   ExchangeH4W,
   ExchangeH4B,
   ExchangeH1,
@@ -95,12 +96,12 @@ return (
                      <ExchangeH2 >JFC Balance:</ExchangeH2>
                      <JFCBalance/>
                     </ExchangeCard>
-                    <ProfileCard>
-                      <ExchangeH3W >Ether Balance</ExchangeH3W>\
+                    <MainCard>
+                      <ExchangeH3W >Ether Balance</ExchangeH3W>
                       <EtherBalance/>
                       <ExchangeH2><br></br></ExchangeH2>
                       <Contribute/>
-                    </ProfileCard>
+                    </MainCard>
 
                   <BalanceCard>
 

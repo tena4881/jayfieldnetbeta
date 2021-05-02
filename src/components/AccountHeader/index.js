@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
-import {AccountNum,MainCard,ExchangeCard, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
+import {AccountNum,ExchangeCard2,ExchangeCard, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
@@ -20,13 +20,13 @@ export default function AccountHeader() {
         <>
             {account ? (
       
-                <MainCard>
+                <ExchangeCard>
                 {/* <ProfileIcon account={''}></ProfileIcon> */}
                 <JFCBalanceBlack/>
                 <AccountNum >{account}</AccountNum>
                 
                 {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
-            </MainCard>
+            </ExchangeCard>
             ) : (
             <>
             <div style={{display: 'flex', flexDirection: 'column',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
