@@ -352,8 +352,7 @@ export const ProfileCard = styled.div`
   
 `;
 export const MainCard = styled.div`
-  background-color: #fff;
-
+ackground-color: #344055;
   display: flex;
   min-height: 100%;
   min-width:  100%;
