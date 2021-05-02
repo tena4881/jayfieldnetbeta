@@ -18,7 +18,7 @@ export const Container = styled.a`
 `;
 
 export const Icon = styled.img`
-  height: 40px;
+  height: 50px;
   margin: 0 5px;
   padding: 5px;
 `;
