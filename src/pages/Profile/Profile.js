@@ -354,7 +354,6 @@ export const ProfileCard = styled.div`
 export const MainCard = styled.div`
   background-color: #344055;
   display: flex;
-  min-height: 100%;
   min-width:  100%;
   z-index: 1;
   flex-direction: column;
