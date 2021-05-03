@@ -14,13 +14,14 @@ import SocailMedia from "./pages/SocailMedia/SMPage";
 import Signup from "./pages/Auth/Signup";
 import Login from "./pages/Auth/Login";
 import PasswordForget from "./pages/Auth/PasswordForget";
-
+import TestBlog from "./pages/Blog/test"
 const routes = [
   { path: "/password-forget", component: PasswordForget },
   { path: "/profile", component: Profile },
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
   { path: "/connect", component: SocailMedia },
+  { path: "/blog", component: TestBlog },
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },
   { path: "/home-seven", component: Index7 },

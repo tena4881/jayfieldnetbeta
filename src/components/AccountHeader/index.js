@@ -20,13 +20,13 @@ export default function AccountHeader() {
         <>
             {account ? (
       
-                <ExchangeCard>
+                <HeaderCard>
                 {/* <ProfileIcon account={''}></ProfileIcon> */}
                 <JFCBalanceBlack/>
                 <AccountNum >{account}</AccountNum>
                 
                 {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
-            </ExchangeCard>
+            </HeaderCard>
             ) : (
             <>
             <div style={{display: 'flex', flexDirection: 'column',  justifyContent:'center', alignItems:'center', height: '100vh'}}>

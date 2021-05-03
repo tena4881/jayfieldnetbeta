@@ -383,9 +383,7 @@ export const MainCard1 = styled.div`
   
 `;
 export const HeaderCard = styled.div`
-background-color: #42378f;
-background-image: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
-  
+background-color: #f0f0f0;
 
   display: flex;
   min-height: 100%;
