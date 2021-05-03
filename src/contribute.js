@@ -106,8 +106,8 @@ const InputRow = styled.div`
 
 const Input = styled.input`
   height: 100%;
-  width: 33%;
-  padding: 3px 10px;
+  width: 100%;
+  padding: 15px 15px;
   border: 0;
   border-radius: ${BorderRad.m};
   -moz-appearance: textfield;
