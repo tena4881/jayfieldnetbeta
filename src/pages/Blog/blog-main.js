@@ -10,6 +10,7 @@ import blog6 from "./assets/images/blog-filler6.jpg";
 import { Container, Row, Col, Card, Media } from "reactstrap";
 import Footer from "../../components/Footer/blog-footer";
 import AccountHeader from "../../components/AccountHeader";
+import { ExchangeCard, ExchangeH1, ProfileCard } from "../Profile/Profile";
 const BlogMain = () => {
   require( './assets/theme/blog.css')
     const {account} = useContext(UserContext);
@@ -22,6 +23,7 @@ const BlogMain = () => {
     {parseFloat(jfcBalance) >= 100 ? (
           <Fragment>
           <AccountHeader/>
+          <ExchangeCard><ExchangeH1>JayField Blog</ExchangeH1></ExchangeCard>
           <Container fluid={true}>
             <Row>
               <Col xl="6 box-col-12">
