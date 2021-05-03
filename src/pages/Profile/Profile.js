@@ -467,6 +467,7 @@ export const ExchangeH3 = styled.h3`
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: .5rem;
+  color: black;
   margin-bottom: 1rem;
 `;
 export const ExchangeH3W = styled.h3`
