@@ -8,7 +8,7 @@ import blog3 from "./assets/images/blog-filler3.jpg";
 import blog5 from "./assets/images/blog-filler5.jpg";
 import blog6 from "./assets/images/blog-filler6.jpg";
 import { Container, Row, Col, Card, Media } from "reactstrap";
-
+import Footer from "../../components/Footer/blog-footer";
 import AccountHeader from "../../components/AccountHeader";
 const BlogMain = () => {
   require( './assets/theme/blog.css')
@@ -39,14 +39,9 @@ const BlogMain = () => {
                       </h4>
                       <ul className="blog-social">
                         <li>
-                          <i className="icofont icofont-user"></i>Mark Jecno
+                          <i className="icofont icofont-user"></i>Antenhe Tena
                         </li>
-                        <li className="digits">
-                          <i className="icofont icofont-thumbs-up"></i>02 Hits
-                        </li>
-                        <li className="digits">
-                          <i className="icofont icofont-ui-chat"></i>598 Comments
-                        </li>
+                        
                       </ul>
                     </div>
                     
@@ -216,6 +211,7 @@ const BlogMain = () => {
               </Col>
             </Row>
           </Container>
+          <Footer/>
         </Fragment>
       ) : (
           <>
