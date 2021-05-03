@@ -7,7 +7,7 @@ import jfcVaultAbi from './abi/jfcVaultAbi.json'
 import { utils } from 'ethers'
 import styled from 'styled-components'
 import { Button } from './components/base/button'
-import {ExchangeH4W} from './pages/Profile/Profile'
+import {ExchangeH4} from './pages/Profile/Profile'
 import UserContext from './components/User/user'
 import { TransactionStatus, useContractCall, useContractFunction, useEtherBalance, useEthers } from '@usedapp/core'
 import { BorderRad, Colors } from './global/styles'
@@ -56,7 +56,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 		  {buttonContent}
 		</SmallButton>
 	  </InputRow>  
-	  <ExchangeH4W>*Contibute Ether and Earn JFC</ExchangeH4W>
+	  <ExchangeH4>*Contibute Ether and Earn JFC</ExchangeH4>
 			</>
 	)
   }
@@ -96,7 +96,7 @@ const InputComponent = ({ ticker, transactionStatus, send }) => {
 const InputRow = styled.div`
   display: flex;
   margin: auto auto;
-  color: white;
+  color: black;
   align-items: center;
   border: ${Colors.Gray['300']} 2px solid;
   border-radius: ${BorderRad.m};

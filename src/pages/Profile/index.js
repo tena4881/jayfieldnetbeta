@@ -96,12 +96,12 @@ return (
                      <ExchangeH2 >JFC Balance:</ExchangeH2>
                      <JFCBalance/>
                     </ExchangeCard>
-                    <MainCard>
-                      <ExchangeH3W >Ether Balance</ExchangeH3W>
+                    <ExchangeCard>
+                      <ExchangeH3>Ether Balance</ExchangeH3>
                       <EtherBalance/>
                       <ExchangeH2><br></br></ExchangeH2>
                       <Contribute/>
-                    </MainCard>
+                    </ExchangeCard>
 
                   <BalanceCard>
 
