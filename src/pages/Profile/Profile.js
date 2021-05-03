@@ -135,7 +135,7 @@ export const ConnectWrapper = styled.div`
 
 export const ExchangeCard = styled.div`
 
-background-color: #fafafa;
+background-color: #f0f0f0;
 
   display: flex;
   flex-direction: column;
@@ -145,6 +145,35 @@ background-color: #fafafa;
   padding: 15px;
   box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px 5vw 1px 5vw;
+  }
+  @media screen and (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px .4vw 1px .4vw;
+  }
+  
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+export const BlogHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 15px;
+
 
   @media screen and (max-width: 1300px) {
     justify-content: center;
@@ -383,27 +412,21 @@ export const MainCard1 = styled.div`
   
 `;
 export const HeaderCard = styled.div`
-background-color: #f0f0f0;
+
 
   display: flex;
-  min-height: 100%;
-  min-width:  100%;
-  z-index: 1;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  max-height: auto;
-  margin-bottom: 60px;
-  padding: 25px;
-  box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
+  justify-content: space-between;
+  max-width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 70px 0px;
   
 `;
 export const HeaderBalance = styled.div`
 
 background-color: white;
  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 8px;
@@ -429,7 +452,7 @@ background-color: white;
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-    color:green;
+    background-color: #e0e0e0;
     cursor: pointer;
   }
 `;
@@ -480,7 +503,7 @@ export const ExchangeH3W = styled.h3`
 
 export const ExchangeH4 = styled(LinkR)`
   font-size: 1.3rem;
-  color: black;
+  color: green;
   font-weight: normal;
   margin-top: .5rem;
   margin-bottom: 1rem;
@@ -488,8 +511,8 @@ export const ExchangeH4 = styled(LinkR)`
 `;
 
 export const ExchangeH4Link = styled(LinkR)`
-  font-size: 1.3rem;
-  color: white;
+font-size: 3rem;
+  color: black;
   font-weight: normal;
   margin-top: .5rem;
   margin-bottom: 1rem;
@@ -516,8 +539,8 @@ export const ExchangeH4W = styled(LinkR)`
 `;
 
 export const AccountNum = styled.h3`
-  font-size: .7rem;
-  font-weight: normal;
+  font-size: .5rem;
+  font-weight: heavy;
   margin-top: 1rem;
   color: black;
   margin-bottom: 1rem;

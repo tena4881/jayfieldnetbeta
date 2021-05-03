@@ -1,12 +1,12 @@
 import React, {useContext} from 'react'
 import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
-import {AccountNum,ExchangeCard2,ExchangeCard, ExchangeH3,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
+import {AccountNum,ExchangeCard2,ExchangeCard, ExchangeH3, ExchangeH4,HeaderCard,ExchangeH3W, JFCBalanceHead, ProfileCard} from '../../pages/Profile/Profile';
 import {  useEthers, useTokenBalance } from '@usedapp/core'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {JFCBalanceBlack} from '../../balance'
 import UserContext from '../../components/User/user';
 import hashAvatar from 'hash-avatar'
- 
+import Avatar from 'react-avatar';
 
 // => It will return a SVG
 export default function AccountHeader() {
@@ -22,8 +22,10 @@ export default function AccountHeader() {
       
                 <HeaderCard>
                 {/* <ProfileIcon account={''}></ProfileIcon> */}
-                <JFCBalanceBlack/>
+                <Avatar size="70" name={account} round={true}/>
                 <AccountNum >{account}</AccountNum>
+                <JFCBalanceBlack/>
+                
                 
                 {/* <button className="btn btn-primary mt-2 waves-effect waves-light" onClick={() => deactivate()}>Disconnect</button> */}
             </HeaderCard>

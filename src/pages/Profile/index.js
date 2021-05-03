@@ -29,6 +29,7 @@ import {
   ExchangeCard2,
   ExchangeH4
 } from './Profile';
+
 import {JFCBalance, EtherBalance} from '../../balance'
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
@@ -86,27 +87,23 @@ return (
                 {/* <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} /> */}
               <ExchangeContainer id='Exchange'>
-                      {/* <AccountHeader/> */}
-                      <ExchangeH3>Hello</ExchangeH3>
-                      <ExchangeH4B>{account} ,</ExchangeH4B>
-                      <ExchangeH3><br></br>Welcome to your</ExchangeH3>
-                     <ExchangeH4>Digital Dashboard</ExchangeH4>
+                  <AccountHeader/>
                 <ExchangeWrapper>
                    <ExchangeCard>
                      <ExchangeH2 >JFC Balance:</ExchangeH2>
                      <JFCBalance/>
                     </ExchangeCard>
                     <ExchangeCard>
-                      <ExchangeH3>Ether Balance</ExchangeH3>
+                      <ExchangeH2>Ether Balance</ExchangeH2>
                       <EtherBalance/>
                       <ExchangeH2><br></br></ExchangeH2>
                       <Contribute/>
                     </ExchangeCard>
 
-                  <BalanceCard>
+                  <ExchangeCard>
 
-                    <ExchangeH4Link to='/connect'>Explore The Brain</ExchangeH4Link>
-                  </BalanceCard>
+                    <ExchangeH4Link to='/blog'>Exclusive Blog</ExchangeH4Link>
+                  </ExchangeCard>
 
       
                 <ChartCard>

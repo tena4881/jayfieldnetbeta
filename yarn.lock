@@ -4039,6 +4039,11 @@
   "resolved" "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz"
   "version" "1.0.2"
 
+"charenc@0.0.2":
+  "integrity" "sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc="
+  "resolved" "https://registry.npmjs.org/charenc/-/charenc-0.0.2.tgz"
+  "version" "0.0.2"
+
 "check-types@^11.1.1":
   "integrity" "sha512-tzWzvgePgLORb9/3a0YenggReLKAIb2owL03H2Xdoe5pKcUyWRSEQ8xfCar8t2SIAuEDwtmx2da1YB52YuHQMQ=="
   "resolved" "https://registry.npmjs.org/check-types/-/check-types-11.1.2.tgz"
@@ -4480,6 +4485,11 @@
   "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
   "version" "2.6.12"
 
+"core-js@^3.6.1":
+  "integrity" "sha512-3tfrrO1JpJSYGKnd9LKTBPqgUES/UYiCzMKeqwR1+jF16q4kD1BY2NvqkfuzXwQ6+CIWm55V9cjD7PQd+hijdw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.11.2.tgz"
+  "version" "3.11.2"
+
 "core-js@^3.6.5":
   "integrity" "sha512-9Id2xHY1W7m8hCl8NkhQn5CufmF/WuR30BTRewvCXc1aZd3kMECwNZ69ndLbekKfakw9Rf2Xyc+QR6E7Gg+obg=="
   "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.8.1.tgz"
@@ -4640,6 +4650,11 @@
     "path-key" "^3.1.0"
     "shebang-command" "^2.0.0"
     "which" "^2.0.1"
+
+"crypt@0.0.2":
+  "integrity" "sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs="
+  "resolved" "https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz"
+  "version" "0.0.2"
 
 "crypto-browserify@^3.11.0", "crypto-browserify@3.12.0":
   "integrity" "sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg=="
@@ -7484,7 +7499,7 @@
   dependencies:
     "call-bind" "^1.0.0"
 
-"is-buffer@^1.1.5":
+"is-buffer@^1.1.5", "is-buffer@~1.1.6":
   "integrity" "sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w=="
   "resolved" "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz"
   "version" "1.1.6"
@@ -7744,6 +7759,11 @@
   "integrity" "sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg=="
   "resolved" "https://registry.npmjs.org/is-resolvable/-/is-resolvable-1.1.0.tgz"
   "version" "1.1.0"
+
+"is-retina@^1.0.3":
+  "integrity" "sha1-10AbKGvqKuN/Ykd1iN5QTQuGR+M="
+  "resolved" "https://registry.npmjs.org/is-retina/-/is-retina-1.0.3.tgz"
+  "version" "1.0.3"
 
 "is-retry-allowed@^1.0.0":
   "integrity" "sha512-RUbUeKwvm3XG2VYamhJL1xFktgjvPzL0Hq8C+6yrWIswDy3BIXGqCxhxkc30N9jqK311gVU137K8Ei55/zVJRg=="
@@ -8903,6 +8923,15 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
     "safe-buffer" "^5.1.2"
+
+"md5@^2.0.0":
+  "integrity" "sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g=="
+  "resolved" "https://registry.npmjs.org/md5/-/md5-2.3.0.tgz"
+  "version" "2.3.0"
+  dependencies:
+    "charenc" "0.0.2"
+    "crypt" "0.0.2"
+    "is-buffer" "~1.1.6"
 
 "mdn-data@2.0.14":
   "integrity" "sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow=="
@@ -10985,7 +11014,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.5.10", "prop-types@^15.5.4", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0 || ^16.0.0", "prop-types@^15.5.10", "prop-types@^15.5.4", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -11194,6 +11223,15 @@
   "integrity" "sha512-dSxo2Mn6Zx4HajeCeQNLefwEO4kNtV/0E682R1+ZTyFRPqxDa5zYb5qM/ocqw9Bxr/kFQO0IUiqdV7wdHw+Cdg=="
   "resolved" "https://registry.npmjs.org/react-attr-converter/-/react-attr-converter-0.3.1.tgz"
   "version" "0.3.1"
+
+"react-avatar@^3.10.0":
+  "integrity" "sha512-FB20OZIAJif0WNzGy4PwT5Nca4rekrYWiswBofuGAa5FKpRrFbJKY69267dRXbFqIYQrA/OxNB/TjhnmP2gsEQ=="
+  "resolved" "https://registry.npmjs.org/react-avatar/-/react-avatar-3.10.0.tgz"
+  "version" "3.10.0"
+  dependencies:
+    "core-js" "^3.6.1"
+    "is-retina" "^1.0.3"
+    "md5" "^2.0.0"
 
 "react-dev-utils@^11.0.1":
   "integrity" "sha512-4lEA5gF4OHrcJLMUV1t+4XbNDiJbsAWCH5Z2uqlTqW6dD7Cf5nEASkeXrCI/Mz83sI2o527oBIFKVMXtRf1Vtg=="
@@ -11478,7 +11516,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^15.5.4 || ^16.0.0", "react@^15.x", "react@^16.0.0", "react@^16.1.0", "react@^17.0.1", "react@>= 16.8.0", "react@>=15", "react@>=16.8":
+"react@*", "react@^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.5.4 || ^16.0.0", "react@^15.x", "react@^16.0.0", "react@^16.1.0", "react@^17.0.1", "react@>= 16.8.0", "react@>=15", "react@>=16.8":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"

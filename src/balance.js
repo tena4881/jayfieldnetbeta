@@ -55,7 +55,7 @@ export function EtherBalance() {
 
   return (
     <div>
-      {etherBalance && <ExchangeH3>Ξ {formatEther(etherBalance)}</ExchangeH3>}
+      {etherBalance && <ExchangeH4>Ξ {formatEther(etherBalance)}</ExchangeH4>}
     </div>
   )
 }

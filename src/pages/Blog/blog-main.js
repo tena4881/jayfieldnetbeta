@@ -8,11 +8,11 @@ import blog3 from "./assets/images/blog-filler3.jpg";
 import blog5 from "./assets/images/blog-filler5.jpg";
 import blog6 from "./assets/images/blog-filler6.jpg";
 import { Container, Row, Col, Card, Media } from "reactstrap";
+import './assets/theme/blog2.css';
 import Footer from "../../components/Footer/blog-footer";
 import AccountHeader from "../../components/AccountHeader";
-import { ExchangeCard, ExchangeH1, ProfileCard } from "../Profile/Profile";
+import { BlogHeader, ExchangeH1, ProfileCard } from "../Profile/Profile";
 const BlogMain = () => {
-  require( './assets/theme/blog.css')
     const {account} = useContext(UserContext);
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
@@ -23,7 +23,7 @@ const BlogMain = () => {
     {parseFloat(jfcBalance) >= 100 ? (
           <Fragment>
           <AccountHeader/>
-          <ExchangeCard><ExchangeH1>JayField Blog</ExchangeH1></ExchangeCard>
+          <BlogHeader><ExchangeH1>JayField Blog</ExchangeH1></BlogHeader>
           <Container fluid={true}>
             <Row>
               <Col xl="6 box-col-12">
@@ -61,19 +61,19 @@ const BlogMain = () => {
                         <div className="blog-date digits">
                           <span>02</span> January 2019
                         </div>
-                        <h6>
+                        
                           
                         <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        <h6>Why JayFeildNet is the GOAT</h6>
                         </a>
-                        </h6>
+                        
                         <div className="blog-bottom-content">
                           <ul className="blog-social">
                             <li>by: Admin</li>
-                            <li className="digits">0 Hits</li>
+                            
                           </ul>
                           <hr />
-                          <p className="mt-0">
+                          <p className="mt-2">
                             inventore veritatis et quasi architecto beatae vitae
                             dicta sunt explicabo. Nemo enim ipsam voluptatem quia
                             voluptas sit.
@@ -101,7 +101,6 @@ const BlogMain = () => {
                         <div className="blog-bottom-content">
                           <ul className="blog-social">
                             <li>by: Admin</li>
-                            <li className="digits">02 Hits</li>
                           </ul>
                           <hr />
                           <p className="mt-0">
@@ -127,7 +126,7 @@ const BlogMain = () => {
                       <ul className="blog-social">
                         <li className="digits">9 April 2019</li>
                         <li className="digits">by: Admin</li>
-                        <li className="digits">0 Hits</li>
+                       
                       </ul>
                       <hr />
                       <h6 className="blog-bottom-details">
@@ -151,7 +150,7 @@ const BlogMain = () => {
                       <ul className="blog-social">
                         <li className="digits">9 April 2019</li>
                         <li className="digits">by: Admin</li>
-                        <li className="digits">0 Hits</li>
+                        
                       </ul>
                       <hr />
                       <h6 className="blog-bottom-details">
@@ -175,7 +174,7 @@ const BlogMain = () => {
                       <ul className="blog-social">
                         <li className="digits">9 April 2019</li>
                         <li className="digits">by: Admin</li>
-                        <li className="digits">0 Hits</li>
+                    
                       </ul>
                       <hr />
                       <h6 className="blog-bottom-details">
@@ -199,7 +198,7 @@ const BlogMain = () => {
                       <ul className="blog-social">
                         <li className="digits">9 April 2019</li>
                         <li className="digits">by: Admin</li>
-                        <li className="digits">0 Hits</li>
+                     
                       </ul>
                       <hr />
                       <h6 className="blog-bottom-details">

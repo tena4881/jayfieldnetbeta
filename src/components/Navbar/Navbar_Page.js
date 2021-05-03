@@ -37,7 +37,7 @@ class NavbarPage extends Component {
     });
     return (
       <React.Fragment>
-        <StickyHeader
+        {/* <StickyHeader
           header={
             <Navbar
               expand="lg"
@@ -100,7 +100,7 @@ class NavbarPage extends Component {
             
           }
           stickyOffset={-70}
-        ></StickyHeader>
+        ></StickyHeader> */}
       </React.Fragment>
     );
   }
