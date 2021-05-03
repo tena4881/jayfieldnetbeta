@@ -10,15 +10,17 @@ import fourteen from "./assets/images/14.png";
 import { Container, Row, Col, Media } from "reactstrap";
 import UserContext from '../../components/User/user';
 import AccountHeader from "../../components/AccountHeader";
-import './assets/theme/blog.scss'
+
 import Footer from "../../components/Footer/blog-footer";
 const BlogSingle = () => {
+  require( './assets/theme/blog.css')
     const {account} = useContext(UserContext);
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
   
   const jfcBal = parseFloat(jfcBalance)
   return (
+    
     <div>
     {parseFloat(jfcBalance) >= 100 ? (
          <Fragment>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 //Importing Modal
 import ModalSection from "../../components/common/ModalSection";
+import { ExchangeH2 } from "../Profile/Profile";
 class Section extends Component {
   constructor() {
     super();
@@ -31,8 +32,7 @@ class Section extends Component {
           <div className="bg-overlay"></div>
           <div className="display-table">
             <div className="home-cell-bottom">
-              <br></br>
-              <br></br>
+              
               <Container style={{height: '70vh', display: 'flex', justifyContent:'center'}}>
                 <Row>
                   <Col
@@ -40,9 +40,9 @@ class Section extends Component {
                     className="text-white text-center"
                     
                   >
-                    <h1 className="text-uppercase">
+                    <ExchangeH2 className="text-uppercase">
                       Your Dedicated Business Brain 
-                    </h1>
+                    </ExchangeH2>
                     <p className="pt-3 home-desc">
                     JayField is a network of business owners in the know. 
                     When you have an idea dont stop there make it official and create a business 

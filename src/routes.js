@@ -9,7 +9,7 @@ import Index8 from "./pages/Index8/Index8";
 import Index9 from "./pages/Index9/Index9";
 import Profile from "./pages/Profile/index";
 import SocailMedia from "./pages/SocailMedia/SMPage";
-
+import BlogMain from "./pages/Blog/blog-main"
 //Auth Pages
 import Signup from "./pages/Auth/Signup";
 import Login from "./pages/Auth/Login";
@@ -21,7 +21,8 @@ const routes = [
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
   { path: "/connect", component: SocailMedia },
-  { path: "/blog", component: TestBlog },
+  { path: "/blog", component: BlogMain },
+  { path: "/blog-test", component: TestBlog },
   { path: "/home-nine", component: Index9 },
   { path: "/home-eight", component: Index8 },
   { path: "/home-seven", component: Index7 },

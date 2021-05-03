@@ -99,7 +99,7 @@ class NavbarPage extends Component {
             </Navbar>
             
           }
-          stickyOffset={-100}
+          stickyOffset={-70}
         ></StickyHeader>
       </React.Fragment>
     );
