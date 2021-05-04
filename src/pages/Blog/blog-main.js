@@ -38,7 +38,7 @@ const BlogMain = () => {
                       <p className="digits">25 July 2019</p>
                       <h4>
                         <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                       </h4>
                       <ul className="blog-social">
@@ -66,7 +66,7 @@ const BlogMain = () => {
                         
                           
                         <a href="#/blog-test">
-                        <h6>Why JayFeildNet is the GOAT</h6>
+                        <h6>Why JayFieldNet is the GOAT</h6>
                         </a>
                         
                         <div className="blog-bottom-content">
@@ -97,7 +97,7 @@ const BlogMain = () => {
                         </div>
                         <h6>
                         <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                         </h6>
                         <div className="blog-bottom-content">
@@ -133,7 +133,7 @@ const BlogMain = () => {
                       <hr />
                       <h6 className="blog-bottom-details">
                       <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                       </h6>
                     </div>
@@ -157,7 +157,7 @@ const BlogMain = () => {
                       <hr />
                       <h6 className="blog-bottom-details">
                       <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                       </h6>
                     </div>
@@ -181,7 +181,7 @@ const BlogMain = () => {
                       <hr />
                       <h6 className="blog-bottom-details">
                       <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                       </h6>
                     </div>
@@ -205,7 +205,7 @@ const BlogMain = () => {
                       <hr />
                       <h6 className="blog-bottom-details">
                       <a href="#/blog-test">
-                        Why JayFeildNet is the GOAT
+                        Why JayFieldNet is the GOAT
                         </a>
                       </h6>
                     </div>
