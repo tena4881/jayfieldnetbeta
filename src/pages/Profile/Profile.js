@@ -504,6 +504,24 @@ export const ExchangeH4 = styled(LinkR)`
   margin-bottom: 1rem;
   
 `;
+export const BlogHeaderTitle = styled.h1`
+  font-size: 1.3rem;
+  color:  #0c3965  ;
+  font-weight: 900;
+  margin-bottom: 3rem;
+`;
+export const BlogHeadlineTitles = styled(LinkR)`
+  font-size: 1.8rem;
+  color:  white;
+  font-weight: hevy;
+  
+`;
+export const BlogTitles = styled(LinkR)`
+  font-size: 1.3rem;
+  color:  #0c3965;
+  font-weight: 150;
+  
+`;
 
 export const ExchangeH4Link = styled(LinkR)`
 font-size: 3rem;

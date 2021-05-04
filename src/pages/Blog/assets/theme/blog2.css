@@ -1818,7 +1818,9 @@ table tbody .border-bottom-warning td {
 
 /**====== custom scrollbar css start ======**/
 .digits {
-  font-family: work-Sans, sans-serif; }
+  font-family: work-Sans, sans-serif; 
+  color: #000;
+  }
 
 .custom-scrollbar::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #e8ebf2; }
@@ -11845,9 +11847,11 @@ header {
   margin: 15px 0; }
 
 .blog-box .blog-details {
+  margin-top: 25px;
   padding-right: 20px; }
   .blog-box .blog-details .blog-social {
-    margin-top: 30px; }
+    margin-top: 20px; 
+    margin-bottom: 40px; }
     .blog-box .blog-details .blog-social li {
       display: inline-block;
       font-size: 12px;
@@ -27501,7 +27505,8 @@ ol.progtrckr {
   .blog-box .blog-details-main .blog-social li {
     padding: 0px 10px; }
   .blog-bottom-content {
-    display: none; }
+    margin-bottom: 1.2rem;
+  }
   .blog-box.blog-shadow .blog-details {
     padding: 10px; }
   .browser-widget img {
@@ -28452,10 +28457,13 @@ ol.progtrckr {
     margin-bottom: 30px; }
   .blog-box .blog-details-main .blog-social li {
     padding: 0 12px; }
+    
   .blog-box .blog-details .blog-social li:first-child {
-    padding-right: 25px; }
+    padding-right: 25px; 
+  }
   .blog-box .blog-details .blog-social li + li {
-    padding-left: 25px; }
+    padding-left: 25px; 
+  }
   .footer-copyright ~ div {
     text-align: center; }
     .footer-copyright ~ div p {

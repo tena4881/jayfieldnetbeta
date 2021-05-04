@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import blogSingle from "./assets/images/blog-single.jpg";
+import blogSingle from "./assets/images/blog-single-copy.jpg";
 import comment from "./assets/images/comment.jpg";
 import nine from "./assets/images/9.jpg";
 import four from "./assets/images/4.jpg";
@@ -36,6 +36,10 @@ const BlogSingle = () => {
                    alt="blog-main"
                  />
                  <div className="blog-details">
+                   
+                   <h3 className="align-items-center">
+                     Why JayFieldNet is the GOAT
+                   </h3>
                    <ul className="blog-social">
                      <li className="digits">03 May 2021</li>
                      <li>
@@ -45,9 +49,6 @@ const BlogSingle = () => {
                      
                      
                    </ul>
-                   <h3 className="align-items-center">
-                     Why JayFieldNet is the GOAT
-                   </h3>
                    <div className="single-blog-content-top">
                      <p>
                        Lorem Ipsum is simply dummy text of the printing and

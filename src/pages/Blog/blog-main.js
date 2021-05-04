@@ -11,7 +11,7 @@ import { Container, Row, Col, Card, Media } from "reactstrap";
 import './assets/theme/blog2.css';
 import Footer from "../../components/Footer/blog-footer";
 import AccountHeader from "../../components/AccountHeader";
-import { BlogHeader, ExchangeH1, ProfileCard } from "../Profile/Profile";
+import { BlogHeader,BlogHeadlineTitles,BlogHeaderTitle, BlogTitles, ExchangeH4, ProfileCard } from "../Profile/Profile";
 import Navbar from "../../components/Navbar/NavBar";
 const BlogMain = () => {
     const {account} = useContext(UserContext);
@@ -25,8 +25,9 @@ const BlogMain = () => {
           <Fragment>
             <Navbar />
           
-          <BlogHeader><ExchangeH1>JayField Blog</ExchangeH1></BlogHeader>
+          <BlogHeader></BlogHeader>
           <Container fluid={true}>
+            <BlogHeaderTitle>Our Brain</BlogHeaderTitle>
             <Row>
               <Col xl="6 box-col-12">
                 <Card>
@@ -37,9 +38,9 @@ const BlogMain = () => {
                     <div className="blog-details">
                       <p className="digits">25 July 2019</p>
                       <h4>
-                        <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
+                        <BlogHeadlineTitles to="/blog-test">
+                        How COIVD Shaped the Digital Frontier 
+                        </BlogHeadlineTitles>
                       </h4>
                       <ul className="blog-social">
                         <li>
@@ -61,13 +62,13 @@ const BlogMain = () => {
                     <Col sm="7">
                       <div className="blog-details">
                         <div className="blog-date digits">
-                          <span>02</span> January 2019
+                          January 02  2019
                         </div>
                         
                           
-                        <a href="#/blog-test">
-                        <h6>Why JayFieldNet is the GOAT</h6>
-                        </a>
+                        
+                        <BlogTitles to="/blog-test">Why JayFieldNet is the GOAT</BlogTitles>
+                       
                         
                         <div className="blog-bottom-content">
                           <ul className="blog-social">
@@ -93,13 +94,9 @@ const BlogMain = () => {
                     <Col sm="7">
                       <div className="blog-details">
                         <div className="blog-date digits">
-                          <span>03</span> January 2019
+                          January 02  2019
                         </div>
-                        <h6>
-                        <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
-                        </h6>
+                        <BlogTitles to="/blog-test">All About Web3</BlogTitles>
                         <div className="blog-bottom-content">
                           <ul className="blog-social">
                             <li>by: Admin</li>
@@ -131,11 +128,13 @@ const BlogMain = () => {
                        
                       </ul>
                       <hr />
-                      <h6 className="blog-bottom-details">
-                      <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
-                      </h6>
+                      
+                      <BlogTitles to="/blog-test">How Decentralized Apps Are Changing the Game</BlogTitles>
+                      <p className="mt-0">
+                            inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit.
+                          </p>
                     </div>
                   </div>
                 </Card>
@@ -155,11 +154,12 @@ const BlogMain = () => {
                         
                       </ul>
                       <hr />
-                      <h6 className="blog-bottom-details">
-                      <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
-                      </h6>
+                      <BlogTitles to="/blog-test">Why DiFi is Here to Stay</BlogTitles>
+                      <p className="mt-0">
+                            inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit.
+                          </p>
                     </div>
                   </div>
                 </Card>
@@ -179,11 +179,13 @@ const BlogMain = () => {
                     
                       </ul>
                       <hr />
-                      <h6 className="blog-bottom-details">
-                      <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
-                      </h6>
+                      <BlogTitles to="/blog-test">Will the value of Bitcoin crash?</BlogTitles>
+                      
+                      <p className="mt-0">
+                            inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit.
+                          </p>
                     </div>
                   </div>
                 </Card>
@@ -203,11 +205,13 @@ const BlogMain = () => {
                      
                       </ul>
                       <hr />
-                      <h6 className="blog-bottom-details">
-                      <a href="#/blog-test">
-                        Why JayFieldNet is the GOAT
-                        </a>
-                      </h6>
+                      <BlogTitles to="/blog-test">11 Coins Better than Bitcoin</BlogTitles>
+                      
+                      <p className="mt-0">
+                            inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit.
+                          </p>
                     </div>
                   </div>
                 </Card>
