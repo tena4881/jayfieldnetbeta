@@ -12,6 +12,7 @@ import UserContext from '../../components/User/user';
 import AccountHeader from "../../components/AccountHeader";
 import './assets/theme/blog2.css';
 import Footer from "../../components/Footer/blog-footer";
+import Navbar from "../../components/Navbar/NavBar";
 const BlogSingle = () => {
     const {account} = useContext(UserContext);
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
@@ -23,7 +24,7 @@ const BlogSingle = () => {
     <div>
     {parseFloat(jfcBalance) >= 100 ? (
          <Fragment>
-         <AccountHeader/>
+        <Navbar/>
        <Container fluid={true}>
          <Row>
            <Col sm="12">
@@ -86,7 +87,7 @@ const BlogSingle = () => {
      </Fragment>
       ) : (
           <>
-          <AccountHeader account={account}/>
+          <Navbar/>
           <NoJFC/>
           
         </>
