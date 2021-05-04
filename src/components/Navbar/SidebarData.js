@@ -19,8 +19,8 @@ export const SidebarData = [
 
     },
     {
-        title: 'Our Brain',
-        path: '/blog',
+        title: 'Brain',
+        path: '/brain',
         icon: <IoIcons.IoIosBulb />,
         cName: 'nav-text'
 

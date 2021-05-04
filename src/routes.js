@@ -9,7 +9,7 @@ import Index8 from "./pages/Index8/Index8";
 import Index9 from "./pages/Index9/Index9";
 import Profile from "./pages/Profile/index";
 import SocailMedia from "./pages/SocailMedia/SMPage";
-import BlogMain from "./pages/Blog/blog-main"
+import BrainMain from "./pages/Blog/blog-main"
 import Charts from "./pages/Charts/index"
 //Auth Pages
 import Signup from "./pages/Auth/Signup";
@@ -22,7 +22,7 @@ const routes = [
   { path: "/sign-up", component: Signup },
   { path: "/login", component: Profile },
   { path: "/connect", component: SocailMedia },
-  { path: "/blog", component: BlogMain },
+  { path: "/brain", component: BrainMain },
   { path: "/blog-test", component: TestBlog },
   { path: "/charts", component: Charts },
   { path: "/home-nine", component: Index9 },
