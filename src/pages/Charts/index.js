@@ -4,7 +4,7 @@ import   Contribute from '../../contribute';
 import { Link } from "react-router-dom";
 import {  useEthers } from '@usedapp/core'
 import { formatUnits } from '@ethersproject/units'
-import AccountHeader from '../../components/AccountHeader/'
+import AccountHeader from '../../components/AccountHeader'
 import {
   ExchangeContainer,
   ExchangeWrapper,
@@ -28,7 +28,7 @@ import {
   ChartCard,
   ExchangeCard2,
   ExchangeH4
-} from './Profile';
+} from './charts';
 
 import {JFCBalance, EtherBalance} from '../../balance'
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
@@ -90,23 +90,24 @@ return (
               <Navbar/>
               
               <ExchangeContainer id='Exchange'>
-              <ExchangeH2>Dashboard<br></br></ExchangeH2>
+              <ExchangeH1>Price of Ether</ExchangeH1>
                 <ExchangeWrapper>
-                   <ExchangeCard>
-                     <ExchangeH2 >JFC Balance:</ExchangeH2>
-                     <JFCBalance/>
-                    </ExchangeCard>
-                    <ExchangeCard>
-                      <ExchangeH2>Ether Balance</ExchangeH2>
-                      <EtherBalance/>
-                      <ExchangeH2><br></br></ExchangeH2>
-                      <Contribute/>
-                    </ExchangeCard>
-
                   
+
+                
+                
+                <ChartCard>
+                  
+                  <TradingViewWidget
+                    symbol="ETHUSD"
+                    theme={Themes.LIGHT}
+                    style='2'
+                    locale="fr"
+                    autosize
+                  />
+                </ChartCard>
               </ExchangeWrapper>
-              <Link onClick={addToMetamask}>Don't see JFC in your MetaMask?</Link>
-            </ExchangeContainer>
+               </ExchangeContainer>
             </>
             ) : (
             <>

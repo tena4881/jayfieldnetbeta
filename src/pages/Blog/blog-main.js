@@ -24,7 +24,7 @@ const BlogMain = () => {
     {parseFloat(jfcBalance) >= 100 ? (
           <Fragment>
             <Navbar />
-          <AccountHeader/>
+          
           <BlogHeader><ExchangeH1>JayField Blog</ExchangeH1></BlogHeader>
           <Container fluid={true}>
             <Row>
@@ -218,7 +218,7 @@ const BlogMain = () => {
         </Fragment>
       ) : (
           <>
-          <AccountHeader account={account}/>
+          <Navbar />
           <NoJFC/>
           
         </>

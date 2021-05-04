@@ -31,6 +31,7 @@ export const ExchangeContainer = styled.div`
   justify-content: center;
   margin-bottom: 30px;
   margin-top: 30px;
+
   
 
   @media screen and (max-width: 1375px) {
@@ -73,7 +74,7 @@ export const ExchangeWrapper = styled.div`
   margin: 0rem auto;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 16px;
   
   @media screen and (max-width: 1375px) {
@@ -412,17 +413,21 @@ export const MainCard1 = styled.div`
   
 `;
 export const HeaderCard = styled.div`
+
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
+  flex-direction: column;
   margin: 0 auto;
+  padding: 70px 0px;
   
 `;
 export const HeaderBalance = styled.div`
 
-  background-color: transparent;
-  display: flex;
+background-color: white;
+ display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
@@ -435,19 +440,20 @@ export const HeaderBalance = styled.div`
     justify-content: center;
     align-items: center;
     padding: 8px;
+    margin: 0px 5vw 1px 5vw;
   }
   @media screen and (max-width: 375px) {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 0px 2vw 1px .4vw;
+    margin: 0px .4vw 1px .4vw;
   }
   
 
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-   
+    background-color: #e0e0e0;
     cursor: pointer;
   }
 `;
@@ -514,10 +520,9 @@ font-size: 3rem;
   
 `;
 export const ExchangeH4B = styled(LinkR)`
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: normal;
-  color: white;
-  
+  color: black;
   
 `;
 export const JFCBalanceHead = styled.h4`

@@ -15,6 +15,7 @@ import Contact from "../../components/Contact/Contact";
 import Social from "../../components/Social/Social";
 import Footer from "../../components/Footer/footer";
 import Network from '../../components/Team/Network';
+import Navbar from '../../components/Navbar/NavBar';
 class Index8 extends Component {
     constructor(props) {
         super(props);
@@ -38,8 +39,8 @@ class Index8 extends Component {
             <React.Fragment>
 
                 {/* Importing Navbar */}
-                <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} />
-
+                {/* <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} /> */}
+                <Navbar />
                 {/* section */}
                 <Section/>
 

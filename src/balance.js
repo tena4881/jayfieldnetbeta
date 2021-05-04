@@ -44,7 +44,7 @@ export function JFCBalanceBlack() {
 
   return (
     <>
-    {jfcBalance && <HeaderBalance><ExchangeH4B to='/profile'>{formatUnits(jfcBalance, 2)} JFC </ExchangeH4B></HeaderBalance>}
+    {jfcBalance && <HeaderBalance> <ExchangeH4B to='/profile'>You Have <br></br>{formatUnits(jfcBalance, 2)} JFC </ExchangeH4B></HeaderBalance>}
     </>
   )
 }

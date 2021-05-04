@@ -25,4 +25,11 @@ export const SidebarData = [
         cName: 'nav-text'
 
     },
+    {
+        title: 'Charts',
+        path: '/charts',
+        icon: <IoIcons.IoMdAnalytics />,
+        cName: 'nav-text'
+
+    },
 ]
