@@ -12,6 +12,7 @@ import './assets/theme/blog2.css';
 import Footer from "../../components/Footer/blog-footer";
 import AccountHeader from "../../components/AccountHeader";
 import { BlogHeader, ExchangeH1, ProfileCard } from "../Profile/Profile";
+import Navbar from "../../components/Navbar/NavBar";
 const BlogMain = () => {
     const {account} = useContext(UserContext);
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
@@ -22,6 +23,7 @@ const BlogMain = () => {
     <div>
     {parseFloat(jfcBalance) >= 100 ? (
           <Fragment>
+            <Navbar />
           <AccountHeader/>
           <BlogHeader><ExchangeH1>JayField Blog</ExchangeH1></BlogHeader>
           <Container fluid={true}>

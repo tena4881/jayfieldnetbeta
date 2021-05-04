@@ -22,7 +22,7 @@ export default function AccountHeader() {
       
                 <HeaderCard>
                 {/* <ProfileIcon account={''}></ProfileIcon> */}
-                <Avatar size="70" name={account} round={true}/>
+                <Avatar size="55" name={account} round={true}/>
                 <AccountNum >{account}</AccountNum>
                 <JFCBalanceBlack/>
                 

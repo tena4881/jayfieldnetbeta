@@ -34,6 +34,7 @@ import {JFCBalance, EtherBalance} from '../../balance'
 import ProfileNavbar from '../../components/Navbar/ProfileNavBar';
 import ProfileSidebar from '../../components/Navbar/ProfileSideBar';
 import UserContext from '../../components/User/user';
+import Navbar from '../../components/Navbar/NavBar';
 
 export default function Exchange(){
   
@@ -86,8 +87,10 @@ return (
                 <>
                 {/* <ProfileNavbar toggle={toggle} />
               <ProfileSidebar isOpen={isOpen} toggle={toggle} /> */}
+              <Navbar/>
+              
               <ExchangeContainer id='Exchange'>
-                  <AccountHeader/>
+                <AccountHeader/>
                 <ExchangeWrapper>
                    <ExchangeCard>
                      <ExchangeH2 >JFC Balance:</ExchangeH2>

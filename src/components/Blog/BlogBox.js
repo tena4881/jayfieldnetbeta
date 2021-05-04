@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/NavBar";
 
 class BlogBox extends Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar/>
         {this.props.blogs.map((blog, key) => (
           <Col key={key} lg={4}>
             <div className="blog-box mt-4 hover-effect">
