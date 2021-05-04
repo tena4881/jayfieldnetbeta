@@ -511,7 +511,7 @@ export const BlogHeaderTitle = styled.h1`
   margin-bottom: 3rem;
 `;
 export const BlogHeadlineTitles = styled(LinkR)`
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color:  white;
   font-weight: hevy;
   
