@@ -21,7 +21,7 @@ const BlogMain = () => {
   const jfcBal = parseFloat(jfcBalance)
   return (
     <div>
-    {parseFloat(jfcBalance) >= 100 ? (
+    {parseFloat(jfcBalance) >= 10000 ? (
           <Fragment>
             <Navbar />
           

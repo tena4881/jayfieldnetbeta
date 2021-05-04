@@ -20,10 +20,11 @@ const BlogSingle = () => {
   const jfcBalance = useTokenBalance(JFC_ADDRESS, account)
   
   const jfcBal = parseFloat(jfcBalance)
+  console.log(parseFloat(jfcBalance))
   return (
     
     <div>
-    {parseFloat(jfcBalance) >= 100 ? (
+    {parseFloat(jfcBalance) >= 10000 ? (
          <Fragment>
         <Navbar/>
        <Container fluid={true}>
