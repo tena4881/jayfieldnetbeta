@@ -11,6 +11,7 @@ import { Container, Row, Col, Media } from "reactstrap";
 import UserContext from '../../components/User/user';
 import AccountHeader from "../../components/AccountHeader";
 import './assets/theme/blog2.css';
+import {BlogHeaderTitle} from "../Profile/Profile";
 import Footer from "../../components/Footer/blog-footer";
 import Navbar from "../../components/Navbar/NavBar";
 const BlogSingle = () => {
@@ -26,6 +27,8 @@ const BlogSingle = () => {
          <Fragment>
         <Navbar/>
        <Container fluid={true}>
+       <BlogHeaderTitle><br></br>
+       </BlogHeaderTitle>
          <Row>
            <Col sm="12">
              <div className="blog-single">
