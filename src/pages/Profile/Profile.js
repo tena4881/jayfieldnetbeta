@@ -498,7 +498,7 @@ export const ExchangeH3W = styled.h3`
 
 export const ExchangeH4 = styled(LinkR)`
   font-size: 1.3rem;
-  color: green;
+  color:  #1f618d  ;
   font-weight: normal;
   margin-top: .5rem;
   margin-bottom: 1rem;
