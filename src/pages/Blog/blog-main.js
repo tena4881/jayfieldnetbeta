@@ -27,7 +27,7 @@ const BlogMain = () => {
           
           <BlogHeader></BlogHeader>
           <Container fluid={true}>
-            <BlogHeaderTitle>Our Brain</BlogHeaderTitle>
+            <BlogHeaderTitle>Business Brain</BlogHeaderTitle>
             <Row>
               <Col xl="6 box-col-12">
                 <Card>
