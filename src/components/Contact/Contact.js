@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, FormGroup } from "reactstrap";
-import { AvForm, AvField } from "availity-reactstrap-validation";
+// import { AvForm, AvField } from "availity-reactstrap-validation";
 
-//Import Section Title
-import SectionTitle from "../common/section-title";
 
 class Features extends Component {
   constructor(props) {
@@ -17,22 +15,22 @@ class Features extends Component {
         <section className="section " id="contact">
           <Container>
             {/* section title */}
-            <SectionTitle
+            {/* <SectionTitle
               title="Join Our Mailing List"
-             
-            />
+
+            /> */}
 
             <Row>
-              
+
               <Col lg={15}>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} className="custom-form mt-4 pt-4">
                   <div id="message"></div>
-                  <AvForm name="contact-form" id="contact-form">
+                  {/* <AvForm name="contact-form" id="contact-form">
                     <Row>
-                      
+
                         <FormGroup className="mt-2">
-                         
-                         
+
+
                           <AvField
                             required
                             name="email"
@@ -51,14 +49,14 @@ class Features extends Component {
                             <div id="simple-msg"></div>
                         </FormGroup>
 
-                        
-                      
-                     
+
+
+
                     </Row>
-                    
-                    
-                    
-                  </AvForm>
+
+
+
+                  </AvForm> */}
                 </div>
               </Col>
             </Row>

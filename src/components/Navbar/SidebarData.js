@@ -13,14 +13,14 @@ export const SidebarData = [
     },
     {
         title: 'Dashboard',
-        path: '/profile',
+        path: '/dashboard',
         icon: <IoIcons.IoIosFingerPrint />,
         cName: 'nav-text'
 
     },
     {
         title: 'Brain',
-        path: '/brain',
+        path: '/dashboard',
         icon: <IoIcons.IoIosBulb />,
         cName: 'nav-text'
 

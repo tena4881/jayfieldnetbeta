@@ -1,69 +1,90 @@
 {
-  "name": "dorsin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@coreui/coreui-free-react-admin-template",
+  "version": "3.2.1",
+  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
+  "author": {
+    "name": "CoreUI",
+    "url": "https://coreui.io",
+    "github": "https://github.com/coreui",
+    "twitter": "https://twitter.com/core_ui"
+  },
+  "contributors": [
+    {
+      "name": "CoreUI Team",
+      "url": "https://github.com/orgs/coreui/people"
+    }
+  ],
   "homepage": ".",
+  "copyright": "Copyright 2017-2020 creativeLabs Łukasz Holeczek",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.6.0",
-    "@usedapp/core": "^0.3.15",
-    "availity-reactstrap-validation": "^2.7.0",
-    "aws-sdk": "^2.855.0",
-    "bootstrap": "^5.0.0-beta1",
-    "dotenv": "^8.2.0",
-    "ethereum-react-components": "^1.0.17",
-    "ethers": "^5.0.31",
-    "hash-avatar": "^0.0.2",
-    "mime": "^1.6.0",
-    "node-sass": "^4.14.1",
+    "@coreui/chartjs": "^2.0.0",
+    "@coreui/coreui": "^3.4.0",
+    "@coreui/icons": "^2.0.0",
+    "@coreui/icons-react": "^1.1.0",
+    "@coreui/react": "^3.4.6",
+    "@coreui/react-chartjs": "^1.1.0",
+    "@coreui/utils": "^1.3.1",
+    "@usedapp/core": "^0.3.16",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "classnames": "^2.2.6",
+    "core-js": "^3.9.1",
+    "enzyme": "^3.11.0",
     "prop-types": "^15.7.2",
-    "qier-player": "^1.2.10",
-    "react": "^17.0.1",
-    "react-avatar": "^3.10.0",
-    "react-dom": "^17.0.1",
-    "react-hash-avatar": "^0.0.2",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-modal-video": "^1.2.6",
-    "react-particles-js": "^3.4.1",
-    "react-render-html": "^0.6.0",
+    "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^2.4.0",
-    "react-scripts": "4.0.1",
-    "react-scroll": "^1.8.1",
-    "react-sticky-header": "^0.2.0",
-    "react-text-rotator": "^1.0.1",
-    "react-tradingview-widget": "^1.3.2",
-    "reactstrap": "^8.8.1",
+    "reactstrap": "^8.9.0",
     "redux": "^4.0.5",
-    "source-map-support": "^0.5.19",
-    "styled-components": "^5.2.1",
-    "typescript": "^4.2.4",
-    "use-metamask": "^1.1.2",
-    "web3": "^1.3.1"
+    "sass": "^1.32.8",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "auto-changelog": "~2.2.1",
+    "pe7-icon": "^1.0.4",
+    "react-scripts": "^4.0.3",
+    "style-loader": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:cov": "npm test -- --coverage --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand",
+    "eject": "react-scripts eject",
+    "changelog": "auto-changelog --starting-version 3.0.0 --commit-limit false --hide-credit"
+  },
+  "bugs": {
+    "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
     ]
   },
-  "devDependencies": {
-    "@types/react-dom": "^17.0.3"
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
   }
 }

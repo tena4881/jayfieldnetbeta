@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
 
 //Import Section Title
-import SectionTitle from "../common/section-title";
+import SectionTitle from "../../reusable/section-title";
 import NetworkBox from "./NetworkBox";
 
 class Clients extends Component {
@@ -30,7 +30,7 @@ class Clients extends Component {
           title: "TVA Tax & Accounting",
           desc: "",
         },
-        
+
       ],
     };
   }

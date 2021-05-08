@@ -3,20 +3,18 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import {Link} from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import AccountHeader from '../AccountHeader/index'
 import './navbar.css';
-import {AccountNum} from '../../pages/Profile/Profile';
-import UserContext from '../../components/User/user';
+import WalletContext from '../../wallet';
 import {JFCBalanceBlack} from '../../balance'
-import Avatar from 'react-avatar';
+
 function Navbar() {
     const JFC_ADDRESS = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8'
-    const {activateBrowserWallet, account,deactivate} = useContext(UserContext);
+    const {activateBrowserWallet, account,deactivate} = useContext(WalletContext);
     const [sidebar, setSidebar] = useState(false);
-    
+
     const showSidebar = () => setSidebar(!sidebar);
-   
-        
+
+
     return (
     <>
     <div className="navbar">
@@ -25,18 +23,18 @@ function Navbar() {
         <Link to='#' className='menu-bars'>
              <FaIcons.FaBars onClick={showSidebar}/>
         </Link>
-        
+
     </div>
-    
+
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className='nav-menu-items'>
-            
+
             <li className='navbar-toggle'>
                 <Link to='#' className='close-bars'>
                     <AiIcons.AiOutlineClose onClick={showSidebar} />
-                </Link> 
+                </Link>
             </li>
-            <JFCBalanceBlack/> 
+            <JFCBalanceBlack/>
             {SidebarData.map((item,index) => {
                 return(
                     <li key={index} className={item.cName}>
@@ -46,13 +44,13 @@ function Navbar() {
                         </Link>
                     </li>
                 )
-            })}  
+            })}
 
-             
+
         </ul>
-       
+
     </nav>
-    
+
     </>
     )
 }

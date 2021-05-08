@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
-
 //Import Section Title
-import SectionTitle from "../common/section-title";
+import SectionTitle from "../../reusable/section-title";
 import ServiceBox from "./services-box";
-
 class Process extends Component {
   constructor(props) {
     super(props);
@@ -58,10 +56,10 @@ class Process extends Component {
         <section className={"section " + this.props.sectionClass} id="services">
           <Container>
             {/* section title */}
-            <SectionTitle
+            {/* <SectionTitle
               title="Business Brain"
               desc=""
-            />
+            /> */}
 
             <Row className="mt-4">
               {/* services box */}

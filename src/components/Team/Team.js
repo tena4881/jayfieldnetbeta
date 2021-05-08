@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
 
 //Import Section Title
-import SectionTitle from "../common/section-title";
+import SectionTitle from "../../reusable/section-title";
 import TeamBox from "./TeamBox";
 
 class Clients extends Component {
@@ -25,7 +25,7 @@ class Clients extends Component {
           title: "Antenhe Tena",
           desc: "DEVELOPER",
         },
-        
+
       ],
     };
   }

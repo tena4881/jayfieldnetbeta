@@ -1,40 +1,17 @@
-import React, { useReducer, useContext, createContext } from "react";
+import { createStore } from 'redux'
 
-const StoreContext = createContext();
 const initialState = {
-  message: "",
-  balancew: 0,
-  balance: 0,
-  address: null
-};
+  sidebarShow: 'responsive'
+}
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "NEW-ADDRESS":
-      return {
-        ...state,
-        address: action.address,
-        message: action.message
-      };
-    
-    case "SET-BALANCE":
-    return {
-      ...state,
-      balance: action.balance
-    };
+const changeState = (state = initialState, { type, ...rest }) => {
+  switch (type) {
+    case 'set':
+      return {...state, ...rest }
     default:
-      throw new Error(`Unknown type of action: ${action.type}`);
+      return state
   }
-};
+}
 
-export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  return (
-    <StoreContext.Provider value={{ state, dispatch }}>
-      {children}
-    </StoreContext.Provider>
-  );
-};
-
-export const useStore = () => useContext(StoreContext);
+const store = createStore(changeState)
+export default store

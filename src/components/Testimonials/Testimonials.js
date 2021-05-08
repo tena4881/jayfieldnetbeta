@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
 
 //Import Section Title
-import SectionTitle from "../common/section-title";
+import SectionTitle from "../../reusable/section-title";
 import TestimonialsBox from "./TestimonialsBox";
 
 class Testimonials extends Component {
@@ -17,8 +17,8 @@ class Testimonials extends Component {
           <p>
               Client Contracts <br></br>
               E-Commerce <br></br>
-              Inventory Management 
-            
+              Inventory Management
+
         </p>,
         },
         {
@@ -31,7 +31,7 @@ class Testimonials extends Component {
           Porfolio Management <br></br>
         </p>,
         },
-        
+
         {
           image: "assets/images/testimonials/user-3.jpg",
           title: "Digital Artist",
@@ -62,7 +62,7 @@ class Testimonials extends Component {
               Financial Projections <br></br>
             </p>,
         },
-        
+
         {
           image: "assets/images/testimonials/user-3.jpg",
           title: "Real Estate",
@@ -71,11 +71,11 @@ class Testimonials extends Component {
           Management Strategy <br></br>
           Product Management <br></br>
           Property Location <br></br>
-          
+
         </p>,
         },
-        
-        
+
+
       ],
     };
   }
