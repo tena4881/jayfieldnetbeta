@@ -65,7 +65,6 @@ class Section extends Component {
                </div>
                <p className="pt-3 home-desc">
                  <br></br>
-                 <br></br>
                     Scroll Down
 
                     </p>
