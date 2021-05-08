@@ -5,28 +5,20 @@ export function Contribute() {
 
   <CCard>
   <CCardHeader>
-    Contribute Ether
+    Get JFC
     <div className="card-header-actions">
-      {/* <CBadge color="success" className="float-right">Success</CBadge> */}
+      <CBadge color="success" className="float-right">Coming Soon!</CBadge>
     </div>
   </CCardHeader>
   <CCardBody>
     <h6>
-    Earn JFC!</h6>
-
-
-    <CInputGroup className="input-prepend">
-          <CInputGroupPrepend>
-            <CInputGroupText>ETH</CInputGroupText>
-          </CInputGroupPrepend>
-          <CInput id="prependedInput" size="16" type="text" />
-        </CInputGroup>
-
+    On its way!</h6>
+  <p><b></b></p>
+  <p><b></b></p>
+{/* 
+    <button className="btn btn-primary">Click Here </button> */}
         <CInputGroup className="input-prepend">
-          <CInputGroupPrepend>
-            <CInputGroupText>ETH</CInputGroupText>
-          </CInputGroupPrepend>
-          <CInput id="prependedInput" size="16" type="text" />
+          
         </CInputGroup>
       </CCardBody>
   </CCard>

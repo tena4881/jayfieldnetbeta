@@ -29,7 +29,7 @@ const Login = props => {
                 <CCardBody>
                   <CForm>
                     <h1>Login</h1>
-                    <p className="text-muted">Connect your wallet</p>
+                    <p className="text-muted">Connect using your wallet</p>
 
 
                     <CRow>
@@ -46,7 +46,7 @@ const Login = props => {
                 <CCardBody className="text-center">
                   <div>
                     <h2>New here?</h2>
-                    <p>A well worder copy that directs new users to metamask!</p>
+                    <p>You will need a MetaMask Wallet to get the full JayFieldNETwork experience!</p>
                     <Link to="/register">
                       <CButton color="primary" className="mt-3" active tabIndex={-1}>Link to MM!</CButton>
                     </Link>

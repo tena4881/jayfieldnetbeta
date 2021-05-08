@@ -63,7 +63,7 @@ const WidgetsDropdown = () => {
         </CWidgetDropdown>
       </CCol>
       <CCol sm="6" lg="3">
-          {/* <Contribute /> */}
+          <Contribute />
       </CCol>
 
 
