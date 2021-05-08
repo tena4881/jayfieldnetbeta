@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
-
+import tena from '../../assets/images/team/img-3.jpg';
+import jay from '../../assets/images/team/img-2.jpg';
+import rell from '../../assets/images/team/img-1.jpg';
 //Import Section Title
 import SectionTitle from "../../reusable/section-title";
 import TeamBox from "./TeamBox";
@@ -11,17 +13,17 @@ class Clients extends Component {
     this.state = {
       teams: [
         {
-          image: "assets/images/team/img-1.jpg",
+          image: rell,
           title: "Terrell Belfield",
           desc: "CEO",
         },
         {
-          image: "assets/images/team/img-2.jpg",
+          image: jay,
           title: "Joshua D. Franklin, J.D.",
           desc: "COO",
         },
         {
-          image: "assets/images/team/img-3.jpg",
+          image: tena,
           title: "Antenhe Tena",
           desc: "DEVELOPER",
         },

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import logo from '../../../assets/images/logo.png'; // Tell Webpack this JS file uses this image
+import bgCover from '../../../assets/images/bg-home.jpg'; // Tell Webpack this JS file uses this image
 import '../../../assets/css/style.css'
 //Importing Modal
 class Section extends Component {
@@ -23,7 +25,7 @@ class Section extends Component {
           className="section section-lg home-half"
           id="home"
           style={{
-            backgroundImage: `url(assets/images/img-2.jpg)`,
+            backgroundImage: bgCover,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -32,8 +34,16 @@ class Section extends Component {
           <div className="display-table">
             <div className="home-cell-bottom">
 
-              <Container style={{height: '70vh', display: 'flex', justifyContent:'center'}}>
+              <Container style={{height: '50vh', display: 'flex', justifyContent:'center'}}>
+              
                 <Row>
+                <Col
+                    lg={{ size: 8, offset: 2 }}
+                    className="text-white text-center"
+
+                  >
+                     <img src={logo} />
+                  </Col>
                   <Col
                     lg={{ size: 8, offset: 2 }}
                     className="text-white text-center"
@@ -46,11 +56,19 @@ class Section extends Component {
                     JayField is a network of business owners in the know.
                     When you have an idea dont stop there make it official and create a business
                     </p>
+
+                    
                     <div className="mt-4">
                       </div>
                       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}  className="nav-button ms-auto">
                   <Link to="/dashboard" className="btn btn-primary mt-4 waves-effect waves-light">Business Brain</Link>
                </div>
+               <p className="pt-3 home-desc">
+                 <br></br>
+                 <br></br>
+                    Scroll Down
+
+                    </p>
                   </Col>
                 </Row>
               </Container>

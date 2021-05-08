@@ -41,12 +41,12 @@ const TheHeader = () => {
     <CHeader withSubheader>
       <CToggler
         inHeader
-        className="ml-md-3 d-lg-none"
+        className="d-lg-none"
         onClick={toggleSidebarMobile}
       />
       <CToggler
         inHeader
-        className="ml-3 d-md-down-none"
+        className="d-md-down-none"
         onClick={toggleSidebar}
       />
       <CHeaderBrand className="mx-auto d-lg-none" to="/">

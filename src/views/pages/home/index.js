@@ -36,7 +36,6 @@ class Home extends Component {
 
                 {/* Importing Navbar */}
                 {/* <NavbarPage navItems={this.state.navItems} navClass={this.state.navClass} /> */}
-                <Navbar />
                 {/* section */}
                 <Section/>
 

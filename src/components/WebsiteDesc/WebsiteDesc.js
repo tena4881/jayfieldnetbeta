@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import pattern from '../../assets/images/bg-pattern.png'
 class WebsiteDesc extends Component {
   render() {
     return (
@@ -22,7 +22,7 @@ class WebsiteDesc extends Component {
             </Row>
           </Container>
           <div className="bg-pattern-effect">
-            <img src="assets/images/bg-pattern.png" alt="dorsin" />
+            <img src={pattern} alt="dorsin" />
           </div>
         </section>
       </React.Fragment>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import image from '../../assets/images/online-world.svg'
 class AboutUs extends Component {
   render() {
     return (
@@ -25,7 +25,7 @@ class AboutUs extends Component {
               <Col lg={7}>
                 <div className="features-img features-right text-right">
                   <img
-                    src="assets/images/online-world.svg"
+                    src={image}
                     alt="macbook"
                     className="img-fluid"
                   />
