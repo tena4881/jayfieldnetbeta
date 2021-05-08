@@ -34,7 +34,7 @@ class Section extends Component {
           <div className="display-table">
             <div className="home-cell-bottom">
 
-              <Container style={{height: '50vh', display: 'flex', justifyContent:'center'}}>
+              <Container style={{height: '70vh', display: 'flex', justifyContent:'center'}}>
               
                 <Row>
                 <Col
