@@ -39,14 +39,14 @@ import CIcon from '@coreui/icons-react'
 import WalletContext from 'src/wallet'
 import jfcVaultAbi from '../abi/jfcVaultAbi'
 
-export function Contribute() {
+export function Withdraw() {
   const [collapsed, setCollapsed] = React.useState(true)
   const [showElements, setShowElements] = React.useState(true)
   const JFVaultInterface = new utils.Interface(jfcVaultAbi)
   const {account, library } = useContext(WalletContext);
 	const etherBalance = useEtherBalance(account)
   	const contract = new Contract('0x557FD4e5C433D5B4565056A42c21f7710776EE2A', JFVaultInterface, library?.getSigner())
-  	const { state, send } = useContractFunction(contract, 'Contribute', { transactionName: 'Contribute' })
+  	const { state, send } = useContractFunction(contract, 'Withdraw', { transactionName: 'Withdraw' })
   
 	const [amount, setAmount] = useState();
 
@@ -72,40 +72,46 @@ export function Contribute() {
       }
       
       return (
-        <CCard>
-    <CCardHeader>
-      Get JFC
-      <div className="card-header-actions">
+        <>
+        {account === '0x2F09612675A16E9D97e8A0c27D2285A5d8FB6EBa' &&
+          <CCard>
+          <CCardHeader>
+            Admin: Withdraw ETH from Vault
+            <div className="card-header-actions">
+              
+              <CButton
+                color="link"
+                className="card-header-action btn-minimize"
+                onClick={() => setCollapsed(!collapsed)}
+              >
+                <CIcon name={ collapsed ? "cil-arrow-top" : "cil-arrow-bottom"} />
+              </CButton>
+              
+            </div>
+          </CCardHeader>
+          <CCollapse show={collapsed} timeout={1000}>
+          <CCardBody>
+            <CForm className="form-horizontal">
+            <CFormGroup>
+                <CLabel htmlFor="appendedInputButtons">Withdraw Ether in Vault!</CLabel>
+                <div className="controls">
+                  <CInputGroup>
+                    <CInput value={value} onChange={(e) => setValue(e.currentTarget.value)} id="appendedInputButtons" size="20" type="number" />
+                    <CInputGroupAppend>
+                      {/* <CButton color="secondary" onClick={(e) => setValue(formatEther(etherBalance)- 0.020578)}>Max ETH</CButton> */}
+                      <CButton color="primary" disabled={!account || isMining} onClick={onClick}>Withdraw Ether</CButton>
+                    </CInputGroupAppend>
+                  </CInputGroup>
+                </div>
+              </CFormGroup>
+            </CForm>
+          </CCardBody>
+        </CCollapse>
+        </CCard>
+        }
+        </>
+
         
-        <CButton
-          color="link"
-          className="card-header-action btn-minimize"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          <CIcon name={ collapsed ? "cil-arrow-top" : "cil-arrow-bottom"} />
-        </CButton>
-        
-      </div>
-    </CCardHeader>
-    <CCollapse show={collapsed} timeout={1000}>
-    <CCardBody>
-      <CForm className="form-horizontal">
-      <CFormGroup>
-          <CLabel htmlFor="appendedInputButtons">Contribute your Ether and get JFC!</CLabel>
-          <div className="controls">
-            <CInputGroup>
-              <CInput value={value} onChange={(e) => setValue(e.currentTarget.value)} id="appendedInputButtons" size="20" type="number" />
-              <CInputGroupAppend>
-                <CButton color="secondary" onClick={(e) => setValue(formatEther(etherBalance)- 0.020578)}>Max ETH</CButton>
-                <CButton color="primary" disabled={!account || isMining} onClick={onClick}>Send Ether</CButton>
-              </CInputGroupAppend>
-            </CInputGroup>
-          </div>
-        </CFormGroup>
-      </CForm>
-    </CCardBody>
-  </CCollapse>
-  </CCard>
       )
       }
   

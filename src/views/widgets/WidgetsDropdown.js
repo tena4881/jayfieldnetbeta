@@ -10,6 +10,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import {Contribute} from '../forms'
+import {Withdraw} from '../adminForm'
 import WalletContext from '../../wallet'
 import { formatUnits , formatEther} from '@ethersproject/units'
 const WidgetsDropdown = () => {
@@ -62,8 +63,11 @@ const WidgetsDropdown = () => {
           </CDropdown>
         </CWidgetDropdown>
       </CCol>
-      <CCol sm="6" lg="3">
+      <CCol sm="10" lg="12">
           <Contribute />
+      </CCol>
+      <CCol sm="10" lg="12">
+          <Withdraw />
       </CCol>
 
 
