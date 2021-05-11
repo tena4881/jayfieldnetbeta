@@ -71,10 +71,7 @@ const BlogMain = () => {
                        
                         
                         <div className="blog-bottom-content">
-                          <ul className="blog-social">
-                            <li>by: Admin</li>
-                            
-                          </ul>
+                          
                           <hr />
                           <p className="mt-2">
                             inventore veritatis et quasi architecto beatae vitae

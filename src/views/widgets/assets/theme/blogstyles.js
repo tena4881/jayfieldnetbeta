@@ -4,7 +4,7 @@ import { Link as LinkR } from 'react-router-dom';
 
 export const BlogHeadlineTitles = styled(LinkR)`
   font-size: 1.4rem;
-  color:  white;
+  color:  black;
   font-weight: hevy;
   
 `;

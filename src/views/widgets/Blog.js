@@ -9,6 +9,7 @@ import {BlogTitles, BlogHeadlineTitles} from "./assets/theme/blogstyles";
 
 import WalletContext from '../../wallet'
 import { formatUnits , formatEther} from '@ethersproject/units'
+import NoJFC from 'src/components/NoJFC';
 const Blog = () => {
   const {etherBalance, jfcBalance} =  useContext(WalletContext)
   
@@ -37,14 +38,13 @@ const Blog = () => {
                       How COIVD Shaped the Digital Frontier 
                       </BlogHeadlineTitles>
                     </h4>
-                    <ul className="blog-social">
-                      <li>
-                        <i className="icofont icofont-user"></i>Antenhe Tena
-                      </li>
-                      
-                    </ul>
+                   
                   </div>
-                  
+                  <p className="mt-2">
+                          inventore veritatis et quasi architecto beatae vitae
+                          dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                          voluptas sit.
+                    </p>
                 </div>
               </Card>
             </Col>
@@ -66,10 +66,7 @@ const Blog = () => {
                     
                       
                       <div className="blog-bottom-content">
-                        <ul className="blog-social">
-                          <li>by: Admin</li>
-                          
-                        </ul>
+                        
                         <hr />
                         <p className="mt-2">
                           inventore veritatis et quasi architecto beatae vitae
@@ -93,9 +90,7 @@ const Blog = () => {
                       </div>
                       <BlogTitles to="/blog-test">All About Web3</BlogTitles>
                       <div className="blog-bottom-content">
-                        <ul className="blog-social">
-                          <li>by: Admin</li>
-                        </ul>
+                        
                         <hr />
                         <p className="mt-0">
                           inventore veritatis et quasi architecto beatae vitae
@@ -117,11 +112,7 @@ const Blog = () => {
                     alt=""
                   />
                   <div className="blog-details-main">
-                    <ul className="blog-social">
-                      <li className="digits">9 April 2019</li>
-                      <li className="digits">by: Admin</li>
                     
-                    </ul>
                     <hr />
                     
                     <BlogTitles to="/blog-test">How Decentralized Apps Are Changing the Game</BlogTitles>
@@ -143,11 +134,7 @@ const Blog = () => {
                     alt=""
                   />
                   <div className="blog-details-main">
-                    <ul className="blog-social">
-                      <li className="digits">9 April 2019</li>
-                      <li className="digits">by: Admin</li>
-                      
-                    </ul>
+                    
                     <hr />
                     <BlogTitles to="/blog-test">Why DiFi is Here to Stay</BlogTitles>
                     <p className="mt-0">
@@ -168,11 +155,7 @@ const Blog = () => {
                     alt=""
                   />
                   <div className="blog-details-main">
-                    <ul className="blog-social">
-                      <li className="digits">9 April 2019</li>
-                      <li className="digits">by: Admin</li>
-                  
-                    </ul>
+                    
                     <hr />
                     <BlogTitles to="/blog-test">Will the value of Bitcoin crash?</BlogTitles>
                     
@@ -194,11 +177,7 @@ const Blog = () => {
                     alt=""
                   />
                   <div className="blog-details-main">
-                    <ul className="blog-social">
-                      <li className="digits">9 April 2019</li>
-                      <li className="digits">by: Admin</li>
-                  
-                    </ul>
+                    
                     <hr />
                     <BlogTitles to="/blog-test">11 Coins Better than Bitcoin</BlogTitles>
                     
@@ -215,7 +194,9 @@ const Blog = () => {
         </Container>
       </Fragment>
     ): (
-      <></>
+      <>
+      <NoJFC/>
+      </>
     )
   }
   </>

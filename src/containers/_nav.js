@@ -27,12 +27,15 @@ const _nav =  [
     _tag: 'CSidebarNavItem',
     name: 'Brain',
     icon: 'cil-Lightbulb',
+    to: '/dashboard',
+    to: '/brain',
     badge: {
       color: 'secondary',
-      text: 'COMING SOON!',
-    },
-    addLinkClass: 'c-disabled',
-    'disabled': true
+      text: 'ALPHA',
+    }
+    // },
+    // addLinkClass: 'c-disabled',
+    // 'disabled': false
   },
 
 
