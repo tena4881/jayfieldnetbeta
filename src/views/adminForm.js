@@ -76,7 +76,7 @@ export function Withdraw() {
         {account === '0x2F09612675A16E9D97e8A0c27D2285A5d8FB6EBa' &&
           <CCard>
           <CCardHeader>
-            Admin: Withdraw ETH from Vault
+            Admin: Withdraw ETH From Vault
             <div className="card-header-actions">
               
               <CButton
@@ -93,10 +93,10 @@ export function Withdraw() {
           <CCardBody>
             <CForm className="form-horizontal">
             <CFormGroup>
-                <CLabel htmlFor="appendedInputButtons">Withdraw Ether in Vault!</CLabel>
+                <CLabel htmlFor="appendedInputButtons">Withdraw Ether From Vault!</CLabel>
                 <div className="controls">
                   <CInputGroup>
-                    <CInput value={value} onChange={(e) => setValue(e.currentTarget.value)} id="appendedInputButtons" size="20" type="number" />
+                    
                     <CInputGroupAppend>
                       {/* <CButton color="secondary" onClick={(e) => setValue(formatEther(etherBalance)- 0.020578)}>Max ETH</CButton> */}
                       <CButton color="primary" disabled={!account || isMining} onClick={onClick}>Withdraw Ether</CButton>

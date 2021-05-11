@@ -63,10 +63,10 @@ const WidgetsDropdown = () => {
           </CDropdown>
         </CWidgetDropdown>
       </CCol>
-      <CCol sm="10" lg="12">
+      <CCol sm="4" lg="6">
           <Contribute />
       </CCol>
-      <CCol sm="10" lg="12">
+      <CCol sm="4" lg="6">
           <Withdraw />
       </CCol>
 
