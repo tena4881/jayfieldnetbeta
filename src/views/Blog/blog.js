@@ -3,7 +3,7 @@ import WalletContext from '../../wallet'
 import Blog from '../widgets/Blog'
 const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
 
-const Dashboard = () => {
+const BlogMain = () => {
 
   return (
 
@@ -23,4 +23,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default BlogMain

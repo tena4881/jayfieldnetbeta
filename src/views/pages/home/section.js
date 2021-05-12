@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import logo from '../../../assets/images/logo.png'; // Tell Webpack this JS file uses this image
+import logo from '../../../assets/images/shadedLogo.png'; // Tell Webpack this JS file uses this image
 import bgCover from '../../../assets/images/bg-home.jpg'; // Tell Webpack this JS file uses this image
 import '../../../assets/css/style.css'
 //Importing Modal

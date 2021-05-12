@@ -27,14 +27,14 @@ const Blog = () => {
           <Row>
             <Col xl="6 box-col-12">
               <Card>
-                <div to='/blog-test' className="blog-box blog-shadow">
+                <div to='/brain/firstpost' className="blog-box blog-shadow">
                 
                   <Media  className="img-fluid" src={blog} alt="" />
                   
                   <div className="blog-details">
                     <p className="digits">25 July 2019</p>
                     <h4>
-                      <BlogHeadlineTitles to="/blog-test">
+                      <BlogHeadlineTitles to="/brain/firstpost">
                       How COIVD Shaped the Digital Frontier 
                       </BlogHeadlineTitles>
                     </h4>
@@ -62,7 +62,7 @@ const Blog = () => {
                       
                         
                       
-                      <BlogTitles to="/blog-test">Why JayFieldNet is the GOAT</BlogTitles>
+                      <BlogTitles to="/brain/firstpost">Why JayFieldNet is the GOAT</BlogTitles>
                     
                       
                       <div className="blog-bottom-content">
@@ -88,7 +88,7 @@ const Blog = () => {
                       <div className="blog-date digits">
                         January 02  2019
                       </div>
-                      <BlogTitles to="/blog-test">All About Web3</BlogTitles>
+                      <BlogTitles to="/brain/firstpost">All About Web3</BlogTitles>
                       <div className="blog-bottom-content">
                         
                         <hr />
@@ -115,7 +115,7 @@ const Blog = () => {
                     
                     <hr />
                     
-                    <BlogTitles to="/blog-test">How Decentralized Apps Are Changing the Game</BlogTitles>
+                    <BlogTitles to="/brain/firstpost">How Decentralized Apps Are Changing the Game</BlogTitles>
                     <p className="mt-0">
                           inventore veritatis et quasi architecto beatae vitae
                           dicta sunt explicabo. Nemo enim ipsam voluptatem quia
@@ -136,7 +136,7 @@ const Blog = () => {
                   <div className="blog-details-main">
                     
                     <hr />
-                    <BlogTitles to="/blog-test">Why DiFi is Here to Stay</BlogTitles>
+                    <BlogTitles to="/brain/firstpost">Why DiFi is Here to Stay</BlogTitles>
                     <p className="mt-0">
                           inventore veritatis et quasi architecto beatae vitae
                           dicta sunt explicabo. Nemo enim ipsam voluptatem quia
@@ -157,7 +157,7 @@ const Blog = () => {
                   <div className="blog-details-main">
                     
                     <hr />
-                    <BlogTitles to="/blog-test">Will the value of Bitcoin crash?</BlogTitles>
+                    <BlogTitles to="/brain/firstpost">Will the value of Bitcoin crash?</BlogTitles>
                     
                     <p className="mt-0">
                           inventore veritatis et quasi architecto beatae vitae
@@ -179,7 +179,7 @@ const Blog = () => {
                   <div className="blog-details-main">
                     
                     <hr />
-                    <BlogTitles to="/blog-test">11 Coins Better than Bitcoin</BlogTitles>
+                    <BlogTitles to="/brain/firstpost">11 Coins Better than Bitcoin</BlogTitles>
                     
                     <p className="mt-0">
                           inventore veritatis et quasi architecto beatae vitae
