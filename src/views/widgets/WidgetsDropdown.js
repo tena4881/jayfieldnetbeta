@@ -13,12 +13,13 @@ import {Contribute} from '../forms'
 import {Withdraw} from '../adminForm'
 import WalletContext from '../../wallet'
 import { formatUnits , formatEther} from '@ethersproject/units'
+import {Chart} from '../widgets/chart'
 const WidgetsDropdown = () => {
   const {etherBalance, jfcBalance} =  useContext(WalletContext)
   // render
   return (
     <CRow>
-      <CCol sm="10" lg="12">
+      <CCol sm="4" lg="4">
         <CWidgetDropdown
           color="gradient-primary"
           header={jfcBalance && formatUnits(jfcBalance,2)}
@@ -26,22 +27,13 @@ const WidgetsDropdown = () => {
           footerSlot={
               <><br></br></>
           }
-        >
-          <CDropdown>
-            <CDropdownToggle color="transparent">
-              <CIcon name="cil-settings"/>
-            </CDropdownToggle>
-            <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
+          style={{ width: '100%', height: '12rem' }}
+          >
+          
         </CWidgetDropdown>
       </CCol>
 
-      <CCol sm="10" lg="12">
+      <CCol sm="4" lg="4">
         <CWidgetDropdown
           color="gradient-info"
           header={etherBalance && (formatEther(etherBalance))}
@@ -49,24 +41,18 @@ const WidgetsDropdown = () => {
           footerSlot={
             <><br></br></>
           }
-        >
-          <CDropdown>
-            <CDropdownToggle caret={false} color="transparent">
-              <CIcon name="cil-location-pin"/>
-            </CDropdownToggle>
-            <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
+          style={{ width: '100%', height: '12rem' }}>
+          
         </CWidgetDropdown>
       </CCol>
-      <CCol sm="4" lg="6">
+      <CCol sm="4" lg="4">
           <Contribute />
       </CCol>
-      <CCol sm="4" lg="6">
+      
+      <CCol sm="12" lg="12">
+          <Chart/>
+      </CCol>
+      <CCol sm="4" lg="4">
           <Withdraw />
       </CCol>
 

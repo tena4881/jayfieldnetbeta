@@ -23,20 +23,20 @@ const _nav =  [
       text: 'NEW',
     }
   },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Brain',
-    icon: 'cil-Lightbulb',
-    to: '/dashboard',
-    to: '/brain',
-    badge: {
-      color: 'secondary',
-      text: 'ALPHA',
-    }
-    // },
-    // addLinkClass: 'c-disabled',
-    // 'disabled': false
-  },
+  // {
+  //   _tag: 'CSidebarNavItem',
+  //   name: 'Brain',
+  //   icon: 'cil-Lightbulb',
+  //   to: '/dashboard',
+  //   to: '/brain',
+  //   badge: {
+  //     color: 'secondary',
+  //     text: 'ALPHA',
+  //   }
+  //   // },
+  //   // addLinkClass: 'c-disabled',
+  //   // 'disabled': false
+  // },
 
 
 ]

@@ -72,7 +72,7 @@ export function Contribute() {
       }
       
       return (
-        <CCard>
+        <CCard style={{ width: '100%', height: '12rem' }}>
     <CCardHeader>
       Get JFC
       <div className="card-header-actions">
