@@ -26,7 +26,7 @@ const Register = () => {
               <CCardBody className="p-4">
                 <div>
                   <h1>What is MetaMask?</h1>
-                <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=YVgfHZMFFFQ' />
+                {/* <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=YVgfHZMFFFQ' /> */}
                 </div>
               </CCardBody>
               <CCardFooter className="p-4">
