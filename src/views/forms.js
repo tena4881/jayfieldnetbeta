@@ -3,6 +3,7 @@ import { utils } from 'ethers'
 import { formatUnits , parseUnits, formatEther, parseEther} from '@ethersproject/units'
 import { TransactionStatus, useContractCall, useContractFunction, useEtherBalance, useEthers } from '@usedapp/core'
 import { Contract } from '@ethersproject/contracts'
+
 import {
     CButton,
     CCard,
@@ -71,41 +72,42 @@ export function Contribute() {
         setValue('0')
       }
       
+      
       return (
         <CCard style={{ width: '100%', height: '12rem' }}>
-    <CCardHeader>
-      Get JFC
-      <div className="card-header-actions">
-        
-        <CButton
-          color="link"
-          className="card-header-action btn-minimize"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          <CIcon name={ collapsed ? "cil-arrow-top" : "cil-arrow-bottom"} />
-        </CButton>
-        
-      </div>
-    </CCardHeader>
-    <CCollapse show={collapsed} timeout={1000}>
-    <CCardBody>
-      <CForm className="form-horizontal">
-      <CFormGroup>
-          <CLabel htmlFor="appendedInputButtons">Contribute your Ether and get JFC!</CLabel>
-          <div className="controls">
-            <CInputGroup>
-              <CInput value={value} onChange={(e) => setValue(e.currentTarget.value)} id="appendedInputButtons" size="20" type="number" />
-              <CInputGroupAppend>
-                <CButton color="secondary" onClick={(e) => setValue(formatEther(etherBalance)- 0.020578)}>Max ETH</CButton>
-                <CButton color="primary" disabled={!account || isMining} onClick={onClick}>Send Ether</CButton>
-              </CInputGroupAppend>
-            </CInputGroup>
+          <CCardHeader>
+              Get JFC
+          <div className="card-header-actions">
+            
+            <CButton
+              color="link"
+              className="card-header-action btn-minimize"
+              onClick={() => setCollapsed(!collapsed)}
+            >
+              <CIcon name={ collapsed ? "cil-arrow-top" : "cil-arrow-bottom"} />
+            </CButton>
+            
           </div>
-        </CFormGroup>
-      </CForm>
-    </CCardBody>
-  </CCollapse>
-  </CCard>
+          </CCardHeader>
+          <CCollapse show={collapsed} timeout={1000}>
+          <CCardBody>
+            <CForm className="form-horizontal">
+            <CFormGroup>
+                <CLabel htmlFor="appendedInputButtons">Contribute your Ether and get JFC!</CLabel>
+                <div className="controls">
+                  <CInputGroup>
+                    <CInput value={value} onChange={(e) => setValue(e.currentTarget.value)} id="appendedInputButtons" size="20" type="number" />
+                    <CInputGroupAppend>
+                      <CButton color="secondary" onClick={(e) => setValue(formatEther(etherBalance)- 0.020578)}>Max ETH</CButton>
+                      <CButton color="primary" disabled={!account || isMining} onClick={onClick}>Send Ether</CButton>
+                    </CInputGroupAppend>
+                  </CInputGroup>
+                </div>
+              </CFormGroup>
+            </CForm>
+          </CCardBody>
+        </CCollapse>
+        </CCard>
       )
       }
   

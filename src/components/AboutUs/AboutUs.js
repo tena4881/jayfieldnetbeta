@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import image from '../../assets/images/online-world.svg'
+import image from '../../assets/images/JFCCoin.gif'
 class AboutUs extends Component {
   render() {
     return (
@@ -12,8 +12,8 @@ class AboutUs extends Component {
               <Col lg={5}>
                 <div className="features-box">
                   <h3>
-                  The JayFieldNETwork is dedicated to creating expertise, enhancing business literacy and ownership within our culture.
-                  <br></br><br></br>All members are verified on blockchain technology and stay up to date on industry news.
+                  JayFieldCOIN ($JFC): The CURRENCY of JayFieldNET Governing Community, Education and Financial Technology.
+                  <br></br><br></br>Our Smart Contracts Enable Effortless Migration From Internet 2.0 to Web 3.
                   </h3>
                   <p className="text-muted web-desc">
 

@@ -25,6 +25,9 @@
 18.responsive
 
 *****************************************/
+
+@import "../../../node_modules/pe7-icon/dist/dist/pe-icon-7-stroke.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@300;400;500&display=swap");
 body {
   font-family: "Rubik", sans-serif;
@@ -32,8 +35,6 @@ body {
   position: relative;
 }
 
-
-@import "../../../node_modules/pe7-icon/dist/scss/pe-icon-7-stroke"
 
 h1,
 h2,
@@ -87,7 +88,7 @@ p {
 
 .bg-overlay {
   background: linear-gradient(to bottom, #051937, #0a284d, #0c3965, #0b4b7d, #005d96);
-  opacity: 0.9;
+  opacity: 0.4;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -309,7 +310,7 @@ iframe {
 }
 
 .btn-primary {
-  background: #4341cc;
+  background: #201ddd;
   border-color: #4341cc !important;
 }
 
@@ -1195,7 +1196,7 @@ iframe {
 }
 
 .bg-light {
-  background-color: #f8fbff;
+  background-color: #ffffff;
 }
 
 .bg-soft-light {
@@ -1432,7 +1433,7 @@ iframe {
 }
 
 .bg-home {
-  background: url("../images/bg-home.jpg");
+  background: url("../images/JayFieldLogo3D.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2224,5 +2225,16 @@ ul.pattern .color8 {
   .container {
     max-width: 1140px !important;
   }
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section
-          className="section section-lg home-half"
+          className="section bg-home section-lg home-half"
           id="home"
           style={{
             backgroundImage: bgCover,
@@ -34,7 +34,7 @@ class Section extends Component {
           <div className="display-table">
             <div className="home-cell-bottom">
 
-              <Container style={{height: '70vh', display: 'flex', justifyContent:'center'}}>
+              <Container style={{height: '77vh', display: 'flex', justifyContent:'center'}}>
               
                 <Row>
                 <Col
@@ -42,7 +42,7 @@ class Section extends Component {
                     className="text-white text-center"
 
                   >
-                     <img src={logo} />
+                     {/* <img src={logo} /> */}
                   </Col>
                   <Col
                     lg={{ size: 8, offset: 2 }}
@@ -50,12 +50,12 @@ class Section extends Component {
 
                   >
                     <h2 className="text-uppercase">
-                      Your Dedicated Business Brain
+                      DON'T CREATE. DIGITIZE.
                     </h2>
-                    <p className="pt-3 home-desc">
+                    {/* <p className="pt-3 home-desc">
                     JayField is a network of business owners in the know.
-                    When you have an idea dont stop there make it official and create a business
-                    </p>
+                    When you have an idea don't stop there make it official and create a business
+                    </p> */}
 
                     
                     <div className="mt-4">

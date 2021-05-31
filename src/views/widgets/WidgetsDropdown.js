@@ -19,7 +19,7 @@ const WidgetsDropdown = () => {
   // render
   return (
     <CRow>
-      <CCol sm="4" lg="4">
+      <CCol sm="6" lg="6">
         <CWidgetDropdown
           color="gradient-primary"
           header={jfcBalance && formatUnits(jfcBalance,2)}
@@ -33,7 +33,7 @@ const WidgetsDropdown = () => {
         </CWidgetDropdown>
       </CCol>
 
-      <CCol sm="4" lg="4">
+      <CCol sm="6" lg="6">
         <CWidgetDropdown
           color="gradient-info"
           header={etherBalance && (formatEther(etherBalance))}
@@ -45,14 +45,14 @@ const WidgetsDropdown = () => {
           
         </CWidgetDropdown>
       </CCol>
-      <CCol sm="4" lg="4">
+      <CCol sm="12" lg="12">
           <Contribute />
       </CCol>
       
       <CCol sm="12" lg="12">
           <Chart/>
       </CCol>
-      <CCol sm="4" lg="4">
+      <CCol sm="6" lg="6">
           <Withdraw />
       </CCol>
 

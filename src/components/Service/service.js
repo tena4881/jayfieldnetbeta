@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
+
 //Import Section Title
 import SectionTitle from "../../reusable/section-title";
 import ServiceBox from "./services-box";
@@ -8,15 +9,16 @@ class Process extends Component {
     super(props);
     this.state = {
       services1: [
+       
         {
-          icon: "pe-7s-magic-wand",
-          title: "Registration & Business Formation",
+          icon: "pe-7s-compass",
+          title: "Strategy Solutions",
           desc:
             "",
         },
         {
-          icon: "pe-7s-piggy",
-          title: "Business Banking Setup",
+          icon: "pe-7s-diamond",
+          title: "Turn Influences Into Funds",
           desc:
             "",
         },
@@ -28,24 +30,24 @@ class Process extends Component {
         },
       ],
       services2: [
-        {
-          icon: "pe-7s-credit",
-          title: "Credit Services",
-          desc:
-            "",
-        },
-        {
-          icon: "pe-7s-compass",
-          title: "Strategy Solutions",
-          desc:
-            "",
-        },
-        {
-          icon: "pe-7s-diamond",
-          title: "Turn Influnces Into Funds",
-          desc:
-            "",
-        },
+        // {
+        //   icon: "pe-7s-credit",
+        //   title: "Credit Services",
+        //   desc:
+        //     "",
+        // },
+         // {
+        //   icon: "pe-7s-magic-wand",
+        //   title: "Registration & Business Formation",
+        //   desc:
+        //     "",
+        // },
+        // {
+        //   icon: "pe-7s-piggy",
+        //   title: "Business Banking Setup",
+        //   desc:
+        //     "",
+        // },
       ],
     };
   }

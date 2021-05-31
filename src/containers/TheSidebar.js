@@ -29,7 +29,7 @@ const TheSidebar = () => {
     >
      
       <CSidebarBrand className="d-md-down-none" to="/">
-        <img className="c-sidebar-brand-full" src={logo1} />
+        {/* <img className="c-sidebar-brand-full" src={logo1} /> */}
         {/* <img className="c-sidebar-brand-minimized" src={logo1} /> */}
         
       </CSidebarBrand>

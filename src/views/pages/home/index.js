@@ -53,15 +53,15 @@ class Home extends Component {
                 {/* team */}
                 <Team/>
 
-                {/* Network */}
-                <Network/>
+                {/* Network
+                <Network/> */}
 
 
                 {/* process <Process/> */}
 
 
                 {/* testimonial */}
-                <Testimonials/>
+                {/* <Testimonials/> */}
 
                 {/* website description */}
                 <WebsiteDesc/>
