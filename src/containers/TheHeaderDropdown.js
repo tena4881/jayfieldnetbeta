@@ -69,13 +69,7 @@ const TheHeaderDropdown = () => {
           <strong>Account</strong>
         </CDropdownItem>
 
-        <CDropdownItem>
-          <a onClick={deactivate}>
-          <CIcon name="cil-lock-locked" className="mfe-2" />
-          Lock Account
-          </a>
-
-        </CDropdownItem>
+       
         <CDropdownItem>
           <a onClick={addToMetamask}>
           <i class="cil-plus"></i>
@@ -83,7 +77,13 @@ const TheHeaderDropdown = () => {
           </a>
 
         </CDropdownItem>
+        <CDropdownItem>
+          <a onClick={deactivate}>
+          <CIcon name="cil-lock-locked" className="mfe-2" />
+          Lock Account
+          </a>
 
+        </CDropdownItem>
       </CDropdownMenu>
     </CDropdown>
     :
