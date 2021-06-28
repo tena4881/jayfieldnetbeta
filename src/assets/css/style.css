@@ -2231,6 +2231,13 @@ ul.pattern .color8 {
   position: relative;
   padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
 }
+.addJFCBTN {
+  color: #ffff;
+}
+
+.addJFCBTN:hover {
+  color: yellow;
+}
 
 .react-player {
   position: absolute;
