@@ -15,6 +15,7 @@ import {Withdraw} from '../adminForm'
 import WalletContext from '../../wallet'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {Chart} from '../widgets/chart'
+import PollModal from './PoleModal'
 const WidgetsDropdown = () => {
   const tokenAddress = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8';
   const tokenSymbol = 'JFC';
@@ -51,44 +52,12 @@ const WidgetsDropdown = () => {
   // render
   return (
     <CRow>
-      <CCol sm="6" lg="6">
-        <CWidgetDropdown
-          color="gradient-primary"
-          header={jfcBalance && formatUnits(jfcBalance,2)}
-          text="JFC Balance"
-          footerSlot={
-              <><br></br></>
-          }
-          style={{ width: '100%', height: '12rem' }}
-          >
-           {/* <CLink className="addJFCBTN" onClick={addToMetamask}>Don't see JFC in your MetaMask?</CLink> */}
-        </CWidgetDropdown>
-       
+      <CCol sm="12" lg="12">
+        <PollModal/>
       </CCol>
       
-      <CCol sm="6" lg="6">
-        <CWidgetDropdown
-          color="gradient-info"
-          header={etherBalance && (formatEther(etherBalance))}
-          text="ETH Balance"
-          footerSlot={
-            <><br></br></>
-          }
-          style={{ width: '100%', height: '12rem' }}>
-          
-        </CWidgetDropdown>
-      </CCol>
-      <CCol sm="12" lg="12">
-          <Contribute />
-      </CCol>
+     
       
-      <CCol sm="12" lg="12">
-          <Chart/>
-      </CCol>
-      <CCol sm="6" lg="6">
-          <Withdraw />
-      </CCol>
-
 
     </CRow>
   )

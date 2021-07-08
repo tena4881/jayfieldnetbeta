@@ -1,6 +1,5 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
-
 const _nav =  [
   
   {
@@ -17,7 +16,17 @@ const _nav =  [
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon name="cil-chart-pie" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon name="cil-chart-pie" customClasses="c-sidebar-nav-icon"/>
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // }
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Vote',
+    to: '/vote',
+    icon: <CIcon name="cil-check-circle" customClasses="c-sidebar-nav-icon"/>,
     badge: {
       color: 'info',
       text: 'NEW',

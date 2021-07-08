@@ -26,6 +26,7 @@ const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/Butt
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/charts/Charts'));
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'));
+const Vote = React.lazy(() => import('./views/vote/Vote'));
 const Brain = React.lazy(() => import('./views/Blog/blog'));
 const Post1 = React.lazy(() => import('./views/Blog/post1'));
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
@@ -43,6 +44,7 @@ const User = React.lazy(() => import('./views/users/User'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/vote', name: 'Vote', component: Vote },
   { path: '/brain', name: 'Brain', component: Brain, exact: true },
   { path: '/brain/firstpost', name: 'Blog Title', component: Post1 },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },

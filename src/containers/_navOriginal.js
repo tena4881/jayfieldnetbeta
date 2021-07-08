@@ -12,6 +12,7 @@ const _nav =  [
       text: 'NEW',
     }
   },
+  
   {
     _tag: 'CSidebarNavTitle',
     _children: ['Theme']
