@@ -48,7 +48,7 @@ const WidgetsDropdown = () => {
       }
   }
   const {etherBalance, jfcBalance} =  useContext(WalletContext)
-  // render
+  // render  
   return (
     <CRow>
       <CCol sm="6" lg="6">
@@ -59,7 +59,7 @@ const WidgetsDropdown = () => {
           footerSlot={
               <><br></br></>
           }
-          style={{ width: '100%', height: '12rem' }}
+          style={{ width: '100%', height: 'auto' }}
           >
            {/* <CLink className="addJFCBTN" onClick={addToMetamask}>Don't see JFC in your MetaMask?</CLink> */}
         </CWidgetDropdown>
@@ -74,7 +74,7 @@ const WidgetsDropdown = () => {
           footerSlot={
             <><br></br></>
           }
-          style={{ width: '100%', height: '12rem' }}>
+          style={{ width: '100%', height: 'auto' }}>
           
         </CWidgetDropdown>
       </CCol>

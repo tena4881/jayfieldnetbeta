@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './scss/style.scss';
 import WalletContext from './wallet';
-
+import { Contract } from '@ethersproject/contracts'
+import { utils } from 'ethers'
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -26,11 +27,14 @@ export default function App () {
   const { activateBrowserWallet, deactivate, account } = useEthers();
   const etherBalance = useEtherBalance(account);
   const jfcBalance = useTokenBalance(JFC, account)
+  
+  const votesFor = 1;
+  const votesAgainst = 1;
   return (
 
         <HashRouter>
             <React.Suspense fallback={loading}>
-            <WalletContext.Provider value={{account,activateBrowserWallet,deactivate, etherBalance, jfcBalance}}>
+            <WalletContext.Provider value={{account,activateBrowserWallet,deactivate, etherBalance, jfcBalance,votesFor,votesAgainst}}>
                 <Switch>
                   <Route exact path="/login" name="Login Page" render={props => <Login {...props}/>} />
                   <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />

@@ -14,7 +14,7 @@ export default function NoJFC() {
     
     <Container>
       <h4>Insufficient JFC</h4>
-      <p><br></br>You need at least 100 JFC to view 😔</p>
+      <p><br></br>You need JFC to view 😔</p>
       <Link to="/dashboard" className="btn btn-primary mt-3 waves-effect waves-light">Earn more JFC! </Link>
     </Container>
    

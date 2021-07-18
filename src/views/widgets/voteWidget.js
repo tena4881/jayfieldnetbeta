@@ -10,12 +10,13 @@ import {
   CLink
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import {Contribute} from '../forms'
+import {Vote} from '../voteForm'
 import {Withdraw} from '../adminForm'
 import WalletContext from '../../wallet'
 import { formatUnits , formatEther} from '@ethersproject/units'
 import {Chart} from '../widgets/chart'
 import PollModal from './PoleModal'
+import NoJFC from 'src/components/NoJFC'
 const WidgetsDropdown = () => {
   const tokenAddress = '0xe5d9D8EEB5b225A465523e2065834d9EC0Ed9aB8';
   const tokenSymbol = 'JFC';
@@ -48,18 +49,55 @@ const WidgetsDropdown = () => {
       console.log(error);
       }
   }
-  const {etherBalance, jfcBalance} =  useContext(WalletContext)
+  const { jfcBalance,votesAgainst,votesFor} =  useContext(WalletContext)
   // render
   return (
+      <>
+    {jfcBalance >= 100 ? (
     <CRow>
-      <CCol sm="12" lg="12">
-        <PollModal/>
+        <CCol sm="12" lg="12">
+            <Vote/>
+          {/* <PollModal/> */}
+        </CCol>
+{/* 
+        <CCol sm="6" lg="6">
+            <CWidgetDropdown
+            color="gradient-primary"
+            header={votesFor}
+            text="Votes 'For'"
+            footerSlot={
+                <><br></br></>
+            }
+            style={{ width: '100%', height: 'auto' }}
+            >
+           
+            </CWidgetDropdown>
+       
+         </CCol>
+      
+      <CCol sm="6" lg="6">
+        <CWidgetDropdown
+          color="gradient-info"
+          header={votesAgainst}
+          text="Votes for against"
+          footerSlot={
+            <><br></br></>
+          }
+          style={{ width: '100%', height: 'auto' }}>
+          
+        </CWidgetDropdown>
       </CCol>
       
-     
-      
 
-    </CRow>
+         */}
+        
+       
+        
+  
+      </CRow>) :(
+          <NoJFC/>
+      ) }
+    </>
   )
 }
 
